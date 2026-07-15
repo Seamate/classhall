@@ -1,0 +1,363 @@
+.classhall-forum {
+    margin: 0 0 28px;
+}
+
+.classhall-forum .dwqa-question-item,
+.classhall-forum .dwqa-answer-item {
+    background: #fff !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 2px !important;
+    box-shadow: none !important;
+    margin: 0 0 16px !important;
+    padding: 20px 24px !important;
+}
+
+.classhall-forum .dwqa-question-title {
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    margin: 0 0 10px !important;
+}
+
+.classhall-forum .dwqa-question-title a {
+    color: inherit;
+    display: inline-block;
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+    text-decoration: none;
+}
+
+.dwqa-container.classhall-forum .dwqa-questions-list .dwqa-question-item .dwqa-question-title,
+.dwqa-container.classhall-forum .dwqa-questions-list .dwqa-question-item .dwqa-question-title a {
+    font-size: 23px !important;
+    font-weight: 700 !important;
+    line-height: 1.35 !important;
+}
+
+.classhall-forum .dwqa-question-title a:hover {
+    color: #1f4a93;
+}
+
+.classhall-forum .dwqa-question-meta,
+.classhall-forum .dwqa-answer-meta {
+    background: transparent !important;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 12px !important;
+    padding: 0 !important;
+}
+
+.classhall-forum .dwqa-answer-meta {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 10px !important;
+}
+
+.classhall-forum .dwqa-question-category a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.classhall-forum .dwqa-question-content,
+.classhall-forum .dwqa-answer-content {
+    background: transparent !important;
+    color: inherit;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.classhall-forum .dwqa-question-content p,
+.classhall-forum .dwqa-answer-content p {
+    margin: 0 0 14px !important;
+}
+
+.classhall-forum .avatar {
+    border-radius: 3px;
+    height: 28px;
+    margin-right: 7px;
+    vertical-align: middle;
+    width: 28px;
+}
+
+.classhall-forum .dwqa-question-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.classhall-forum .dwqa-question-stats span {
+    background: transparent !important;
+    border: 1px solid #e1e1e1;
+    border-radius: 2px;
+    color: #555;
+    padding: 6px 10px;
+}
+
+.classhall-forum .dwqa-votes-count,
+.classhall-forum .dwqa-question-vote,
+.classhall-forum .dwqa-answer-vote {
+    display: none !important;
+}
+
+.classhall-forum .dwqa-answers-title {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 28px 0 14px;
+}
+
+.classhall-forum-form label,
+.classhall-forum-answer-form label {
+    display: block;
+    font-weight: 600;
+    margin: 0 0 6px;
+}
+
+.classhall-forum-form input[type="text"],
+.classhall-forum-form select,
+.classhall-forum-form textarea,
+.classhall-forum-answer-form textarea {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 42px;
+    padding: 9px 11px;
+    width: 100%;
+}
+
+.classhall-forum-form textarea,
+.classhall-forum-answer-form textarea {
+    min-height: 180px;
+}
+
+.classhall-forum .dwqa-btn.dwqa-btn-primary,
+.classhall-forum button,
+.classhall-forum input[type="submit"] {
+    background: #1f4a93 !important;
+    border: 1px solid #1f4a93 !important;
+    border-radius: 3px !important;
+    color: #fff !important;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1.2;
+    padding: 12px 22px !important;
+    text-decoration: none !important;
+}
+
+.classhall-forum .dwqa-btn.dwqa-btn-primary:hover,
+.classhall-forum button:hover,
+.classhall-forum input[type="submit"]:hover {
+    background: #173a74 !important;
+    border-color: #173a74 !important;
+    color: #fff !important;
+}
+
+.classhall-forum-message,
+.classhall-forum-notice {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-left: 3px solid #1f4a93;
+    margin: 0 0 16px;
+    padding: 10px 12px;
+}
+
+.classhall-forum-empty {
+    color: #666;
+}
+
+.classhall-forum-pagination ul {
+    background: transparent !important;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    list-style: none;
+    margin: 18px 0;
+    padding: 0;
+}
+
+.classhall-forum-pagination.dwqa-page-numbers,
+.classhall-forum .dwqa-page-numbers {
+    background: transparent !important;
+    border: 0 !important;
+    margin: 18px 0 !important;
+    padding: 0 !important;
+}
+
+.classhall-forum-pagination li {
+    margin: 0;
+}
+
+.classhall-forum-pagination a,
+.classhall-forum-pagination span {
+    background: #fff;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    color: #333;
+    display: block;
+    line-height: 1.2;
+    padding: 9px 12px;
+    text-decoration: none;
+}
+
+.classhall-forum-pagination .current,
+.classhall-forum-pagination a:hover {
+    background: #1f4a93;
+    border-color: #1f4a93;
+    color: #fff;
+}
+
+.sidebar .classhall-forum {
+    margin: 0;
+}
+
+.sidebar .classhall-forum .dwqa-question-item {
+    border: 0 !important;
+    border-bottom: 1px solid #eeeeee !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+}
+
+.sidebar .classhall-forum .dwqa-question-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+}
+
+.sidebar .classhall-forum .dwqa-question-title a {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+
+.sidebar .dwqa-questions-list .dwqa-question-item {
+    padding: 12px 14px !important;
+}
+
+.sidebar .dwqa-questions-list .dwqa-question-title,
+.sidebar .dwqa-questions-list .dwqa-question-title a,
+.sidebar .dwqa-question-title,
+.sidebar .dwqa-question-title a,
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+
+.sidebar .classhall-forum .dwqa-question-meta,
+.sidebar .classhall-forum .dwqa-question-stats,
+.sidebar .classhall-forum .dwqa-ask-question {
+    display: none !important;
+}
+
+@media (max-width: 640px) {
+    .classhall-forum .dwqa-question-item,
+    .classhall-forum .dwqa-answer-item {
+        padding: 16px !important;
+    }
+
+    .classhall-forum .dwqa-question-stats {
+        display: block;
+    }
+
+    .classhall-forum .dwqa-question-stats span {
+        display: inline-block;
+        margin: 0 5px 7px 0;
+    }
+}
+.widget .dwqa-questions-list .dwqa-question-title,
+.widget .dwqa-questions-list .dwqa-question-title a,
+.widget .dwqa-question-title,
+.widget .dwqa-question-title a,
+aside .dwqa-questions-list .dwqa-question-title,
+aside .dwqa-questions-list .dwqa-question-title a,
+aside .dwqa-question-title,
+aside .dwqa-question-title a,
+.sidebar .dwqa-questions-list .dwqa-question-title,
+.sidebar .dwqa-questions-list .dwqa-question-title a,
+.sidebar .classhall-forum .dwqa-question-title,
+.sidebar .classhall-forum .dwqa-question-title a,
+.sidebar .dwqa-question-title,
+.sidebar .dwqa-question-title a,
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    font-size: 14px !important;
+    font-weight: normal !important;
+    line-height: 1.4 !important;
+}
+
+.widget .dwqa-questions-list .dwqa-question-item,
+aside .dwqa-questions-list .dwqa-question-item,
+.sidebar .dwqa-questions-list .dwqa-question-item,
+.sidebar .classhall-forum .dwqa-question-item {
+    padding: 12px 14px !important;
+}
+
+.classhall-forum-compact .classhall-forum-pagination,
+.classhall-forum-compact .dwqa-page-numbers,
+.widget .classhall-forum-pagination,
+.widget .dwqa-page-numbers,
+aside .classhall-forum-pagination,
+aside .dwqa-page-numbers,
+.sidebar .classhall-forum-pagination,
+.sidebar .dwqa-page-numbers {
+    display: none !important;
+}
+
+.widget:has(.classhall-forum),
+.widget:has(.dwqa-questions-list),
+.widget:has(.dwqa-popular-questions),
+.widget:has(.related-questions),
+aside:has(.classhall-forum),
+aside:has(.dwqa-questions-list),
+aside:has(.dwqa-popular-questions),
+aside:has(.related-questions),
+.sidebar .widget:has(.classhall-forum),
+.sidebar .widget:has(.dwqa-questions-list),
+.sidebar .widget:has(.dwqa-popular-questions),
+.sidebar .widget:has(.related-questions) {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.widget:has(.classhall-forum) .widget-title,
+.widget:has(.classhall-forum) .widgettitle,
+.widget:has(.dwqa-questions-list) .widget-title,
+.widget:has(.dwqa-questions-list) .widgettitle,
+.widget:has(.dwqa-popular-questions) .widget-title,
+.widget:has(.dwqa-popular-questions) .widgettitle,
+.widget:has(.related-questions) .widget-title,
+.widget:has(.related-questions) .widgettitle,
+.widget:has(.classhall-forum) h3:first-child,
+.widget:has(.dwqa-questions-list) h3:first-child,
+.widget:has(.dwqa-popular-questions) h3:first-child,
+.widget:has(.related-questions) h3:first-child,
+.widget:has(.classhall-forum) h4:first-child,
+.widget:has(.dwqa-questions-list) h4:first-child,
+.widget:has(.dwqa-popular-questions) h4:first-child,
+.widget:has(.related-questions) h4:first-child,
+aside:has(.classhall-forum) .widget-title,
+aside:has(.classhall-forum) .widgettitle,
+aside:has(.dwqa-questions-list) .widget-title,
+aside:has(.dwqa-questions-list) .widgettitle,
+aside:has(.dwqa-popular-questions) .widget-title,
+aside:has(.dwqa-popular-questions) .widgettitle,
+aside:has(.related-questions) .widget-title,
+aside:has(.related-questions) .widgettitle {
+    background: #f5f5f5 !important;
+    border: 1px solid #e5e5e5 !important;
+    border-radius: 2px !important;
+    color: #222222 !important;
+    display: block !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.3 !important;
+    margin: 0 0 10px !important;
+    padding: 11px 14px !important;
+}

@@ -1,0 +1,2 @@
+/******/ // webpackBootstrap
+jQuery(document).ready((function(){document.location.href.includes("edit.php?post_type=sensei_message")&&jQuery("#toplevel_page_sensei").addClass("wp-has-submenu wp-has-current-submenu wp-menu-open")}));

@@ -1,0 +1,58 @@
+.header {
+	width: 100%;
+	padding: 20px;
+}
+
+.button a {
+	float: right;
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	color: #999;
+	border: 2px solid #999;
+	border-radius: 3px;
+}
+
+.button a:hover {
+	color: #000;
+	border: 2px solid #000;
+	transition: 2s;
+}
+
+img {
+	max-width: 100%;
+}
+
+.related {
+	text-align: center;
+	padding: 5em 0;
+}
+
+.related > a {
+  width: calc(100% - 20px);
+  max-width: 340px;
+  border: 3px solid #f0f0f0;
+  border-color: initial;
+  display: inline-block;
+  text-align: center;
+  margin: 20px 10px;
+  padding: 25px;
+  border-radius: 3px;
+}
+
+.related a img {
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.related a h3 {
+  margin: 0;
+  padding: 0.5em 0 0.3em;
+  max-width: 300px;
+  text-align: left;
+}
+
+.related p{
+  font-size: 1.4em;
+  color: #ccc;
+}

@@ -1,0 +1,69 @@
+/* BEGIN css-protection script */
+	*:not(input):not(textarea):not(text):not([contenteditable="true"]):not([contenteditable="true"] *):not([contenteditable]):not([contenteditable] *):not(code):not(code *):not(codeblock_wccp):not(codeblock_wccp *),
+	*::after,
+	*::backdrop,
+	*::before,
+	*::cue,
+	*::marker,
+	*::placeholder
+	{
+		/*-webkit-touch-callout: none;*/
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-user-select: none;
+	}
+
+	/* 1. Apply transparent background to ALL selections */
+	::selection,
+	::-moz-selection {
+		background: transparent;
+		color: inherit; /* Optional: ensures selected text color remains the same */
+	}
+
+	/* 2. Override the rule for the specific elements you want to have a default/visible selection */
+	/* Note: You must apply a specific background color here, as the browser default is now overridden by step 1. */
+	input::selection,
+	input::-moz-selection,
+	textarea::selection,
+	textarea::-moz-selection,
+	[contenteditable="true"]::selection,
+	[contenteditable="true"]::-moz-selection,
+	[contenteditable]::selection,
+	[contenteditable]::-moz-selection,
+	code::selection,
+	code::-moz-selection {
+		/* Use a standard selection color, e.g., browser default blue/gray */
+		background: #b3d4fc; /* A common light blue selection color */
+		color: #000000; /* Ensure selected text is visible */
+	}
+
+
+	.cover-container {
+		   border: 1px solid #DDDDDD;
+		   width: 100%;
+		   height: 100%;
+		   position: relative;
+		}
+	.glass-cover {
+	   float: left;
+	   position: relative;
+	   left: 0px;
+	   top: 0px;
+	   z-index: 1000;
+	   background-color: #92AD40;
+	   padding: 5px;
+	   color: #FFFFFF;
+	   font-weight: bold;
+	}
+	.unselectable
+	{
+	-moz-user-select:none;
+	-webkit-user-select:none;
+	-khtml-user-select: none;
+	user-select: none;
+	cursor: default;
+	}
+/* END css-protection script */
+

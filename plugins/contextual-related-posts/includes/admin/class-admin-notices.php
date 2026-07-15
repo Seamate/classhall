@@ -1,0 +1,132 @@
+<?php
+/**
+ * Controls admin notices.
+ *
+ * @package WebberZone\Contextual_Related_Posts
+ */
+
+namespace WebberZone\Contextual_Related_Posts\Admin;
+
+use WebberZone\Contextual_Related_Posts\Util\Hook_Registry;
+use function WebberZone\Contextual_Related_Posts\wz_crp;
+
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+/**
+ * Admin Notices Class.
+ *
+ * @since 4.0.0
+ */
+class Admin_Notices {
+
+	/**
+	 * Admin Notices API instance.
+	 *
+	 * @since 4.0.0
+	 *
+	 * @var Admin_Notices_API
+	 */
+	private ?Admin_Notices_API $admin_notices_api = null;
+
+	/**
+	 * Constructor class.
+	 *
+	 * @since 4.0.0
+	 */
+	public function __construct() {
+		// Add initialization hook that runs after full plugin setup.
+		Hook_Registry::add_action( 'admin_init', array( $this, 'init' ), 5 );
+	}
+
+	/**
+	 * Initialize the notices API reference after full plugin initialization.
+	 *
+	 * @since 4.0.0
+	 */
+	public function init() {
+		$this->admin_notices_api = wz_crp()->admin->admin_notices_api;
+		$this->register_notices();
+	}
+
+	/**
+	 * Register all notices with the API.
+	 *
+	 * @since 4.0.0
+	 */
+	private function register_notices() {
+		// Only register notices if the API is available.
+		if ( ! $this->admin_notices_api ) {
+			return;
+		}
+
+		$this->register_fulltext_index_notice();
+		$this->register_migration_pending_notice();
+	}
+
+	/**
+	 * Register fulltext index notice.
+	 *
+	 * @since 4.0.0
+	 */
+	private function register_fulltext_index_notice() {
+		// Check if admin_notices_api is available.
+		if ( ! $this->admin_notices_api ) {
+			return;
+		}
+
+		$this->admin_notices_api->register_notice(
+			array(
+				'id'          => 'crp_missing_fulltext_index',
+				'message'     => sprintf(
+					'<p>%s <a href="%s">%s</a></p>',
+					esc_html__( 'Contextual Related Posts: Some FULLTEXT indexes are missing from your database, which will prevent related posts from being found. Please run the recreate indexes tool from the Tools page to restore related posts functionality.', 'contextual-related-posts' ),
+					esc_url( admin_url( 'tools.php?page=crp_tools_page#crp-recreate-fulltext-index' ) ),
+					esc_html__( 'Go to Tools page', 'contextual-related-posts' )
+				),
+				'type'        => 'warning',
+				'dismissible' => true,
+				'capability'  => 'manage_options',
+				'conditions'  => array(
+					fn(): bool => ! \crp_get_option( 'use_custom_tables', false ) &&
+						! \WebberZone\Contextual_Related_Posts\Admin\Db::is_fulltext_index_installed(),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Register migration pending notice.
+	 *
+	 * @since 4.2.0
+	 */
+	private function register_migration_pending_notice() {
+		// Check if admin_notices_api is available.
+		if ( ! $this->admin_notices_api ) {
+			return;
+		}
+
+		$this->admin_notices_api->register_notice(
+			array(
+				'id'          => 'crp_migration_pending',
+				'message'     => sprintf(
+					'<p>%s <a href="%s">%s</a></p>',
+					esc_html__( 'Contextual Related Posts: Post meta migration is required to keep your data compatible with the latest version. Please run the migration tool from the Tools page to update your database structure.', 'contextual-related-posts' ),
+					esc_url( admin_url( 'tools.php?page=crp_tools_page#crp-migrate-post-meta' ) ),
+					esc_html__( 'Go to Tools page', 'contextual-related-posts' )
+				),
+				'type'        => 'warning',
+				'dismissible' => true,
+				'capability'  => 'manage_options',
+				'conditions'  => array(
+					function () {
+						return current_user_can( 'manage_options' ) &&
+								false === get_option( 'crp_meta_migration_done', false ) &&
+								Tools_Page::get_migration_count() > 0;
+					},
+				),
+			)
+		);
+	}
+}

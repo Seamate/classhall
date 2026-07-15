@@ -1,0 +1,7 @@
+# BEGIN wccp_pro_image_protection
+<IfModule mod_rewrite.c>
+RewriteEngine on
+	# Test if .htaccess is working
+	RewriteRule ^htaccess-fail\.png$ htaccess-success.png [L]
+</ifModule>
+# END wccp_pro_image_protection

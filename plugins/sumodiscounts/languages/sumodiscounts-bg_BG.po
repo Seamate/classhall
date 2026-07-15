@@ -1,0 +1,1276 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: SUMO Discounts\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-23 11:29+0530\n"
+"PO-Revision-Date: 2017-10-23 11:29+0530\n"
+"Last-Translator: FantasticPlugins <contact@fantasticplugins.com>\n"
+"Language-Team: FantasticPlugins <support@fantasticplugins.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _e(;__(;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../admin/class_fpsp_admin_menu.php:13
+msgid "SUMO Discounts"
+msgstr ""
+
+#: ../admin/class_fpsp_admin_menu.php:25
+msgid "Action failed. Please refresh the page and retry."
+msgstr ""
+
+#: ../admin/class_fpsp_admin_menu.php:73
+msgid "Your settings have been saved."
+msgstr ""
+
+#: ../admin/class_fpsp_admin_menu.php:104
+msgid "Save Changes"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:18
+msgid "General"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:40
+msgid "Discounts will be applied in the following order"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:51
+msgid "Discounted Price Display Settings"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:56
+msgid "Discount Price Display Method"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:63
+msgid "Replace Original Price"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:64
+msgid "Strike Original Price and Display Discounted Price"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:70
+msgid "Enable Discount Tag Label"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:79
+msgid "Discount Tag Label"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/class_general_settings.php:89
+msgid ""
+"Display On Sale Tag for Variable Products using First Matched Variations"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:121
+msgid "Sitewide Discounts"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:124
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:160
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:55
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:395
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:62
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:62
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:271
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:55
+#: ../inc/common_functions_for_sumopricing.php:1044
+msgid "First Matched Rule"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:125
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:161
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:56
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:396
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:63
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:63
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:272
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:56
+#: ../inc/common_functions_for_sumopricing.php:1045
+msgid "Last Matched Rule"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:126
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:162
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:57
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:64
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:64
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:273
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:57
+#: ../inc/common_functions_for_sumopricing.php:1046
+msgid "Minimum Discount"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:127
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:163
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:58
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:65
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:65
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:274
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:58
+#: ../inc/common_functions_for_sumopricing.php:1047
+msgid "Maximum Discount"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:144
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:178
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:204
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:47
+msgid "Enable"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:158
+msgid "Bulk Discounts"
+msgstr ""
+
+#: ../admin/tabs/generalsettings/sumo_functionality_for_general_settings.php:191
+msgid "Cart Discounts"
+msgstr ""
+
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:34
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:44
+msgid "Special Offer Discounts"
+msgstr ""
+
+#: ../admin/tabs/specialofferpricing/class_specialofferpricing_tab.php:49
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:386
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:56
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:56
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:266
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:49
+msgid "Rule Priority"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:182
+msgid "SUMO Reward Points Discounts"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:202
+msgid ""
+"SUMO Reward Points Earning Level Discounts (Requires SUMO Reward Points "
+"Plugin)"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:207
+msgid "Apply Reward Point Discount for Product with Sale Price"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:214
+msgid ""
+"If enabled, Reward Point Discounts will be applicable for products with sale "
+"price"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:217
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:97
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:61
+#: ../inc/common_functions_for_sumopricing.php:1152
+#: ../inc/common_functions_for_sumopricing.php:1643
+msgid "Rule Valid from"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:225
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:105
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:69
+#: ../inc/common_functions_for_sumopricing.php:1155
+#: ../inc/common_functions_for_sumopricing.php:1646
+msgid "The Date from which the Discounts are valid"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:228
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:108
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:72
+#: ../inc/common_functions_for_sumopricing.php:1152
+#: ../inc/common_functions_for_sumopricing.php:1643
+msgid "Rule Valid Till"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:236
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:116
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:80
+#: ../inc/common_functions_for_sumopricing.php:1155
+#: ../inc/common_functions_for_sumopricing.php:1646
+msgid "The Date till which the Discounts are valid"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:243
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:123
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:87
+#: ../inc/common_functions_for_sumopricing.php:1187
+msgid "Rule is valid on the following days"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:246
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:126
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:90
+#: ../inc/common_functions_for_sumopricing.php:1191
+#: ../inc/common_functions_for_sumopricing.php:1682
+msgid ""
+"If you want to provide discounts only on certain days of a Week then select "
+"only those days."
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:249
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:129
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:93
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Monday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:257
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:137
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:101
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Tuesday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:265
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:145
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:109
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Wednesday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:273
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:153
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:117
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Thursday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:281
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:161
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:125
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Friday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:289
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:169
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:133
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Saturday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:297
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:177
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:141
+#: ../inc/common_functions_for_sumopricing.php:1189
+#: ../inc/common_functions_for_sumopricing.php:1680
+msgid "Sunday"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:309
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:189
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:153
+msgid "Applicable Discounts for"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:314
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:194
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:158
+#: ../inc/common_functions_for_sumopricing.php:1221
+#: ../inc/common_functions_for_sumopricing.php:1230
+#: ../inc/common_functions_for_sumopricing.php:1332
+#: ../inc/common_functions_for_sumopricing.php:1341
+#: ../inc/common_functions_for_sumopricing.php:1454
+#: ../inc/common_functions_for_sumopricing.php:1463
+msgid "Select Products"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:319
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:199
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:163
+#: ../inc/common_functions_for_sumopricing.php:1203
+msgid "All Products"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:320
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:670
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:200
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:326
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:164
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:495
+#: ../inc/common_functions_for_sumopricing.php:1204
+#: ../inc/common_functions_for_sumopricing.php:1220
+#: ../inc/common_functions_for_sumopricing.php:1317
+#: ../inc/common_functions_for_sumopricing.php:1331
+#: ../inc/common_functions_for_sumopricing.php:1453
+msgid "Include Products"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:321
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:679
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:201
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:335
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:165
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:504
+#: ../inc/common_functions_for_sumopricing.php:1205
+#: ../inc/common_functions_for_sumopricing.php:1229
+#: ../inc/common_functions_for_sumopricing.php:1318
+#: ../inc/common_functions_for_sumopricing.php:1340
+#: ../inc/common_functions_for_sumopricing.php:1462
+msgid "Exclude Products"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:322
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:202
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:166
+#: ../inc/common_functions_for_sumopricing.php:1206
+msgid "All Categories"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:323
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:342
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:203
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:222
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:167
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:186
+#: ../inc/common_functions_for_sumopricing.php:1207
+#: ../inc/common_functions_for_sumopricing.php:1238
+#: ../inc/common_functions_for_sumopricing.php:1319
+#: ../inc/common_functions_for_sumopricing.php:1349
+#: ../inc/common_functions_for_sumopricing.php:1471
+msgid "Include Categories"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:324
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:353
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:204
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:233
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:168
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:197
+#: ../inc/common_functions_for_sumopricing.php:1208
+#: ../inc/common_functions_for_sumopricing.php:1248
+#: ../inc/common_functions_for_sumopricing.php:1320
+#: ../inc/common_functions_for_sumopricing.php:1359
+#: ../inc/common_functions_for_sumopricing.php:1481
+msgid "Exclude Categories"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:325
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:205
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:169
+#: ../inc/common_functions_for_sumopricing.php:1209
+msgid "All Tags"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:326
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:364
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:206
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:244
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:170
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:208
+#: ../inc/common_functions_for_sumopricing.php:1210
+#: ../inc/common_functions_for_sumopricing.php:1258
+#: ../inc/common_functions_for_sumopricing.php:1321
+#: ../inc/common_functions_for_sumopricing.php:1369
+#: ../inc/common_functions_for_sumopricing.php:1491
+msgid "Include Tags"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:327
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:375
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:207
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:255
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:171
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:219
+#: ../inc/common_functions_for_sumopricing.php:1211
+#: ../inc/common_functions_for_sumopricing.php:1268
+#: ../inc/common_functions_for_sumopricing.php:1322
+#: ../inc/common_functions_for_sumopricing.php:1379
+#: ../inc/common_functions_for_sumopricing.php:1501
+msgid "Exclude Tags"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:333
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:213
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:177
+#: ../inc/common_functions_for_sumopricing.php:1213
+msgid ""
+"By Default, discounts will be provided for All Products.If you want to "
+"restrict the discounts only to specific products/categories then, that can "
+"be done using the options provided"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:397
+msgid "Minimum Reward"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:398
+msgid "Maximum Reward"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:401
+msgid ""
+"When multiple rules are created and When there is a overlap for a user based "
+"on the rule priority discount will be applied"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:404
+msgid "Select Earn points based on"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:413
+msgid "Based on Total Points"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:414
+msgid "Based on Current Points"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:472
+msgid "Minimum Points"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:473
+msgid "Maximum Points"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:474
+#: ../inc/common_functions_for_sumopricing.php:1300
+#: ../inc/common_functions_for_sumopricing.php:1423
+#: ../inc/common_functions_for_sumopricing.php:1592
+msgid "Discount Type"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:475
+#: ../inc/common_functions_for_sumopricing.php:1300
+#: ../inc/common_functions_for_sumopricing.php:1423
+#: ../inc/common_functions_for_sumopricing.php:1592
+#: ../inc/common_functions_for_sumopricing.php:1700
+msgid "Value"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:476
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:519
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:642
+msgid "Delete Rule"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:486
+#: ../inc/common_functions_for_sumopricing.php:149
+msgid "Add Rule"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:508
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:631
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:307
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:299
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:328
+#: ../inc/common_functions_for_sumopricing.php:1515
+msgid "None"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:509
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:632
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:308
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:300
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:329
+#: ../inc/common_functions_for_sumopricing.php:252
+#: ../inc/common_functions_for_sumopricing.php:807
+#: ../inc/common_functions_for_sumopricing.php:869
+#: ../inc/common_functions_for_sumopricing.php:931
+#: ../inc/common_functions_for_sumopricing.php:1691
+#: ../inc/common_functions_for_sumopricing.php:2158
+#: ../inc/common_functions_for_sumopricing.php:2235
+msgid "% Discount"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:510
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:633
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:309
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:301
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:330
+#: ../inc/common_functions_for_sumopricing.php:253
+#: ../inc/common_functions_for_sumopricing.php:808
+#: ../inc/common_functions_for_sumopricing.php:870
+#: ../inc/common_functions_for_sumopricing.php:932
+#: ../inc/common_functions_for_sumopricing.php:1692
+#: ../inc/common_functions_for_sumopricing.php:2159
+#: ../inc/common_functions_for_sumopricing.php:2236
+msgid "Fixed Discount"
+msgstr ""
+
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:511
+#: ../admin/tabs/rewardpointpricing/class_rewardpointspricing_tab.php:634
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:310
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:302
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:331
+#: ../inc/common_functions_for_sumopricing.php:254
+#: ../inc/common_functions_for_sumopricing.php:809
+#: ../inc/common_functions_for_sumopricing.php:871
+#: ../inc/common_functions_for_sumopricing.php:1693
+#: ../inc/common_functions_for_sumopricing.php:2160
+#: ../inc/common_functions_for_sumopricing.php:2237
+msgid "Fixed Price"
+msgstr ""
+
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:41
+#: ../admin/tabs/categoryproductpricing/class_category_product_pricing_tab.php:51
+msgid "Category/Product Discounts"
+msgstr ""
+
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:41
+#: ../admin/tabs/carttotalpricing/class_cart_pricing_tab.php:51
+msgid "Cart Total Discounts"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:21
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:30
+msgid "Experimental"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:31
+msgid "Note : "
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:31
+msgid ""
+"The Features/Options present in this tab are for Experimental purposes. Some "
+"of the Features may not work."
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:36
+msgid "Quantity Discounts Table Settings"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:41
+msgid "Enable Quantity pricing table in single product page"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:48
+msgid "Disable"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:54
+msgid "Range label"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:58
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:59
+msgid "Range"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:63
+msgid "Price label"
+msgstr ""
+
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:67
+#: ../admin/tabs/advancedsettings/class_advanced_tab.php:68
+msgid "Price"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:31
+msgid "SUMO Memberships Discounts"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:82
+msgid "SUMO Memberships Discounts (Requires SUMO Memberships Plugin)"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:87
+msgid "Apply Membership Discount for Product with Sale Price"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:94
+msgid ""
+"If enabled, Membership Discounts will be applicable for products with sale "
+"price"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:280
+msgid ""
+"When user has purchased multiple Membership plans and discount has been "
+"configured for all membership plan, in this case based on the rule priority "
+"discount will be applied"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:305
+msgid "Discount Type :"
+msgstr ""
+
+#: ../admin/tabs/membershippricing/class_membershippricing_tab.php:314
+msgid "Value :"
+msgstr ""
+
+#: ../admin/tabs/messagesettings/class_message_tab.php:101
+msgid "Message"
+msgstr ""
+
+#: ../admin/tabs/messagesettings/class_message_tab.php:110
+msgid "Messages"
+msgstr ""
+
+#: ../admin/tabs/messagesettings/class_message_tab.php:115
+msgid "Cart Total Discounts Message Setting"
+msgstr ""
+
+#: ../admin/tabs/messagesettings/class_message_tab.php:120
+msgid "Discount Fees Label"
+msgstr ""
+
+#: ../admin/tabs/messagesettings/class_message_tab.php:124
+#: ../admin/tabs/messagesettings/class_message_tab.php:125
+msgid "Cart Discount"
+msgstr ""
+
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:34
+#: ../admin/tabs/quantitypricing/class_quantity_pricing_tab.php:44
+msgid "Quantity Discounts"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:22
+#: ../admin/tabs/help/class_help_tab.php:57
+msgid "Help"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:48
+msgid "Documentation"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:51
+msgid ""
+"The documentation file can be found inside the documentation folder  which "
+"you will find when you unzip the downloaded zip file."
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:60
+msgid ""
+"If you need Help, please <a href=\"http://support.fantasticplugins.com\" "
+"target=\"_blank\" > register and open a support ticket</a>"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:81
+msgid "Compatibility"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:85
+msgid "SUMO Memberships"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:86
+msgid "SUMO Reward Points"
+msgstr ""
+
+#: ../admin/tabs/help/class_help_tab.php:87
+msgid "The following Plugins are compatible with this Discounts Plugin."
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:27
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:46
+msgid "User Role Discounts"
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:51
+msgid "Apply User Role Discount for Product with Sale Price"
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:58
+msgid ""
+"If enabled, User Role Discounts will be applicable for products with sale "
+"price"
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:295
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:323
+msgid "Discount Type : "
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:306
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:336
+msgid "Value : "
+msgstr ""
+
+#: ../admin/tabs/userrolepricing/class_userrolepricing_tab.php:319
+#: ../inc/common_functions_for_sumopricing.php:1079
+msgid "Guest"
+msgstr ""
+
+#: ../inc/main_functions_for_sumodiscount.php:468
+msgid "Below "
+msgstr ""
+
+#: ../inc/main_functions_for_sumodiscount.php:826
+#: ../inc/main_functions_for_sumodiscount.php:847
+msgid "Sale!"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:139
+#: ../inc/common_functions_for_sumopricing.php:167
+msgid "Remove this Rule"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:167
+msgid "(Untitled)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:274
+#: ../inc/common_functions_for_sumopricing.php:822
+#: ../inc/common_functions_for_sumopricing.php:884
+#: ../inc/common_functions_for_sumopricing.php:941
+#: ../inc/common_functions_for_sumopricing.php:2179
+#: ../inc/common_functions_for_sumopricing.php:2254
+#: ../inc/common_functions_for_sumopricing.php:2320
+msgid "Delete Row"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:483
+#: ../inc/common_functions_for_sumopricing.php:514
+msgid "Select User Role"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:690
+#: ../inc/common_functions_for_sumopricing.php:721
+#: ../inc/common_functions_for_sumopricing.php:3000
+msgid "Select Category"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:751
+#: ../inc/common_functions_for_sumopricing.php:781
+#: ../inc/common_functions_for_sumopricing.php:3035
+msgid "Select Tag"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:826
+#: ../inc/common_functions_for_sumopricing.php:888
+#: ../inc/common_functions_for_sumopricing.php:945
+#: ../inc/common_functions_for_sumopricing.php:2186
+#: ../inc/common_functions_for_sumopricing.php:2261
+#: ../inc/common_functions_for_sumopricing.php:2327
+msgid "Add New Row"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1014
+#: ../inc/common_functions_for_sumopricing.php:1605
+msgid "Enable this Rule"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1016
+#: ../inc/common_functions_for_sumopricing.php:1607
+msgid ""
+"Enable this checkbox, if you want to consider this rule for providing "
+"Discounts"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1023
+#: ../inc/common_functions_for_sumopricing.php:1614
+msgid "Apply this Rule for Product with Sale Price"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1025
+#: ../inc/common_functions_for_sumopricing.php:1616
+msgid ""
+"When enabled, Products with Sale Price will also be considered for providing "
+"discounts"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1032
+#: ../inc/common_functions_for_sumopricing.php:1623
+msgid "Rule Name"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1033
+#: ../inc/common_functions_for_sumopricing.php:1624
+msgid "Rule Description"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1034
+#: ../inc/common_functions_for_sumopricing.php:1625
+msgid "Enter Name of this Rule"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1035
+#: ../inc/common_functions_for_sumopricing.php:1626
+msgid ""
+"Enter a Name which can denote the purpose of creating this rule <br> "
+"Example: Discounts for Logged In Users"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1042
+msgid "Row Priority"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1049
+msgid ""
+"Row priority will be used to decide what discount is applicable for the "
+"users when the user's Current quantity matches with more than one row in a "
+"Rule "
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1058
+msgid "Quantity Calculation is based on"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1060
+msgid "Quantity from Product Level"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1061
+msgid "Quantity from Variant Level"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1062
+msgid "Entire Cart Quantity"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1063
+msgid "Quantity from Each Category"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1065
+msgid "Based on the options provided, the discounts will be calculated"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1075
+msgid "User Filter"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1077
+#: ../inc/common_functions_for_sumopricing.php:1090
+msgid "All Users"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1078
+msgid "Logged In Users"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1081
+msgid ""
+"By Default, discounts will be provided for All Users.If you want to restrict "
+"the discounts only to Logged in Users/Guest that can be done using the "
+"options"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1088
+#: ../inc/common_functions_for_sumopricing.php:1201
+msgid "Applicable for"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1091
+#: ../inc/common_functions_for_sumopricing.php:1104
+msgid "Include User(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1092
+#: ../inc/common_functions_for_sumopricing.php:1113
+msgid "Exclude User(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1094
+#: ../inc/common_functions_for_sumopricing.php:1122
+msgid "Include User Role(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1095
+#: ../inc/common_functions_for_sumopricing.php:1132
+msgid "Exclude User Role(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1097
+msgid ""
+"By Default, discounts will be provided for All Users.If you want to restrict "
+"the discounts only to specific users then, that can be done using the "
+"options provided"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1105
+#: ../inc/common_functions_for_sumopricing.php:1114
+msgid "Select User(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1106
+msgid ""
+"Rule is valid only for the selected users. If the 'Include User(s)' is left "
+"empty then the rule is not valid for any of the users."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1115
+msgid ""
+"Rule is valid only for all users except for those users who are excluded. If "
+"the 'Exclude User(s)' is left empty then the rule is not valid for any of "
+"the Users."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1123
+#: ../inc/common_functions_for_sumopricing.php:1133
+msgid "Select User Role(s)"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1125
+msgid ""
+"Rule is valid only for the users of the selected user role(s). If the "
+"'Include User Role(s)' is left empty then the rule is not valid for any of "
+"the users."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1135
+msgid ""
+"Rule is valid only for all users of the selected user role(s) except for "
+"those users who belong to the user role(s) which are excluded. If the "
+"'Exclude User Role(s)' is left empty then the rule is not valid for any of "
+"the users."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1222
+msgid "Rule is applicable only the selected Products"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1231
+msgid ""
+"Rule is applicable for all products except for those products which are "
+"excluded"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1239
+#: ../inc/common_functions_for_sumopricing.php:1249
+#: ../inc/common_functions_for_sumopricing.php:1350
+#: ../inc/common_functions_for_sumopricing.php:1360
+#: ../inc/common_functions_for_sumopricing.php:1472
+#: ../inc/common_functions_for_sumopricing.php:1482
+msgid "Select Categories"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1241
+msgid "Rule is applicable for all products of the  selected categories"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1251
+msgid ""
+"Rule is applicable for all products except for those products which belongs "
+"to the Excluded categories"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1259
+#: ../inc/common_functions_for_sumopricing.php:1269
+#: ../inc/common_functions_for_sumopricing.php:1370
+#: ../inc/common_functions_for_sumopricing.php:1380
+#: ../inc/common_functions_for_sumopricing.php:1492
+#: ../inc/common_functions_for_sumopricing.php:1502
+msgid "Select Tags"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1261
+msgid "Rule is applicable for all products of the  selected tags"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1271
+msgid ""
+"Rule is applicable for all products except for those products which belongs "
+"to the Excluded tags"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1300
+msgid "Min Quantity"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1300
+msgid "Max Quantity"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1300
+msgid "Repeat"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1303
+msgid ""
+"The minimum quantity which the user needs to purchase in order to get a "
+"Discount"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1303
+msgid ""
+"The maximum quantity which the user should not exceed in order to get a "
+"Discount"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1303
+#: ../inc/common_functions_for_sumopricing.php:1595
+#: ../inc/common_functions_for_sumopricing.php:1695
+msgid "The type of discount which is to be applied can be chosen"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1303
+#: ../inc/common_functions_for_sumopricing.php:1595
+#: ../inc/common_functions_for_sumopricing.php:1704
+msgid "Enter Value for discount"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1314
+msgid "Applicable To"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1316
+msgid "Same Products"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1324
+msgid ""
+"By Default, discounts will be provided for Same Products.If you want to "
+"restrict the discounts only to specific products/categories then, that can "
+"be done using the options provided"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1333
+msgid "Discount is applicable only the selected Products"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1342
+msgid ""
+"Discount is applicable for all products except for those products which are "
+"excluded"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1352
+msgid "Discount is applicable for all products of the  selected categories"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1362
+msgid ""
+"Discount is applicable for all products except for those products which "
+"belongs to the Excluded categories"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1372
+msgid "Discount is applicable for all products of the  selected tags"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1382
+msgid ""
+"Discount is applicable for all products except for those products which "
+"belongs to the Excluded tags"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1389
+msgid "Apply Discount on"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1391
+msgid "Product With Highest Price"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1392
+msgid "Product With Lowest Price"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1394
+msgid ""
+"When discount is set to be applied on selected products and more than one of "
+"the selected product is in cart, based on the option selected the discount "
+"will be applied to Product With Highest/Lowest Price."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1423
+msgid "Buy"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1423
+msgid "Get"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1423
+msgid "Repeat Row"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1432
+msgid "Criteria "
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1436
+msgid "Any Product(s) is in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1437
+msgid "Any one of the Selected Product(s) is in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1438
+msgid "Any one of the Selected Product(s) is not in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1439
+msgid "Any Products have Categories in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1440
+msgid "Any one of the Product(s) of a Selected Category is in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1441
+msgid "Any one of the Product(s) of a Selected Category is not in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1442
+msgid "Any Products have Tags in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1443
+msgid "Any one of the Product(s) of a Selected Tag is in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1444
+msgid "Any one of the Product(s) of a Selected Tag is not in Cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1446
+msgid "Cart Discount will be applied based on option selected"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1455
+msgid ""
+"Discount will be applied when any one of the selected products is in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1464
+msgid ""
+"Discount will be applied when any one of the selected products is not in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1474
+msgid ""
+"Discount will be applied when any one of the Products of the selected "
+"category is in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1484
+msgid ""
+"Discount will be applied when any one of the Products of the selected "
+"category is not in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1494
+msgid ""
+"Discount will be applied when any one of the Products of the selected tag is "
+"in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1504
+msgid ""
+"Discount will be applied when any one of the Products of the selected tag is "
+"not in cart"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1511
+msgid "User Purchase History"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1516
+msgid "Minimum Number of Successful Orders"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1517
+msgid "Minimum Amount spent on Site"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1519
+#: ../inc/common_functions_for_sumopricing.php:1531
+msgid ""
+"Restrict Discounts to user based on their number of purchases or total "
+"amount spent in site"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1524
+msgid "User Purchase History Time"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1528
+msgid "From Beginning"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1529
+msgid "Specific Period"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1545
+msgid "From"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1545
+msgid "Till"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1548
+msgid "The Date from which the User's Purchase History recorded"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1548
+msgid "The Date till which the User's Purchase History recorded"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1554
+msgid "Number of orders Placed"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1558
+msgid ""
+"Rule is applicable for users who has placed more than the number of orders "
+"specified.<br>Note: Successful orders refers to orders which are in "
+"Processing / Completed Status"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1563
+msgid "Total Amount Spent "
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1567
+msgid ""
+"Rule is applicable for users who has purchased more than the amount "
+"specified in the rule."
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1592
+msgid "Min Cart Total"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1592
+msgid "Max Cart Total"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1595
+msgid "The minimum cart total which the user needs in order to get a Discount"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1595
+msgid ""
+"The maximum cart total which the user should not exceed in order to get a "
+"Discount"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1678
+msgid "Rule is valid on the following days "
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:1687
+msgid "Discount Type "
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:2067
+#: ../inc/common_functions_for_sumopricing.php:2093
+#: ../inc/common_functions_for_sumopricing.php:2920
+#: ../inc/common_functions_for_sumopricing.php:2943
+#: ../inc/common_functions_for_sumopricing.php:3174
+#: ../inc/common_functions_for_sumopricing.php:3197
+#: ../inc/common_functions_for_sumopricing.php:3311
+#: ../inc/common_functions_for_sumopricing.php:3315
+msgid "Search Products"
+msgstr ""
+
+#: ../inc/common_functions_for_sumopricing.php:2804
+#: ../inc/common_functions_for_sumopricing.php:2820
+#: ../inc/common_functions_for_sumopricing.php:3086
+#: ../inc/common_functions_for_sumopricing.php:3102
+#: ../inc/common_functions_for_sumopricing.php:3323
+#: ../inc/common_functions_for_sumopricing.php:3327
+msgid "Search Users"
+msgstr ""

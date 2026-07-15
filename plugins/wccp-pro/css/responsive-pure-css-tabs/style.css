@@ -1,0 +1,183 @@
+.tab_container h1 {
+	color: #ccc;
+	text-align: center;
+}
+
+.tab_container a {
+  text-decoration: none;
+  outline: none;
+}
+
+/*Fun begins*/
+.tab_container {
+	margin: 0 auto;
+	padding-top: 0px;
+	/*position: relative;*/
+}
+.tab_container {    
+    background-image: -webkit-linear-gradient(top, #f0f0f0, #ffffff 70px, #ffffff00 19%, #ffffff00 100%);
+}
+
+.tab_container section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+
+.tab_container_radio_tabs{
+  clear: both;
+  padding-top: 10px;
+  display: none !important;
+}
+
+.tab_container_label_tabs {
+  font-weight: 700;
+  font-size: 14px;
+  display: block;
+  float: left;
+  padding: 1.6em 2.4%;
+  color: #757575;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  
+  /*background-image: -webkit-linear-gradient(top, #f0f0f0, #f0f0f0, transparent 11%, transparent 100%);*/
+  
+}
+
+
+#tab1:checked ~ div > #content1,
+#tab2:checked ~ div > #content2,
+#tab3:checked ~ div > #content3,
+#tab4:checked ~ div > #content4,
+#tab5:checked ~ div > #content5,
+#tab6:checked ~ div > #content6,
+#tab7:checked ~ div > #content7,
+#tab8:checked ~ div > #content8,
+#tab9:checked ~ div > #content9
+{
+  display: block;
+  padding: 20px;
+  background: #fff;
+  color: #999;
+}
+
+#tab1:checked ~ div > #label1,
+#tab2:checked ~ div > #label2,
+#tab3:checked ~ div > #label3,
+#tab4:checked ~ div > #label4,
+#tab5:checked ~ div > #label5,
+#tab6:checked ~ div > #label6,
+#tab7:checked ~ div > #label7,
+#tab8:checked ~ div > #label8,
+#tab9:checked ~ div > #label9
+{
+  background: #fff;
+  box-shadow: inset 0 3px #0CE;
+}
+
+#tab1:checked ~ div > #label1 .fa,
+#tab2:checked ~ div > #label2 .fa,
+#tab3:checked ~ div > #label3 .fa,
+#tab4:checked ~ div > #label4 .fa,
+#tab5:checked ~ div > #label5 .fa,
+#tab6:checked ~ div > #label6 .fa,
+#tab7:checked ~ div > #label7 .fa,
+#tab8:checked ~ div > #label8 .fa,
+#tab9:checked ~ div > #label9 .fa
+{
+  color: #0CE;
+}
+
+.tab_container .tab-content p,
+.tab_container .tab-content h3,
+.tab_container .tab-content span
+{
+  -webkit-animation: fadeInScale 0.7s ease-in-out;
+  -moz-animation: fadeInScale 0.7s ease-in-out;
+  animation: fadeInScale 0.7s ease-in-out;
+}
+.tab_container .tab-content h3  {
+  text-align: center;
+}
+/*
+.tab_container [id^="tab"]:checked + label {
+  background: #fff;
+  box-shadow: inset 0 3px #0CE;
+}
+
+.tab_container [id^="tab"]:checked + label .fa {
+  color: #0CE;
+}
+*/
+.contenttabs label .fa {
+  font-size: 1.3em;
+  margin: 0 0.4em 0 0;
+}
+
+/*Media query*/
+@media only screen and (max-width: 1930px) {
+  /* .contenttabs{ */
+	  /* width:10%; */
+	  /* float:left; */
+  /* } */
+  /* .tab_container { */
+    /* width: 80%; */
+	/* float: left; */
+  /* } */
+  .contenttabs label span {
+    font-size: 14px;
+	display: none;
+  }
+  .contenttabs label .fa {
+    font-size: 14px;
+	/*display: none;*/
+  }
+  /* .tab_container_radio_tabs:checked ~ div > label span{ */
+  /* display: block; */
+	  /* } */
+	#tab1:checked ~ div > #label1 span,
+	#tab2:checked ~ div > #label2 span,
+	#tab3:checked ~ div > #label3 span,
+	#tab4:checked ~ div > #label4 span,
+	#tab5:checked ~ div > #label5 span,
+	#tab6:checked ~ div > #label6 span,
+	#tab7:checked ~ div > #label7 span,
+	#tab8:checked ~ div > #label8 span,
+	#tab9:checked ~ div > #label9 span
+	{
+	  display: block;
+	}
+}
+
+@media only screen and (max-width: 1768px) {
+  .contenttabs label span {
+    display: none;
+  }
+
+  .contenttabs label .fa {
+    font-size: 16px;
+  }
+
+  .tab_container [id^="tab"]:checked + label span{
+  display: none;
+  }
+  .tab_container_label_tabs {
+  
+	}
+	
+
+}
+
+/*Content Animation*/
+@keyframes fadeInScale {
+  0% {
+  	transform: scale(0.9);
+  	opacity: 0;
+  }
+  
+  100% {
+  	transform: scale(1);
+  	opacity: 1;
+  }
+}

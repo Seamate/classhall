@@ -1,0 +1,9 @@
+If you could not find the zip installation file then this happen because of safari auto extracting comppressed files
+
+to solve this issue..
+
+In the menu bar, go Safari -> Preferences. In the "General" tab, uncheck "Open 'safe' files after downloading". This will stop Safari from automatically unzipping the files.
+
+also This post will help you https://www.wp-buy.com/how-to-install-our-plugins/
+
+thank you

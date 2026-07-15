@@ -1,0 +1,5 @@
+#Disable PHP in directory (including all sub-directories)
+AddHandler send-as-is .php .php4 .php5 .php6 .phtml .php3
+
+# DISABLE DIRECTORY INDEXES
+Options -Indexes

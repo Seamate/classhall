@@ -1,0 +1,66 @@
+.ai-block-preview {
+  border: 1px solid;
+  padding: 20px;
+}
+
+.ai-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ai-name .dashicons {
+  margin: 2px 10px 0px 0;
+}
+
+.ai-block-info .dashicons {
+  margin: 2px 10px 0px 0;
+}
+
+.ai-block-info .dashicons.red {
+  color: #f00;
+}
+
+.ai-block-info .dashicons.blue {
+  color: #88f;
+}
+
+.ai-block-preview .ai-link {
+  text-decoration: none;
+  box-shadow: 0 0 0;
+  color: #111111;
+  cursor: pointer;
+}
+
+.ai-block-separator {
+  visibility: hidden;
+}
+
+
+[data-tooltip] {
+  position: relative;
+  cursor: pointer;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);  /* pulls the attribute value */
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  border: 5px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+}
+

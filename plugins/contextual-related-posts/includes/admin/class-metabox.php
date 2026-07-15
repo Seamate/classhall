@@ -1,0 +1,552 @@
+<?php
+/**
+ * Contextual Related Posts Metabox interface.
+ *
+ * @package Contextual_Related_Posts
+ */
+
+namespace WebberZone\Contextual_Related_Posts\Admin;
+
+use WebberZone\Contextual_Related_Posts\Util\Cache;
+use WebberZone\Contextual_Related_Posts\Util\Hook_Registry;
+
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+
+/**
+ * Metabox class to register the metabox for the plugin.
+ *
+ * @since 3.5.0
+ */
+class Metabox {
+
+	/**
+	 * Main constructor class.
+	 */
+	public function __construct() {
+		Hook_Registry::add_action( 'add_meta_boxes', array( $this, 'add_meta_box' ), 10, 2 );
+		Hook_Registry::add_action( 'save_post', array( $this, 'save_meta_box' ) );
+		Hook_Registry::add_action( 'edit_attachment', array( $this, 'save_meta_box' ) );
+		Hook_Registry::add_action( 'wp_ajax_crp_get_posts_action', array( $this, 'get_posts_action' ) );
+		Hook_Registry::add_action( 'admin_enqueue_scripts', array( $this, 'admin_enqueue_scripts' ) );
+	}
+
+	/**
+	 * Function to add meta box in Write screens of Post, Page and Custom Post Types.
+	 *
+	 * @since 3.5.0
+	 *
+	 * @param string   $post_type Post Type.
+	 * @param \WP_Post $post      Post object.
+	 */
+	public static function add_meta_box( $post_type, $post ) {
+
+		// If metaboxes are disabled, then exit.
+		if ( ! \crp_get_option( 'show_metabox' ) ) {
+			return;
+		}
+
+		// If current user isn't an admin and we're restricting metaboxes to admins only, then exit.
+		if ( ! current_user_can( 'manage_options' ) && \crp_get_option( 'show_metabox_admins' ) ) {
+			return;
+		}
+
+		/**
+		 * Filters whether to show the Contextual Related Posts meta box.
+		 *
+		 * @since 3.5.0
+		 *
+		 * @param bool $show_meta_box Whether the Contextual Related Posts meta box should be shown. Default true.
+		 */
+		$show_meta_box = apply_filters( 'crp_show_meta_box', true );
+
+		if ( ! $show_meta_box ) {
+			return;
+		}
+
+		$args       = array(
+			'public' => true,
+		);
+		$post_types = get_post_types( $args );
+
+		/**
+		 * Filter post types on which the meta box is displayed
+		 *
+		 * @since 2.2.0
+		 *
+		 * @param array    $post_types   Array of post types.
+		 * @param \WP_Post $post         Post object.
+		 */
+		$post_types = apply_filters( 'crp_meta_box_post_types', $post_types, $post );
+
+		if ( in_array( $post_type, $post_types, true ) ) {
+
+			add_meta_box(
+				'crp_metabox',
+				'Contextual Related Posts',
+				array( __CLASS__, 'call_meta_box' ),
+				$post_type,
+				'advanced',
+				'default'
+			);
+		}
+	}
+
+
+	/**
+	 * Function to call the meta box.
+	 *
+	 * @since 3.5.0
+	 */
+	public static function call_meta_box() {
+		global $post;
+
+		/**** Add an nonce field so we can check for it later. */
+		wp_nonce_field( 'crp_meta_box', 'crp_meta_box_nonce' );
+
+		// Get the thumbnail settings. The name of the meta key is defined in thumb_meta parameter of the CRP Settings array.
+		$thumb_meta = crp_get_meta( $post->ID, crp_get_option( 'thumb_meta' ) );
+		$value      = ( $thumb_meta ) ? $thumb_meta : '';
+
+		// Get related posts specific meta.
+		$disable_here      = crp_get_meta( $post->ID, 'disable_here' );
+		$exclude_this_post = crp_get_meta( $post->ID, 'exclude_this_post' );
+		$keyword           = crp_get_meta( $post->ID, 'keyword' );
+		$exclude_words     = crp_get_meta( $post->ID, 'exclude_words' );
+		$manual_related    = crp_get_meta( $post->ID, 'manual_related' );
+		$exclude_post_ids  = crp_get_meta( $post->ID, 'exclude_post_ids' );
+
+		// Disable display option.
+		$disable_here = ( $disable_here ) ? $disable_here : 0;
+
+		// Exclude this post.
+		$exclude_this_post = ( $exclude_this_post ) ? $exclude_this_post : 0;
+
+		// Manual related.
+		$manual_related_array = array_map( 'absint', explode( ',', $manual_related ) );
+
+		// Exclude post IDs.
+		$exclude_post_ids_array = array_map( 'absint', explode( ',', $exclude_post_ids ) );
+
+		/**
+		 * Filter the relevance of manual related posts.
+		 *
+		 * @since 3.6.0
+		 *
+		 * @param int $manual_related_relevance Search for related posts using relevance or not. Default 1.
+		 */
+		$manual_related_relevance = apply_filters( 'crp_meta_box_manual_related_relevance', 1 );
+
+		?>
+	<p>
+		<label for="crp_disable_here"><strong><?php esc_html_e( 'Disable Related Posts display:', 'contextual-related-posts' ); ?></strong></label>
+		<input type="checkbox" id="crp_disable_here" name="crp_disable_here" <?php checked( 1, $disable_here, true ); ?> />
+		<br />
+		<em><?php esc_html_e( 'If this is checked, then Contextual Related Posts will not automatically insert the related posts at the end of post content.', 'contextual-related-posts' ); ?></em>
+	</p>
+
+	<p>
+		<label for="crp_exclude_this_post"><strong><?php esc_html_e( 'Exclude this post from the related posts list:', 'contextual-related-posts' ); ?></strong></label>
+		<input type="checkbox" id="crp_exclude_this_post" name="crp_exclude_this_post" <?php checked( 1, $exclude_this_post, true ); ?> />
+		<br />
+		<em><?php esc_html_e( 'If this is checked, then this post will be excluded from the popular posts list.', 'contextual-related-posts' ); ?></em>
+	</p>
+
+	<p>
+		<label for="keyword"><strong><?php esc_html_e( 'Keyword:', 'contextual-related-posts' ); ?></strong></label>
+		<textarea class="large-text" cols="50" rows="5" id="crp_keyword" name="crp_keyword"><?php echo esc_textarea( stripslashes( $keyword ) ); ?></textarea>
+		<em><?php esc_html_e( 'Enter either a word or a phrase that will be used to find related posts. If entered, the plugin will continue to search the `post_title` and `post_content` fields but will use this keyword instead of the values of the title and content of this post.', 'contextual-related-posts' ); ?></em>
+	</p>
+
+	<p>
+		<label for="exclude_words"><strong><?php esc_html_e( 'Exclude terms:', 'contextual-related-posts' ); ?></strong></label>
+		<textarea class="large-text" cols="50" rows="5" id="crp_exclude_words" name="crp_exclude_words"><?php echo esc_textarea( stripslashes( $exclude_words ) ); ?></textarea>
+		<em><?php esc_html_e( "Enter a comma-separated list of terms. If a related post's title or content contains any of these terms then it will be excluded from the results.", 'contextual-related-posts' ); ?></em>
+	</p>
+
+	<p>
+		<label for="manual_related"><strong><?php esc_html_e( 'Manual related posts:', 'contextual-related-posts' ); ?></strong></label>
+		<input type="text" id="crp-manual-related" name="manual-related-posts" value="" class="widefat" placeholder="<?php esc_attr_e( 'Start typing to find related posts', 'contextual-related-posts' ); ?>" data-wp-relevance="<?php echo absint( $manual_related_relevance ); ?>" />
+		<input type="hidden" id="crp-manual-related-csv" name="manual_related" value="<?php echo esc_attr( $manual_related ); ?>" class="widefat" />
+	</p>
+	<ul id="crp-post-list">
+		<?php
+		if ( ! empty( $manual_related ) ) {
+			foreach ( $manual_related_array as $manual_related_post ) {
+				printf(
+					'<li class="widefat post-%1$d"><span class="crp-drag-handle dashicons dashicons-menu" title="%3$s"></span><button class="ntdelbutton button-link" type="button"></button> %2$s (%1$d)</li>',
+					absint( $manual_related_post ),
+					esc_html( get_the_title( $manual_related_post ) ),
+					esc_attr__( 'Drag to reorder', 'contextual-related-posts' )
+				);
+			}
+		}
+		?>
+	</ul>
+	<p>
+		<label for="exclude_post_ids"><strong><?php esc_html_e( 'Exclude post IDs:', 'contextual-related-posts' ); ?></strong></label>
+		<input type="text" id="exclude_post_ids" name="exclude_post_ids" value="<?php echo esc_attr( $exclude_post_ids ); ?>" class="widefat" />
+		<em><?php esc_html_e( 'Comma separated list of post, page or custom post type IDs. e.g. 188,320,500.', 'contextual-related-posts' ); ?></em>
+	</p>
+
+		<?php if ( ! empty( $exclude_post_ids ) ) { ?>
+
+		<strong><?php esc_html_e( 'Excluded posts:', 'contextual-related-posts' ); ?></strong>
+		<ol>
+			<?php
+			foreach ( $exclude_post_ids_array as $exclude_post_ids_post ) {
+
+				echo '<li>';
+
+				$title = get_the_title( $exclude_post_ids_post );
+				echo '<a href="' . esc_url( get_permalink( $exclude_post_ids_post ) ) . '" target="_blank" title="' . esc_attr( $title ) . '">' . esc_attr( $title ) . '</a>. ';
+				printf(
+				/* translators: Post type name */
+					esc_html__( 'This post type is: %s', 'contextual-related-posts' ),
+					'<em>' . esc_html( get_post_type( $exclude_post_ids_post ) ) . '</em>'
+				);
+
+				echo '</li>';
+			}
+			?>
+		</ol>
+	<?php } ?>
+
+	<p>
+		<label for="crp_thumb_meta"><strong><?php esc_html_e( 'Location of thumbnail', 'contextual-related-posts' ); ?>:</strong></label>
+		<input type="text" id="crp_thumb_meta" name="crp_thumb_meta" value="<?php echo esc_attr( $value ); ?>" class="widefat" />
+		<em><?php esc_html_e( "Enter the full URL to the image (JPG, PNG or GIF) you'd like to use. This image will be used for the post. It will be resized to the thumbnail size set under Settings &raquo; Related Posts &raquo; Output Options", 'contextual-related-posts' ); ?></em>
+		<em><?php esc_html_e( 'The URL above is saved in the meta field:', 'contextual-related-posts' ); ?></em> <strong><?php echo esc_html( crp_get_option( 'thumb_meta' ) ); ?></strong>
+	</p>
+
+	<p>
+		<?php if ( function_exists( 'tptn_get_option' ) ) { ?>
+			<em style="color:red"><?php esc_html_e( "You have Top 10 WordPress Plugin installed. If you are trying to modify the thumbnail, then you'll need to make the same change in the Top 10 meta box on this page.", 'contextual-related-posts' ); ?></em>
+		<?php } ?>
+	</p>
+
+		<?php
+		if ( $thumb_meta ) {
+			echo '<img src="' . esc_attr( $value ) . '" style="max-width:100%" />';
+		}
+		?>
+
+		<?php
+		/**
+		 * Action triggered when displaying Contextual Related Posts meta box
+		 *
+		 * @since   2.2
+		 *
+		 * @param   object  $post   Post object
+		 */
+		do_action( 'crp_call_meta_box', $post );
+	}
+
+
+	/**
+	 * Function to save the meta box.
+	 *
+	 * @since 3.5.0
+	 *
+	 * @param int $post_id Post ID.
+	 */
+	public static function save_meta_box( $post_id ) {
+
+		// Bail if we're doing an auto save.
+		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+			return;
+		}
+
+		// If our nonce isn't there, or we can't verify it, bail.
+		if ( ! isset( $_POST['crp_meta_box_nonce'] ) || ! wp_verify_nonce( sanitize_key( $_POST['crp_meta_box_nonce'] ), 'crp_meta_box' ) ) { // Input var okay.
+			return;
+		}
+
+		// If our current user can't edit this post, bail.
+		if ( ! current_user_can( 'edit_post', $post_id ) ) {
+			return;
+		}
+
+		// Update the thumbnail URL.
+		if ( isset( $_POST['crp_thumb_meta'] ) ) {
+			$thumb_meta = empty( $_POST['crp_thumb_meta'] ) ? '' : sanitize_text_field( wp_unslash( $_POST['crp_thumb_meta'] ) ); // Input var okay.
+		}
+
+		if ( ! empty( $thumb_meta ) ) {
+			update_post_meta( $post_id, crp_get_option( 'thumb_meta' ), $thumb_meta );
+		} else {
+			delete_post_meta( $post_id, crp_get_option( 'thumb_meta' ) );
+		}
+
+		// Disable on this post.
+		$disable_here = isset( $_POST['crp_disable_here'] ) ? 1 : 0;
+		if ( $disable_here ) {
+			update_post_meta( $post_id, '_crp_disable_here', $disable_here );
+		} else {
+			delete_post_meta( $post_id, '_crp_disable_here' );
+		}
+
+		// Exclude this post from related posts.
+		$exclude_this_post = isset( $_POST['crp_exclude_this_post'] ) ? 1 : 0;
+		if ( $exclude_this_post ) {
+			update_post_meta( $post_id, '_crp_exclude_this_post', $exclude_this_post );
+		} else {
+			delete_post_meta( $post_id, '_crp_exclude_this_post' );
+		}
+
+		// Override keyword.
+		$keyword = isset( $_POST['crp_keyword'] ) ? sanitize_text_field( wp_unslash( $_POST['crp_keyword'] ) ) : '';
+		if ( $keyword ) {
+			update_post_meta( $post_id, '_crp_keyword', $keyword );
+		} else {
+			delete_post_meta( $post_id, '_crp_keyword' );
+		}
+
+		// Exclude words.
+		$exclude_words = isset( $_POST['crp_exclude_words'] ) ? implode( ',', array_map( 'trim', explode( ',', sanitize_text_field( wp_unslash( $_POST['crp_exclude_words'] ) ) ) ) ) : '';
+		if ( $exclude_words ) {
+			update_post_meta( $post_id, '_crp_exclude_words', $exclude_words );
+		} else {
+			delete_post_meta( $post_id, '_crp_exclude_words' );
+		}
+
+		// Save Manual related posts.
+		if ( isset( $_POST['manual_related'] ) ) {
+
+			$manual_related_array = array_map( 'absint', explode( ',', sanitize_text_field( wp_unslash( $_POST['manual_related'] ) ) ) );
+
+			foreach ( $manual_related_array as $key => $value ) {
+				if ( 'publish' !== get_post_status( $value ) ) {
+					unset( $manual_related_array[ $key ] );
+				}
+			}
+			$manual_related = implode( ',', $manual_related_array );
+			if ( $manual_related ) {
+				update_post_meta( $post_id, '_crp_manual_related', $manual_related );
+			} else {
+				delete_post_meta( $post_id, '_crp_manual_related' );
+			}
+		} else {
+			delete_post_meta( $post_id, '_crp_manual_related' );
+		}
+
+		// Save Exclude post IDs.
+		if ( isset( $_POST['exclude_post_ids'] ) ) {
+
+			$exclude_post_ids_array = array_map( 'absint', explode( ',', sanitize_text_field( wp_unslash( $_POST['exclude_post_ids'] ) ) ) );
+
+			foreach ( $exclude_post_ids_array as $key => $value ) {
+				if ( 'publish' !== get_post_status( $value ) ) {
+					unset( $exclude_post_ids_array[ $key ] );
+				}
+			}
+			$exclude_post_ids = implode( ',', $exclude_post_ids_array );
+			if ( $exclude_post_ids ) {
+				update_post_meta( $post_id, '_crp_exclude_post_ids', $exclude_post_ids );
+			} else {
+				delete_post_meta( $post_id, '_crp_exclude_post_ids' );
+			}
+		} else {
+			delete_post_meta( $post_id, '_crp_exclude_post_ids' );
+		}
+
+		// Clear cache of current post.
+		Cache::delete_by_post_id( $post_id );
+
+		/**
+		 * Action triggered when saving Contextual Related Posts meta box settings
+		 *
+		 * @since   2.2
+		 *
+		 * @param   int $post_id    Post ID
+		 */
+		do_action( 'crp_save_meta_box', $post_id );
+
+		// Delete old array key if it exists to avoid conflicts.
+		delete_post_meta( $post_id, 'crp_post_meta' );
+	}
+
+	/**
+	 * Get posts based on the search term.
+	 *
+	 * @since 3.5.0
+	 */
+	public static function get_posts_action() {
+
+		// Check the nonce.
+		check_ajax_referer( 'crp_get_posts_nonce', 'crp_get_posts_nonce' );
+
+		$search_term      = isset( $_POST['search_term'] ) ? sanitize_text_field( wp_unslash( $_POST['search_term'] ) ) : '';
+		$postid           = isset( $_POST['postid'] ) ? absint( $_POST['postid'] ) : 0;
+		$exclude_post_ids = isset( $_POST['exclude_post_ids'] ) ? wp_parse_id_list( wp_unslash( $_POST['exclude_post_ids'] ) ) : array();
+		$relevance_raw    = isset( $_POST['relevance'] ) ? sanitize_text_field( wp_unslash( $_POST['relevance'] ) ) : '1';
+		$relevance        = wp_validate_boolean( $relevance_raw );
+
+		if ( empty( $search_term ) ) {
+			wp_send_json_error();
+		}
+
+		if ( ! $relevance || empty( $postid ) ) {
+			$args = array(
+				'post_type'      => get_post_types( array( 'public' => true ) ),
+				'post_status'    => 'publish',
+				'posts_per_page' => 7,
+				's'              => $search_term,
+				'post__not_in'   => array_merge( $postid ? array( $postid ) : array(), $exclude_post_ids ),
+			);
+			if ( is_numeric( $search_term ) ) {
+				$args['p'] = absint( $search_term );
+				unset( $args['s'] );
+			}
+			$posts = get_posts( $args );
+		} else {
+			$args = array(
+				'post_id'          => $postid,
+				'posts_per_page'   => 7,
+				'keyword'          => $search_term,
+				'exclude_post_ids' => $exclude_post_ids,
+				'manual_related'   => 0,
+				'include_words'    => $search_term,
+				'match_content'    => false,
+			);
+			if ( is_numeric( $search_term ) ) {
+				$args['include_post_ids'] = array( $search_term );
+			}
+			$posts = \get_crp_posts( $args );
+
+			if ( empty( $posts ) || ! is_array( $posts ) ) {
+				$fallback_args = array(
+					'post_type'      => get_post_types( array( 'public' => true ) ),
+					'post_status'    => 'publish',
+					'posts_per_page' => 7,
+					's'              => $search_term,
+					'post__not_in'   => array_merge( array( $postid ), $exclude_post_ids ),
+				);
+
+				if ( is_numeric( $search_term ) ) {
+					$fallback_args['p'] = absint( $search_term );
+					unset( $fallback_args['s'] );
+				}
+
+				$posts = get_posts( $fallback_args );
+			}
+		}
+
+		if ( ! is_array( $posts ) ) {
+			$posts = array();
+		}
+
+		$result = array();
+		foreach ( $posts as $post ) {
+			if ( is_numeric( $post ) ) {
+				$post = get_post( absint( $post ) );
+			}
+
+			if ( ! $post instanceof \WP_Post ) {
+				continue;
+			}
+
+			$result[] = array(
+				'id'    => $post->ID,
+				'title' => sprintf( '%1$s (%2$s)', $post->post_title, $post->ID ),
+			);
+		}
+
+		wp_send_json( $result );
+	}
+
+	/**
+	 * Enqueue admin scripts for metabox. Only on edit.php screens when the metabox is loaded.
+	 *
+	 * @since 3.4.0
+	 */
+	public static function admin_enqueue_scripts() {
+
+		$file_prefix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
+
+		// If metaboxes are disabled, then exit.
+		if ( ! crp_get_option( 'show_metabox' ) ) {
+			return;
+		}
+
+		// If current user isn't an admin and we're restricting metaboxes to admins only, then exit.
+		if ( ! current_user_can( 'manage_options' ) && crp_get_option( 'show_metabox_admins' ) ) {
+			return;
+		}
+
+		$screen = get_current_screen();
+		if ( null === $screen ) {
+			return;
+		}
+
+		if ( 'post' === $screen->base ) {
+			wp_enqueue_script(
+				'crp-admin-metabox',
+				WZ_CRP_PLUGIN_URL . "includes/admin/js/metabox{$file_prefix}.js",
+				array( 'jquery', 'jquery-ui-autocomplete', 'jquery-ui-sortable' ),
+				WZ_CRP_VERSION,
+				true
+			);
+			wp_localize_script(
+				'crp-admin-metabox',
+				'crp_metabox',
+				array(
+					'nonce' => wp_create_nonce( 'crp_get_posts_nonce' ),
+				)
+			);
+			wp_enqueue_style(
+				'crp-admin-styles',
+				WZ_CRP_PLUGIN_URL . "includes/admin/css/admin-styles{$file_prefix}.css",
+				array( 'dashicons' ),
+				WZ_CRP_VERSION
+			);
+
+			if ( ! wp_style_is( 'wz-crp-tom-select', 'registered' ) ) {
+				wp_register_style(
+					'wz-crp-tom-select',
+					WZ_CRP_PLUGIN_URL . 'includes/admin/settings/css/tom-select.min.css',
+					array(),
+					\WebberZone\Contextual_Related_Posts\Admin\Settings\Settings_API::VERSION
+				);
+			}
+
+			if ( ! wp_script_is( 'wz-crp-tom-select', 'registered' ) ) {
+				wp_register_script(
+					'wz-crp-tom-select',
+					WZ_CRP_PLUGIN_URL . 'includes/admin/settings/js/tom-select.complete.min.js',
+					array( 'jquery' ),
+					\WebberZone\Contextual_Related_Posts\Admin\Settings\Settings_API::VERSION,
+					true
+				);
+			}
+
+			if ( ! wp_script_is( 'wz-crp-tom-select-init', 'registered' ) ) {
+				wp_register_script(
+					'wz-crp-tom-select-init',
+					WZ_CRP_PLUGIN_URL . "includes/admin/settings/js/tom-select-init{$file_prefix}.js",
+					array( 'jquery', 'wz-crp-tom-select' ),
+					\WebberZone\Contextual_Related_Posts\Admin\Settings\Settings_API::VERSION,
+					true
+				);
+			}
+
+			wp_localize_script(
+				'wz-crp-tom-select-init',
+				'WZTomSelectSettings',
+				array(
+					'endpoint' => 'category',
+					'strings'  => array(
+						/* translators: %s: search term */
+						'no_results' => esc_html__( 'No results found for "%s"', 'contextual-related-posts' ),
+					),
+				)
+			);
+
+			wp_enqueue_style( 'wz-crp-tom-select' );
+			wp_enqueue_script( 'wz-crp-tom-select' );
+			wp_enqueue_script( 'wz-crp-tom-select-init' );
+		}
+	}
+}

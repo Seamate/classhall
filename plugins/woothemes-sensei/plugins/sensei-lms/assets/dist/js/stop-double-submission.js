@@ -1,0 +1,1 @@
+/******/document.querySelectorAll(".sensei-stop-double-submission").forEach((e=>{let t=0;e.addEventListener("click",(e=>{t>0?e.preventDefault():(t++,setTimeout((()=>t=0),2e3))}))}));
