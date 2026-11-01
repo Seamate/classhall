@@ -48,6 +48,38 @@ if ( ! is_readable( $classhall_cache_file ) || filemtime( $classhall_cache_file 
     return;
 }
 
+$classhall_cache_mtime  = filemtime( $classhall_cache_file );
+$classhall_dependencies = array(
+    __DIR__ . '/themes/kleo-child/functions.php',
+    __DIR__ . '/themes/kleo-child/front-page.php',
+    __DIR__ . '/themes/kleo-child/template-classhall-home.php',
+    __DIR__ . '/themes/kleo-child/template-parts/classhall-modern-home.php',
+    __DIR__ . '/themes/kleo-child/template-parts/classhall-summer-banner.php',
+    __DIR__ . '/themes/kleo-child/classhall-home.css',
+    __DIR__ . '/themes/kleo-child/classhall-home.min.css',
+    __DIR__ . '/themes/kleo-child/style.css',
+    __DIR__ . '/themes/kleo-child/style.min.css',
+);
+
+foreach ( $classhall_dependencies as $classhall_dependency ) {
+    if ( is_readable( $classhall_dependency ) && filemtime( $classhall_dependency ) > $classhall_cache_mtime ) {
+        return;
+    }
+}
+
+$classhall_cache_sample = file_get_contents( $classhall_cache_file, false, null, 0, 8192 );
+
+if (
+    false !== $classhall_cache_sample
+    && (
+        false !== stripos( $classhall_cache_sample, 'There has been a critical error' )
+        || false !== stripos( $classhall_cache_sample, 'wp-die-message' )
+    )
+) {
+    @unlink( $classhall_cache_file ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged, WordPress.WP.AlternativeFunctions.unlink_unlink
+    return;
+}
+
 header( 'Content-Type: text/html; charset=UTF-8' );
 header( 'Cache-Control: public, max-age=300, stale-while-revalidate=1800' );
 header( 'X-Classhall-Cache: HIT' );

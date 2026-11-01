@@ -142,7 +142,7 @@ do_action( 'sensei_single_quiz_content_inside_before', get_the_ID() );
 		?>
 
 		<div class="classhall-quiz-preview sensei-message tick">
-			<?php esc_html_e( 'Here are a few sample questions from this quiz. Sign up for the course to answer the full quiz and track your score.', 'kleo-child' ); ?>
+			<?php esc_html_e( 'Here are a few sample questions from this quiz. Sign up for the subject to answer the full quiz and track your score.', 'kleo-child' ); ?>
 		</div>
 
 		<div id="sensei-quiz-form" class="classhall-quiz-preview-form">

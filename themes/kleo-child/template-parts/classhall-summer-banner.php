@@ -1,26 +1,36 @@
 <?php
-$classhall_summer_page_url    = home_url( '/summer-classes/' );
-$classhall_summer_image_url   = 'https://classhall.com/wp-content/uploads/2026/07/Classhall-Summer-Classes-1.jpg';
+$home_lessons_page = ! empty( $args['home_lessons_page'] );
+if ( empty( $GLOBALS['classhall_allow_summer_banner'] ) && ! $home_lessons_page ) {
+    return;
+}
 ?>
-<section class="ch-summer-banner" aria-labelledby="classhall-summer-banner-title">
-	<div class="ch-shell">
-		<a class="ch-summer-banner-card" href="<?php echo esc_url( $classhall_summer_page_url ); ?>" aria-label="<?php esc_attr_e( 'View Classhall Summer Classes details', 'kleo-child' ); ?>">
-			<span class="ch-summer-banner-copy">
-				<span class="ch-summer-kicker"><?php esc_html_e( 'Live Summer Classes via Google Meet / Zoom', 'kleo-child' ); ?></span>
-				<strong id="classhall-summer-banner-title"><?php esc_html_e( 'English, Mathematics, Coding & AI', 'kleo-child' ); ?></strong>
-				<span class="ch-summer-meta"><?php esc_html_e( '27 July - 28 August 2026 | Monday to Friday | 10 am - 4 pm', 'kleo-child' ); ?></span>
-				<span class="ch-summer-price-row">
-					<span><?php esc_html_e( 'Early bird', 'kleo-child' ); ?> <b>₦40,000</b></span>
-					<span><?php esc_html_e( 'Regular', 'kleo-child' ); ?> <b>₦45,000</b></span>
-				</span>
-				<span class="ch-summer-banner-actions">
-					<span class="ch-summer-banner-button"><?php esc_html_e( 'Reserve a Seat', 'kleo-child' ); ?></span>
-					<span class="ch-summer-banner-link"><?php esc_html_e( 'View details', 'kleo-child' ); ?></span>
-				</span>
-			</span>
-			<span class="ch-summer-banner-media">
-				<img src="<?php echo esc_url( $classhall_summer_image_url ); ?>" alt="<?php esc_attr_e( 'Classhall Summer Classes for English, Mathematics, Coding and AI', 'kleo-child' ); ?>" loading="lazy" decoding="async">
-			</span>
-		</a>
-	</div>
+<section class="ch-home-promo" aria-labelledby="ch-home-promo-title">
+    <div class="ch-shell">
+        <?php if ( $home_lessons_page ) : ?>
+            <div class="ch-home-promo-link">
+        <?php else : ?>
+            <a class="ch-home-promo-link" href="<?php echo esc_url( home_url( '/online-classes/' ) ); ?>">
+        <?php endif; ?>
+            <img class="ch-home-promo-photo" src="https://classhall.com/wp-content/uploads/2026/09/classhall-home-lessons.webp" alt="Teacher helping three primary school pupils learn" width="921" height="614" loading="lazy" decoding="async">
+            <div class="ch-home-promo-copy">
+                <span class="ch-home-eyebrow"><?php esc_html_e( 'Build confidence in every subject', 'kleo-child' ); ?></span>
+                <?php if ( $home_lessons_page ) : ?>
+                    <h1 id="ch-home-promo-title"><?php esc_html_e( 'Online', 'kleo-child' ); ?> <span><?php esc_html_e( 'Classes', 'kleo-child' ); ?></span></h1>
+                <?php else : ?>
+                    <h2 id="ch-home-promo-title"><?php esc_html_e( 'Online', 'kleo-child' ); ?> <span><?php esc_html_e( 'Classes', 'kleo-child' ); ?></span></h2>
+                <?php endif; ?>
+                <p class="ch-home-promo-age"><?php esc_html_e( 'Primary 1 - 6 | JSS1 - SS3', 'kleo-child' ); ?></p>
+                <p class="ch-home-promo-platform"><?php esc_html_e( 'Learn from home via Google Meet', 'kleo-child' ); ?></p>
+                <p><?php esc_html_e( 'Core subjects for primary and junior secondary pupils, plus English Language, General Mathematics, Biology, Chemistry and Physics for senior secondary science students.', 'kleo-child' ); ?></p>
+                <div class="ch-home-promo-facts"><span><small><?php esc_html_e( 'Lesson time', 'kleo-child' ); ?></small><strong><?php esc_html_e( 'Weekdays, 4:30 - 6:30 pm', 'kleo-child' ); ?></strong></span><span><small><?php esc_html_e( 'Monthly fee', 'kleo-child' ); ?></small><strong>&#8358;20,000</strong></span></div>
+                <?php if ( ! $home_lessons_page ) : ?>
+                    <span class="chl-home-button"><?php esc_html_e( 'Enrol your child', 'kleo-child' ); ?> <span aria-hidden="true">&rarr;</span></span>
+                <?php endif; ?>
+            </div>
+        <?php if ( $home_lessons_page ) : ?>
+            </div>
+        <?php else : ?>
+            </a>
+        <?php endif; ?>
+    </div>
 </section>

@@ -1,0 +1,4676 @@
+/*
+Theme Name:     Kleo Child
+Theme URI:
+Description:    Child theme for Kleo
+Author:         SeventhQueen
+Author URI:     http://seventhqueen.com
+Template:       kleo
+Tags:  one-column, two-columns, right-sidebar, fluid-layout, custom-menu, featured-images, post-formats, sticky-post, translation-ready
+License: GNU General Public License
+License URI: license.txt
+*/
+
+
+.jtrespo-scroll table tbody td {
+padding: 8px;
+}
+
+.menu-top{
+    background: #A3C9FE !important;
+}
+.woocommerce-page .main-color button.button.alt {
+background-color: #1F4690;
+}
+
+.woocommerce .main-color button.button.alt {
+    color: #fff !important;
+background-color: #1F4690;
+}
+
+.widget.widget_sensei_course_progress header{background: #BEC0C0;}
+.widget.widget_sensei_course_progress header h2{font-size:1.618em; margin-top:-5px; margin-bottom:0px; padding-top:-30px; padding-bottom:20px;}
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3{margin-top: -20px; margin-bottom:3px; border:none;padding:0}
+.widget ul.course-progress-navigation li a{background:#B5EFEF;display:block;padding:1em 0;color:#ccc;line-height:1.5em;text-decoration:none}
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span{display:block;border-bottom:1px solid rgba(0,0,0,0.05);padding:0.618em 1.618em 0.618em 3.618em;font-weight:bold;background:#E7E9EC;position:relative}
+
+.dwqa-questions-footer .dwqa-ask-question a {
+    -o-transition: all .2s;
+    -webkit-transition: all .2s;
+    border: none;
+    font-size: 16px;
+    font-weight: normal;
+    padding: 14px 22px 13px;
+    transition: all .2s;
+    line-height: 1.3333333;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #4884ff;
+    border-color: #1cd25c;
+    text-align: center;
+    vertical-align: middle;
+	float: right;
+	display: none;
+}
+
+
+.sidebar .dwqa-question-filter, .sidebar .dwqa-question-item 
+.dwqa-question-stats, .sidebar .dwqa-question-item .dwqa-question-meta {
+    display: none;
+}
+
+.dwqa-breadcrumbs { display: none; border: 0 !important;
+    width: 50px;
+    background-size: 45%;
+    left: 5px;
+    background-repeat: no-repeat;
+    height: 50px;
+    top: -8px;
+}
+
+/* Sensei subject access panel: equal CTA and login-info heights */
+body.single-course .classhall-course-access-panel .single_add_to_cart_button,
+body.single-course .classhall-course-access-panel a.button,
+body.single-course .classhall-course-access-panel .add-to-cart-login,
+body.single-course .classhall-course-access-panel .course-meta .status,
+body.single-course .classhall-course-access-panel .sensei-course-meta .status,
+body.single-course .classhall-course-access-panel .course-enrolment .status {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: 58px !important;
+    box-sizing: border-box !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+}
+
+body.single-course .classhall-course-access-panel .add-to-cart-login,
+body.single-course .classhall-course-access-panel .course-meta .status,
+body.single-course .classhall-course-access-panel .sensei-course-meta .status,
+body.single-course .classhall-course-access-panel .course-enrolment .status {
+    justify-content: flex-start !important;
+}
+
+@media (max-width: 782px) {
+    body.single-course .classhall-course-access-panel .single_add_to_cart_button,
+    body.single-course .classhall-course-access-panel a.button,
+    body.single-course .classhall-course-access-panel .add-to-cart-login,
+    body.single-course .classhall-course-access-panel .course-meta .status,
+    body.single-course .classhall-course-access-panel .sensei-course-meta .status,
+    body.single-course .classhall-course-access-panel .course-enrolment .status {
+        width: 100% !important;
+        min-height: 54px !important;
+    }
+}
+
+
+a.my-messages-link, #my-courses.ui-tabs ul.ui-tabs-nav li.ui-state-active a.ui-tabs-anchor, #my-courses.ui-tabs ul.ui-tabs-nav li.ui-state-hover a.ui-tabs-anchor {
+    background: #A3C9FE;
+    color: #555;
+    padding: 6px;
+    float:right;
+}
+
+a.my-messages-link:hover, #my-courses.ui-tabs ul.ui-tabs-nav li.ui-state-active a.ui-tabs-anchor, #my-courses.ui-tabs ul.ui-tabs-nav li.ui-state-hover a.ui-tabs-anchor {
+    background: #f2f2f2;
+    color: #555;
+    margin-right: 3px;
+    
+}
+
+.course-lesson-count, .course-category {
+    display:none;
+}
+.course-lesson-progress {
+    margin-top: -1px;
+    margin-bottom: 13px;
+    float:left;
+    background: #f2f2f2;
+    border-radius:5px;
+    padding: 10px;
+}
+
+
+a.sensei-certificate-link, a.view-results, a.view-results-link {
+    display: block;
+    background: #e6e6e6;
+    float: right;
+    margin-left: .236em;
+    padding: .382em 1em;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+.course, .course-container, .course-container .course {
+    list-style: none;
+    margin: -5px 10px 0 -5px;
+}
+
+.woo-image.thumbnail {
+    border: none;
+    padding: 0;
+        padding-bottom: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 5px;
+    margin: -5px 10px 15px 0px;
+}
+
+body .alignleft, .entry-content a:hover .alignleft {
+    float: left;
+    margin: 4px 10px 0 0px;
+    display: block;
+}
+
+a.page-numbers {
+    background: #555;
+    color:#fff;
+    padding: 7px 14px 7px 14px;
+    border-radius:5px;
+    margin: 5px;
+    align-items: center;
+}
+
+a.page-numbers:hover {
+    background: #555;
+    color:#4884ff;
+    padding: 7px 14px 7px 14px;
+}
+span.page-numbers.current {
+    background: #4884ff;
+    color:#fff;
+    padding: 7px 14px 7px 14px;
+    border-radius:5px;
+    margin: 5px;
+}
+
+
+div.user_current_rank {
+    font-weight: bold;
+    margin: -1px 0 8px 0;
+    color: #555;
+    font-size: 17px;
+}
+
+.user_login_points{
+    margin-top: 0px;
+    width:250px;
+    padding: 10px 10px 10px 10px;
+}
+    
+.user_current_rank, .li_points {
+    text-align: left;
+    color: #555;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    text-shadow: none;
+    cursor: default;
+    height: 12px;
+    line-height: 12px;
+}
+
+.usr_point_count{
+    color: #fff;
+}
+
+
+@media (max-width: 480px) {
+.user_login_points{
+    width: 330px
+}
+}
+
+@media (max-width: 480px) {
+.pb_hold{
+    width: 230px;
+    float:left;
+}
+}
+.pb_back_user_login {
+    background: url(/wp-content/uploads/2019/01/bg_bar_back.png) repeat-x top left;
+    height: 22px;
+}
+
+
+.pb_bar_user_login {
+    background: url(/wp-content/uploads/2019/01/bg_bar_front.png) repeat-x top left;
+    width: 0;
+    height: 22px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+a.button.view-results{
+    text-transform: none;
+    background:#4884ff;
+}
+
+a.button.view-results:hover{
+    background:#f2f2f2;
+    color:#555;
+    border: 1px solid #ccc;
+}
+
+/******My Subjects Page****/
+
+.sensei-course-filters li a {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius:2px;
+    background: #A3C9FE;
+    color:#555;
+}
+
+.sensei-course-filters li a.active {
+    background: #4884ff;
+    cursor: default;
+    color:#fff;
+}
+
+.sensei-course-filters li a:hover {
+    background: #f2f2f2;
+    border-color: #ccc;
+    color:#555;
+}
+
+.sensei-course-meta .course-price {
+    display:none;
+}
+
+.woo-image.thumbnail {
+    border: none;
+    padding: 0;
+    padding-bottom: 0px;
+    padding-bottom: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 2px;
+    margin: -5px 10px 15px 0;
+    clear: both;
+}
+
+/******Subjects Results Page****/
+
+.course header h1{
+    clear:both;
+}
+
+.course, .course-container, .course-container .course {
+    position: relative;
+    margin: 0 0 1.618em;
+    padding: 0 0 1em;
+    list-style: none;
+}
+
+.total-grade {
+    background: #f2f2f2;
+    padding: 10px;
+}
+
+/******Subjects Results Page****/
+
+.course header h1{
+    clear:both;
+}
+
+.course, .course-container, .course-container .course {
+    position: relative;
+    margin: 0 0 1.618em;
+    padding: 0 0 1em;
+    list-style: none;
+}
+
+
+/******Single Lesson Page****/
+
+a.button {
+    background: #4884ff;
+}
+
+a.button:hover {
+    background: #f2f2f2;
+    color: #555;
+    border: 1px solid #ccc;
+}
+
+.widget ul.course-progress-navigation li a {
+    background: #A3C9FE;
+    text-decoration: none;
+    color:#555;
+}
+
+.widget ul.course-progress-navigation li a:hover {
+    background: #f2f2f2;
+    text-decoration: none;
+    color:#555;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span {
+    background: #fff;
+    color: #555;
+    border-top: 1px solid #ccc;
+}
+
+/******Sensei Congrats Message****/
+.sensei div.sensei-message.tick, .quiz div.sensei-message.tick {
+    clear: both;
+    margin: 1.387em 0 1.618em;
+    padding: 1em 1.618em;
+}
+
+/******Sensei Congrats Message Mobile****/
+@media (max-width: 768px) {
+.sensei div.sensei-message.tick, .quiz div.sensei-message.tick {
+    clear: both;
+    margin: 1.387em 0 1.618em;
+    padding: 10px 10px 25px 10px;
+}
+}
+
+/******Sensei Congrats Message Next lesson button****/
+@media (max-width: 768px) {
+.quiz div.sensei-message a.next-lesson, .sensei div.sensei-message a.next-lesson {
+    padding: 4px 10px 4px;
+    margin: 2px 0 0 1em;
+}
+}
+
+/******Sign up notice after excerpt ****/
+.sign-up-notice-after-excerpt-two{
+    background: #D6E7FE;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.lesson div.sensei-message.alert, .sensei div.sensei-message.alert a{
+    background: #FDC0B6;
+    color: #000;
+}
+
+.lesson div.sensei-message.alert, .sensei div.sensei-message.alert a:hover{
+    background: #f2f2f2;
+    color: #000;
+    margin-top: -5px;
+    border-radius: 0 0 5px 5px;
+    line-height: 30px;
+}
+
+.alert > a:nth-child(1) {
+    background: #EEEFEF;
+    padding: 2px 2px 2px 2px;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small {
+  font-weight: normal;
+  line-height: 1;
+  color: #999999;
+}
+
+/******Sensei hide free lessons ****/
+p.sensei-free-lessons {
+    display: none;
+}
+
+/******Change Sensei Free preview label  ****/
+.module .module-lessons ul li a .preview-label{
+    display: none !important;
+}
+
+/******Make subject status icon background transparent ****/
+.course .status, .course-container .status, .course-lessons .status {
+    background: transparent;
+    color: #555;
+}
+
+/******Remove modules title ****/
+.modules-title {
+    display:none;
+}
+
+/******Alter course progress header background colour ****/
+.widget.widget_sensei_course_progress header {
+    border-radius: 2px 2px 0 0;
+}
+
+/******Change sensei course progress background and border radius ****/
+.widget.widget_sensei_course_progress {
+    background: #555;
+    border-radius: 2px;
+    display: block;
+}
+
+/******Change next/previous lesson background colour ****/
+nav#post-entries a {
+    background: #f9f9f9;
+    color: #555;
+}
+
+/******Change sensei course status colour ****/
+body.sensei .course-meta .status {
+    background: #A3C9FE;
+}
+
+/******Subject image ****/
+.woo-image.thumbnail {
+    border: none;
+    padding: 0;
+    padding-bottom: 0px;
+    padding-bottom: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 5px;
+    margin: 2px 10px 15px 0;
+    clear: both;
+}
+
+
+/******Course progress number of lessons completed****/
+.course-lesson-progress {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+section.entry span.course-lesson-progress {
+    margin-left: 0;
+}
+
+/******Module description ****/
+.course .module .module-description {
+    background: #A9F5F2;
+    border-radius: 0;
+}
+
+
+/******Remove modules title ****/
+.widget_wpachievements_widget .myus_user {
+    border-radius: 2px;
+    background-color: #f7f7f7;
+}
+
+.course-container li.course {
+    padding: 0;
+}
+
+.sidebar {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+/******Headings colour ****/
+.entry > h1:nth-child(1), .entry > h1:nth-child(2) {
+    background: #c7d2f8;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.entry > h2:nth-child(odd) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #fae5cf;
+}
+
+.entry > h2:nth-child(even) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #fae5cf;
+}
+
+.entry > h3:nth-child(odd) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #caf7f7;
+}
+
+.entry > h3:nth-child(even) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #caf7f7;
+}
+
+.entry > h4:nth-child(odd) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #e4e4e4;
+}
+
+.entry > h4:nth-child(even) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #e4e4e4;
+}
+
+.entry > h5:nth-child(odd) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #fbd4d5;
+}
+
+.entry > h5:nth-child(even) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #fbd4d5;
+}
+
+.entry > h6:nth-child(odd) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #f2ffde;
+}
+
+.entry > h6:nth-child(even) {
+    padding: 5px;
+    border-radius: 2px;
+    background: #f2ffde;
+}
+
+
+/******View results, take test contact teacher ****/
+.woocommerce a.button, .course a.button, .course-container a.button {
+    text-transform: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.woocommerce a.button, .course a.button, .course-container a.button:hover{
+    background: #A3C9FE;
+    color: #555;
+}
+
+/******IMPORTANT: Remove small line above h1****/
+h1:not(.site-title):before,
+h2:before {
+    display: none;
+}
+
+article.post:nth-child(2n+1) > section:nth-child(1) {
+    background: transparent;
+    padding: 0;
+}
+
+/******IMPORTANT: Hide Table code showing in frontend to visitors****/
+.jtsettingcontainer {
+    display: none;
+}
+
+.quiz form ol#sensei-quiz-list li > span {
+    background: #ffffff;
+    padding: 3px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    font-weight: 500;
+}
+
+.quiz form ol#sensei-quiz-list li ul li {
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+.quiz form ol#sensei-quiz-list li:hover ul:hover li:hover{
+    background: #A3C9FE;
+}
+
+li.multiple-choice:nth-child(odd) > ul:nth-child(4) {
+    margin-left: -40px !important;
+}
+li.multiple-choice:nth-child(even) > ul:nth-child(4) {
+    margin-left: -40px !important;
+}
+
+/******Change Subcribe from #100 per day BG color****/
+
+.woocommerce .main-color button.button.alt{
+    color: #555;
+    
+}
+
+.woocommerce .main-color button.button.alt:hover{
+    color: #555;
+    background: #A9F5F2;
+    
+}
+
+/******Useful tip****/
+.widget_text.widget.clearfix.widget_custom_html, .widget.woocommerce.widget_product_search, .widget.woocommerce.widget_recently_viewed_products, .widget.woocommerce.widget_product_categories{
+    background: #E3EEFE;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    width: 100%;
+    display:block;
+    margin-top: -20px;
+    line-height: 20px;
+}
+
+/******Useful tip heading****/
+.widget_text.widget.clearfix.widget_custom_html h4, .widget.woocommerce.widget_product_search h4, .widget.woocommerce.widget_recently_viewed_products h4, .widget.woocommerce.widget_product_categories h4{
+    background: #D1E3FC;
+    padding: 10px;
+}
+
+.woocommerce-product-search.searchform {
+background: #fff;
+border-radius: 15px;
+}
+
+.button.searchsubmit{
+color: #555;
+}
+
+.wpa-progress-indicator > li.completed {
+    color: #818586;
+}
+
+.woocommerce .main-color a.button {
+    
+    background: #A3C9FE;
+    position: relative;
+	color: #555;
+}
+
+.lesson input.quiz-submit.reset a.button{
+    background: #A9F5F2;
+    border-radius: 2px;
+    text-transform: none;
+} #customer_login{display:none;} .div#customer_login.col2-set{display:none;}
+
+
+
+/******Questions and Answers sidebar****/
+
+.sidebar .dwqa-questions-list .dwqa-question-item {
+    padding: 15px 15px;
+    background-color: #f9f9f9;
+}
+.sidebar .dwqa-questions-list .dwqa-question-item.dwqa-sticky{
+background: #E1FAF9;
+}
+
+.dwqa-popular-questions ul li,
+.related-questions ul li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    background: #f9f9f9;
+}
+.dwqa-popular-questions ul, 
+.related-questions ul {
+    border: 1px solid #ddd;
+}
+.dwqa-popular-questions ul li:last-child,
+.related-questions ul li:last-child {
+    border-bottom: 0;
+}
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    color: #0007ea;
+}
+
+/* Sensei Quiz Gapfill Answer */
+.gapfill-answer-gap {
+border-color: 1px solid #000;
+background: #A3C9FE;
+width: 100%;
+}
+
+
+#menu-jss1-basic-technology-live-class#menu-jss1-basic-technology-live-class {
+background-color: #A3C9FE;
+padding: 10px !important;
+border-radius: 10px;
+}
+
+.dpn-zvc-single-content-wrapper .dpn-zvc-col-4{
+display: none !important;
+}
+#paystack-payment-button {
+padding: 10px 20px 10px 20px;
+background: #A3C9FE;
+}
+#paystack-cancel-payment-button {
+padding: 10px 20px 10px 20px;
+background: #f9f9f9;
+}
+.woocommerce a.button, .woocommerce-page button.button {
+font-weight: normal;
+font-size: 14px;
+text-transform: Capitalize;
+color: #000;
+}
+.woocommerce a.button:hover {
+background: #f9f9f9;
+}
+.woocommerce .order_details, .woocommerce-page .order_details {
+background: #caf7f7;
+}
+.woocommerce-page ul.product_list_widget li {
+background: #f9f9f9;
+}
+.woocommerce-page .main-color input.button {
+background: #A3C9FE;
+color: #555;
+}
+
+input.button {
+font-weight: 600;
+color: #000;
+}
+
+.position-1, .position-2, .position-3 {
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #caf7f7;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #caf7f7;
+  }
+}
+
+.course .status.completed{
+background: #088A68;
+padding: 10px;
+}
+
+.meter .value{
+background: #088A68;
+}
+
+body.sensei .course-meta .status
+{
+padding: 10px;
+}
+.course .status.completed::before{
+margin-right: 2px;
+}
+
+.course .module .module-lessons ul li.completed a {
+background: #EFFBFB;
+}
+
+.course .module .module-lessons ul li.completed a::before, .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a::before, .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span::before {
+color: #088A68;
+}
+
+.module header .status{
+color: #EFFBFB;
+font-weight: 500;
+}
+
+a.view-results{
+background: #fae5cf;
+font-weight: 500;
+color: #555;
+text-transform: Capitalize;
+font-size: 15px;
+}
+body.sensei a.button, .course .course-meta .single_add_to_cart_button {
+font-size: 13px;
+font-weight: 600;
+}
+.my-messages-link-container .my-messages-link {
+text-transform: Capitalize;
+border-radius: 5px;
+margin-bottom: -2px;
+}
+
+footer .lesson a.button, body.sensei a.button {
+color: #555;
+background: #A3C9FE;
+text-transform: Capitalize;
+font-weight: 600;
+}
+.lesson a.button, body.sensei a.button:hover{
+color: #555;
+background: #fae5cf;
+}
+
+.quiz-submit .reset {
+color: #555;
+background: #fae5cf;
+text-transform: Capitalize;
+}
+
+.kleo-notifications.new-alert {
+background-color: #A9F5F2;
+color: #020202;
+}
+
+.woocommerce ul.product_list_widget li a, .woocommerce-page ul.product_list_widget li a {
+text-transform: capitalize;
+padding-top: 0;
+}
+.woocommerce ul.product_list_widget li img{
+margin: 0;
+}
+
+.widget.woocommerce.widget_recently_viewed_products .subscription-details, .widget.woocommerce.widget_recently_viewed_products .from, .widget.woocommerce.widget_recently_viewed_products .amount, .related.products, .woocommerce .summary .product_meta, .share-links{
+display: none;
+}
+
+.woocommerce a.button, .woocommerce-page button.button {
+font-size: 16px;
+text-transform: none;
+}
+
+.woocommerce .woocommerce-message, .woocommerce-page .woocommerce-message {
+border-left: 3px solid #f2f2f2;
+padding: .5em .5em .5em .5em!important;
+margin: 0 0 -1em !important;
+}
+
+.woocommerce div.product div.summary, .woocommerce div.product div.summary {
+margin-bottom: 0;
+}
+
+div.woocommerce-message {
+background: #FBF8EF;
+margin: -50px;
+}
+
+.woocommerce .woocommerce-message, .woocommerce .woocommerce-message {
+color: #555;
+font-size: 15px;
+line-height: 15px;
+}
+
+.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before {
+position: absolute;
+left: 0;
+padding-top: 0;
+color: 555;
+}
+
+.woocommerce .woocommerce-message:before, .woocommerce-page .woocommerce-message:before {
+display:none;
+}
+
+.woocommerce #payment ul.payment_methods li input, .woocommerce-page #payment ul.payment_methods li input {
+margin: 0;
+height: 20px;
+width: 20px;
+}
+
+#payment > ul > li.wc_payment_method.payment_method_bacs > label, #payment > ul > li.wc_payment_method.payment_method_paystack > label{
+font-size: 25px;
+margin-top: -10px;
+}
+
+.ur-frontend-form.ur-frontend-form--rounded form input input[type=submit] {
+background: #FBF8EF;
+}
+
+/******Classhall dropdown panels and divider cleanup****/
+#main .template-page,
+#main .main-color,
+#main .container,
+#main .row,
+#main .sidebar,
+#main aside,
+#main .col-sm-4,
+#main .col-md-4,
+#main .col-sm-8,
+#main .col-md-8 {
+    border-left-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+#main .template-page,
+#main .main-color {
+    box-shadow: none !important;
+}
+
+.sidebar .dwqa-popular-questions,
+.sidebar .dwqa-questions-list,
+.sidebar .widget_dwqa_popular_question,
+.sidebar .widget_dwqa_latest_question,
+.sidebar .widget_dwqa_related_question,
+.sidebar .widget_display_topics,
+.sidebar .widget_display_replies,
+aside .dwqa-popular-questions,
+aside .dwqa-questions-list {
+    overflow: hidden !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .05) !important;
+}
+
+.sidebar .dwqa-popular-questions > h3,
+.sidebar .dwqa-popular-questions > h4,
+.sidebar .dwqa-questions-list > h3,
+.sidebar .dwqa-questions-list > h4,
+.sidebar .widget_dwqa_popular_question .widget-title,
+.sidebar .widget_dwqa_latest_question .widget-title,
+.sidebar .widget_dwqa_related_question .widget-title,
+.sidebar .widget_display_topics .widget-title,
+.sidebar .widget_display_replies .widget-title,
+aside .dwqa-popular-questions > h3,
+aside .dwqa-popular-questions > h4,
+aside .dwqa-questions-list > h3,
+aside .dwqa-questions-list > h4 {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    background: #f8fbff !important;
+    color: #0f172a !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+}
+
+.sidebar .dwqa-popular-questions ul,
+.sidebar .dwqa-questions-list ul,
+.sidebar .widget_dwqa_popular_question ul,
+.sidebar .widget_dwqa_latest_question ul,
+.sidebar .widget_dwqa_related_question ul,
+aside .dwqa-popular-questions ul,
+aside .dwqa-questions-list ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: #ffffff !important;
+}
+
+.sidebar .dwqa-popular-questions ul li,
+.sidebar .dwqa-questions-list .dwqa-question-item,
+.sidebar .widget_dwqa_popular_question ul li,
+.sidebar .widget_dwqa_latest_question ul li,
+.sidebar .widget_dwqa_related_question ul li,
+.sidebar .widget_display_topics ul li,
+.sidebar .widget_display_replies ul li,
+aside .dwqa-popular-questions ul li,
+aside .dwqa-questions-list .dwqa-question-item {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #eef2f7 !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+}
+
+.sidebar .dwqa-popular-questions ul li:last-child,
+.sidebar .dwqa-questions-list .dwqa-question-item:last-child,
+.sidebar .widget_dwqa_popular_question ul li:last-child,
+.sidebar .widget_dwqa_latest_question ul li:last-child,
+.sidebar .widget_dwqa_related_question ul li:last-child,
+.sidebar .widget_display_topics ul li:last-child,
+.sidebar .widget_display_replies ul li:last-child,
+aside .dwqa-popular-questions ul li:last-child,
+aside .dwqa-questions-list .dwqa-question-item:last-child {
+    border-bottom: 0 !important;
+}
+
+.sidebar .classhall-forum .classhall-forum-empty,
+.sidebar .classhall-forum-compact .classhall-forum-empty,
+.widget .classhall-forum .classhall-forum-empty,
+.widget .classhall-forum-compact .classhall-forum-empty,
+aside .classhall-forum .classhall-forum-empty,
+aside .classhall-forum-compact .classhall-forum-empty {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    background: #ffffff !important;
+    color: #475569 !important;
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+}
+
+.sidebar .dwqa-popular-questions a,
+.sidebar .dwqa-questions-list a,
+.sidebar .widget_dwqa_popular_question a,
+.sidebar .widget_dwqa_latest_question a,
+.sidebar .widget_dwqa_related_question a,
+.sidebar .widget_display_topics a,
+.sidebar .widget_display_replies a,
+aside .dwqa-popular-questions a,
+aside .dwqa-questions-list a {
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    text-decoration: none !important;
+}
+
+.sidebar .dwqa-popular-questions a:hover,
+.sidebar .dwqa-questions-list a:hover,
+.sidebar .widget_dwqa_popular_question a:hover,
+.sidebar .widget_dwqa_latest_question a:hover,
+.sidebar .widget_dwqa_related_question a:hover,
+.sidebar .widget_display_topics a:hover,
+.sidebar .widget_display_replies a:hover,
+aside .dwqa-popular-questions a:hover,
+aside .dwqa-questions-list a:hover {
+    color: #2563eb !important;
+}
+
+/******Classhall Sensei page consistency fixes****/
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 0 !important;
+}
+
+.kleo-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1 0 auto;
+}
+
+#footer,
+footer {
+    flex-shrink: 0;
+}
+
+#my-courses .course h2 a,
+#my-courses .course .course-title,
+#my-courses .course .course-title a,
+.course-container .course h2 a,
+.course-container .course .course-title,
+.course-container .course .course-title a {
+    background: transparent !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+#my-courses .course form,
+.course-container .course form {
+    display: inline-flex !important;
+    margin: 8px 0 0 10px !important;
+    vertical-align: top !important;
+}
+
+#my-courses .course-lesson-progress,
+.course-container .course-lesson-progress {
+    vertical-align: top !important;
+}
+
+.sensei .course,
+.single-course .course,
+body.single-course article.course,
+body.single-lesson article.lesson,
+body.single-quiz #sensei-quiz-form {
+    max-width: 1120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body.single-course .course header h1,
+body.single-course .entry-title,
+body.single-lesson .lesson header h1,
+body.single-lesson .lesson-title h1,
+body.single-quiz .entry-title,
+body.single-quiz h1 {
+    color: var(--classhall-text) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    background: transparent !important;
+}
+
+body.single-course .classhall-course-featured-description {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 0 26px !important;
+    padding: 26px 30px !important;
+    border: 1px solid #c9d8f0 !important;
+    border-top: 5px solid var(--classhall-blue, #1F4690) !important;
+    border-radius: 8px !important;
+    background: #edf4ff !important;
+    color: var(--classhall-text, #102033) !important;
+    box-shadow: 0 14px 34px rgba(31, 70, 144, .12) !important;
+    box-sizing: border-box !important;
+}
+
+body.single-course .classhall-course-featured-description__content {
+    min-width: 0 !important;
+    color: var(--classhall-text, #102033) !important;
+    font-size: 20px !important;
+    font-weight: 600 !important;
+    line-height: 1.55 !important;
+}
+
+body.single-course .classhall-course-featured-description__content > :first-child {
+    margin-top: 0 !important;
+}
+
+body.single-course .classhall-course-featured-description__content > :last-child {
+    margin-bottom: 0 !important;
+}
+
+body.single-course .classhall-course-featured-description__content p {
+    margin: 0 0 10px !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+body.single-course .classhall-course-featured-description__content a {
+    color: var(--classhall-blue, #1F4690) !important;
+    font-weight: 700 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px !important;
+}
+
+body.single-course .course-excerpt {
+    display: none !important;
+}
+
+@media (max-width: 640px) {
+    body.single-course .classhall-course-featured-description {
+        padding: 20px !important;
+    }
+
+    body.single-course .classhall-course-featured-description__content {
+        font-size: 18px !important;
+        line-height: 1.55 !important;
+    }
+}
+
+body.single-course .course-meta,
+body.single-course .sensei-course-meta,
+body.single-lesson .lesson-meta,
+body.single-quiz .sensei-message,
+.sensei div.sensei-message,
+.quiz div.sensei-message {
+    background: var(--classhall-light-grey) !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 8px !important;
+    color: var(--classhall-text) !important;
+    box-shadow: none !important;
+}
+
+.meter,
+.course .meter,
+.course-container .meter,
+.sensei .meter {
+    overflow: hidden !important;
+    height: 30px !important;
+    background: #e9edf2 !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+}
+
+.meter .value,
+.course .meter .value,
+.course-container .meter .value,
+.sensei .meter .value {
+    height: 100% !important;
+    background: var(--classhall-blue) !important;
+    border-radius: 999px !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    line-height: 30px !important;
+    text-align: right !important;
+    padding-right: 14px !important;
+}
+
+body.sensei .course-meta .status,
+.course .status,
+.course-container .status,
+.course-lessons .status,
+.module header .status,
+.lesson header.lesson-title .lesson-status {
+    background: #dbe7fb !important;
+    border: 1px solid #c4d5f2 !important;
+    border-radius: 6px !important;
+    color: var(--classhall-blue) !important;
+    font-weight: 700 !important;
+}
+
+.course .module,
+.sensei .module,
+.course .module-lessons,
+.sensei .module-lessons {
+    overflow: hidden !important;
+    margin: 24px 0 !important;
+    background: #ffffff !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .06) !important;
+}
+
+.course .module header,
+.sensei .module header,
+.module-lessons header.lesson-title {
+    background: var(--classhall-light-grey) !important;
+    color: var(--classhall-text) !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+}
+
+.course .module header h2,
+.sensei .module header h2,
+.course .module header h3,
+.sensei .module header h3 {
+    color: var(--classhall-text) !important;
+    font-weight: 700 !important;
+}
+
+.course .module .module-description,
+.sensei .module .module-description {
+    background: #edf3fb !important;
+    color: var(--classhall-text) !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+}
+
+.course .module .module-lessons ul,
+.sensei .module .module-lessons ul,
+.course-lessons ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.course .module .module-lessons ul li,
+.sensei .module .module-lessons ul li,
+.course-lessons ul li {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+}
+
+.course .module .module-lessons ul li:nth-child(odd),
+.sensei .module .module-lessons ul li:nth-child(odd),
+.course-lessons ul li:nth-child(odd) {
+    background: #f8fafc !important;
+}
+
+.course .module .module-lessons ul li a,
+.sensei .module .module-lessons ul li a,
+.course-lessons ul li a {
+    color: var(--classhall-text) !important;
+    text-decoration: none !important;
+}
+
+.course .module .module-lessons ul li.completed a,
+.sensei .module .module-lessons ul li.completed a {
+    color: var(--classhall-muted) !important;
+}
+
+body.single-lesson article.lesson,
+body.single-quiz #sensei-quiz-form {
+    padding: 22px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, .06) !important;
+}
+
+body.single-lesson .entry,
+body.single-lesson .entry-content {
+    color: var(--classhall-text) !important;
+    line-height: 1.7 !important;
+}
+
+.quiz form ol#sensei-quiz-list {
+    display: grid !important;
+    gap: 18px !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    list-style-position: inside !important;
+}
+
+.quiz form ol#sensei-quiz-list > li {
+    padding: 18px !important;
+    background: #ffffff !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 8px !important;
+    color: var(--classhall-text) !important;
+}
+
+.quiz form ol#sensei-quiz-list li ul {
+    display: grid !important;
+    gap: 8px !important;
+    margin: 14px 0 0 !important;
+    padding: 0 !important;
+}
+
+.quiz form ol#sensei-quiz-list li ul li {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    min-height: 44px !important;
+    padding: 10px 12px !important;
+    background: var(--classhall-light-grey) !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 6px !important;
+    color: var(--classhall-text) !important;
+}
+
+.quiz form ol#sensei-quiz-list li ul li:hover {
+    background: #edf3fb !important;
+    border-color: #c4d5f2 !important;
+}
+
+@media (min-width: 783px) {
+    #my-courses .course form,
+    .course-container .course form {
+        margin-top: 8px !important;
+    }
+}
+
+@media (max-width: 782px) {
+    #my-courses .course form,
+    .course-container .course form {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    body.single-lesson article.lesson,
+    body.single-quiz #sensei-quiz-form {
+        padding: 16px !important;
+    }
+}
+
+/******Classhall last-word Sensei overrides****/
+#my-courses .course h2,
+#my-courses .course h2 *,
+#my-courses .course .course-title,
+#my-courses .course .course-title *,
+.course-container .course h2,
+.course-container .course h2 *,
+.course-container .course .course-title,
+.course-container .course .course-title * {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#my-courses .course .course-lesson-progress,
+.course-container .course .course-lesson-progress {
+    display: inline-flex !important;
+    margin-right: 10px !important;
+}
+
+#my-courses .course form,
+.course-container .course form {
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: 100% !important;
+    margin: 8px 0 0 !important;
+}
+
+#my-courses .course form input[type="submit"],
+#my-courses .course form button,
+.course-container .course form input[type="submit"],
+.course-container .course form button {
+    width: auto !important;
+}
+
+body.single-course .meter .value,
+body.single-course .course .meter .value,
+body.single-course .sensei .meter .value {
+    background: var(--classhall-blue) !important;
+}
+
+@media (max-width: 782px) {
+    #my-courses .course form,
+    .course-container .course form,
+    #my-courses .course form input[type="submit"],
+    #my-courses .course form button,
+    .course-container .course form input[type="submit"],
+    .course-container .course form button {
+        width: 100% !important;
+    }
+}
+
+/******Classhall absolute final minimalist fixes****/
+html,
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+}
+
+.kleo-page,
+#main,
+.template-page,
+.main-color,
+#footer,
+footer,
+#socket,
+.socket,
+.footer-bottom {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+body::after,
+.kleo-page::after {
+    display: none !important;
+    content: none !important;
+}
+
+.lesson a.button,
+body.single-lesson a.button,
+body.sensei a.button,
+.sensei input[type="submit"],
+.sensei button,
+.quiz input[type="submit"],
+.quiz button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    padding: 10px 18px !important;
+    border: 0 !important;
+    border-radius: 6px !important;
+    background: var(--classhall-blue) !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+}
+
+.widget.widget_sensei_course_progress,
+.widget_sensei_course_progress {
+    overflow: hidden !important;
+    background: #ffffff !important;
+    border: 1px solid var(--classhall-border-grey) !important;
+    border-radius: 8px !important;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+
+.widget.widget_sensei_course_progress header,
+.widget_sensei_course_progress header {
+    padding: 20px 22px !important;
+    background: var(--classhall-light-grey) !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+}
+
+.widget.widget_sensei_course_progress header h2,
+.widget_sensei_course_progress header h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: var(--classhall-text) !important;
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+.widget ul.course-progress-navigation {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget ul.course-progress-navigation li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 48px !important;
+    padding: 10px !important;
+    background: #f4f6f8 !important;
+    border-right: 1px solid var(--classhall-border-grey) !important;
+    color: var(--classhall-blue) !important;
+    font-size: 0 !important;
+    text-decoration: none !important;
+}
+
+.widget ul.course-progress-navigation li a::before {
+    font-size: 32px !important;
+    line-height: 1 !important;
+}
+
+.widget ul.course-progress-navigation li:first-child a::before {
+    content: "\2039" !important;
+}
+
+.widget ul.course-progress-navigation li:last-child a::before {
+    content: "\203A" !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    margin: 0 !important;
+    padding: 13px 22px !important;
+    background: #f8fafc !important;
+    border-top: 1px solid var(--classhall-border-grey) !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+    color: var(--classhall-text) !important;
+    font-size: 15px !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    display: block !important;
+    min-height: 48px !important;
+    padding: 13px 18px 13px 48px !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+    color: var(--classhall-text) !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+    text-decoration: none !important;
+    text-align: left !important;
+}
+
+/******Classhall final sidebar polish****/
+.widget.widget_sensei_course_progress,
+.widget_sensei_course_progress {
+    border-radius: 6px !important;
+}
+
+.widget.widget_sensei_course_progress header,
+.widget_sensei_course_progress header {
+    padding: 16px 18px !important;
+}
+
+.widget.widget_sensei_course_progress header h2,
+.widget_sensei_course_progress header h2 {
+    font-size: 21px !important;
+    line-height: 1.3 !important;
+    text-transform: none !important;
+}
+
+.widget ul.course-progress-navigation {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 33.333% !important;
+    justify-content: stretch !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+}
+
+.widget ul.course-progress-navigation li a {
+    min-height: 48px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.widget ul.course-progress-navigation li a:hover {
+    background: #edf3fb !important;
+    color: var(--classhall-blue) !important;
+}
+
+.widget.widget_sensei_course_progress a.course-progress-collapse,
+.widget_sensei_course_progress a.course-progress-collapse,
+.widget.widget_sensei_course_progress .course-progress-collapse,
+.widget_sensei_course_progress .course-progress-collapse {
+    position: absolute !important;
+    left: 33.333% !important;
+    width: 33.333% !important;
+    min-height: 48px !important;
+    margin-top: -49px !important;
+    padding: 14px 8px !important;
+    background: #ffffff !important;
+    border-right: 1px solid var(--classhall-border-grey) !important;
+    border-left: 1px solid var(--classhall-border-grey) !important;
+    border-bottom: 1px solid var(--classhall-border-grey) !important;
+    color: var(--classhall-muted) !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    text-align: center !important;
+    z-index: 2 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    padding: 11px 18px !important;
+    background: #f4f6f8 !important;
+    font-size: 14px !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    min-height: 44px !important;
+    padding: 11px 16px 11px 42px !important;
+    font-size: 14px !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span {
+    background: #edf3fb !important;
+    color: var(--classhall-blue) !important;
+    font-weight: 700 !important;
+}
+.sidebar .dwqa-questions-list .dwqa-question-item,
+.sidebar .classhall-forum .dwqa-question-item {
+    padding: 12px 14px !important;
+}
+
+.sidebar .dwqa-questions-list .dwqa-question-title,
+.sidebar .dwqa-questions-list .dwqa-question-title a,
+.sidebar .classhall-forum .dwqa-question-title,
+.sidebar .classhall-forum .dwqa-question-title a,
+.sidebar .dwqa-question-title,
+.sidebar .dwqa-question-title a,
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+}
+.sidebar .dwqa-questions-list .dwqa-question-title,
+.sidebar .dwqa-questions-list .dwqa-question-title a,
+.sidebar .classhall-forum .dwqa-question-title,
+.sidebar .classhall-forum .dwqa-question-title a,
+.sidebar .dwqa-question-title,
+.sidebar .dwqa-question-title a,
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+}
+.widget .dwqa-questions-list .dwqa-question-title,
+.widget .dwqa-questions-list .dwqa-question-title a,
+.widget .dwqa-question-title,
+.widget .dwqa-question-title a,
+aside .dwqa-questions-list .dwqa-question-title,
+aside .dwqa-questions-list .dwqa-question-title a,
+aside .dwqa-question-title,
+aside .dwqa-question-title a,
+.sidebar .dwqa-questions-list .dwqa-question-title,
+.sidebar .dwqa-questions-list .dwqa-question-title a,
+.sidebar .classhall-forum .dwqa-question-title,
+.sidebar .classhall-forum .dwqa-question-title a,
+.sidebar .dwqa-question-title,
+.sidebar .dwqa-question-title a,
+.dwqa-popular-questions ul li a.question-title,
+.related-questions ul li a.question-title {
+    font-size: 14px !important;
+    font-weight: normal !important;
+    line-height: 1.4 !important;
+}
+
+.widget .dwqa-questions-list .dwqa-question-item,
+aside .dwqa-questions-list .dwqa-question-item,
+.sidebar .dwqa-questions-list .dwqa-question-item,
+.sidebar .classhall-forum .dwqa-question-item {
+    padding: 12px 14px !important;
+}
+
+/******Remove empty space after subject lesson lists****/
+article.course .module > .module-lessons,
+.course .module > .module-lessons,
+.sensei .module > .module-lessons,
+body.single-course .course .module > .module-lessons,
+body.single-course .sensei .module > .module-lessons {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+article.course .module > .module-lessons,
+.course .module > .module-lessons,
+.sensei .module > .module-lessons,
+body.single-course .course .module .module-lessons,
+body.single-course .sensei .module .module-lessons,
+article.course .module .module-lessons ul,
+.course .module .module-lessons ul,
+.sensei .module .module-lessons ul,
+body.single-course .course .module .module-lessons ul,
+body.single-course .sensei .module .module-lessons ul,
+body.single-course .course-lessons,
+body.single-course .course-lessons ul {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+article.course .module .module-lessons ul li:last-child,
+.course .module .module-lessons ul li:last-child,
+.sensei .module .module-lessons ul li:last-child,
+body.single-course .course .module .module-lessons ul li:last-child,
+body.single-course .sensei .module .module-lessons ul li:last-child,
+body.single-course .course-lessons ul li:last-child {
+    border-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+article.course .module > :last-child,
+.course .module > :last-child,
+.sensei .module > :last-child,
+body.single-course .course .module > :last-child,
+body.single-course .sensei .module > :last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/******Centre course status filter tabs****/
+
+/******Classhall mobile performance pass****/
+/******Classhall single lesson and quiz buttons****/
+body.single-lesson .lesson a.button,
+body.single-lesson a.button,
+body.single-lesson .lesson button,
+body.single-lesson .lesson input[type="submit"],
+body.single-quiz .quiz a.button,
+body.single-quiz .quiz button,
+body.single-quiz .quiz input[type="submit"],
+body.single-quiz #sensei-quiz-form a.button,
+body.single-quiz #sensei-quiz-form button,
+body.single-quiz #sensei-quiz-form input[type="submit"],
+.quiz-submit input[type="submit"],
+.quiz-submit button,
+.quiz-submit a.button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 52px !important;
+    padding: 14px 24px !important;
+    border: 1px solid #2563eb !important;
+    border-radius: 8px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 850 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    white-space: nowrap !important;
+    box-shadow: 0 14px 28px rgba(37, 99, 235, .22) !important;
+    cursor: pointer !important;
+    transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+}
+
+body.single-lesson .lesson a.button:hover,
+body.single-lesson .lesson a.button:focus,
+body.single-lesson a.button:hover,
+body.single-lesson a.button:focus,
+body.single-lesson .lesson button:hover,
+body.single-lesson .lesson button:focus,
+body.single-lesson .lesson input[type="submit"]:hover,
+body.single-lesson .lesson input[type="submit"]:focus,
+body.single-quiz .quiz a.button:hover,
+body.single-quiz .quiz a.button:focus,
+body.single-quiz .quiz button:hover,
+body.single-quiz .quiz button:focus,
+body.single-quiz .quiz input[type="submit"]:hover,
+body.single-quiz .quiz input[type="submit"]:focus,
+body.single-quiz #sensei-quiz-form a.button:hover,
+body.single-quiz #sensei-quiz-form a.button:focus,
+body.single-quiz #sensei-quiz-form button:hover,
+body.single-quiz #sensei-quiz-form button:focus,
+body.single-quiz #sensei-quiz-form input[type="submit"]:hover,
+body.single-quiz #sensei-quiz-form input[type="submit"]:focus,
+.quiz-submit input[type="submit"]:hover,
+.quiz-submit input[type="submit"]:focus,
+.quiz-submit button:hover,
+.quiz-submit button:focus,
+.quiz-submit a.button:hover,
+.quiz-submit a.button:focus {
+    border-color: #1e40af !important;
+    background: #1e40af !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 34px rgba(37, 99, 235, .28) !important;
+    transform: translateY(-1px) !important;
+}
+
+body.single-quiz .quiz input[name="quiz_reset"],
+body.single-quiz .quiz input[name="quiz_save"],
+body.single-quiz .quiz input[name="quiz_complete"],
+body.single-quiz #sensei-quiz-form input[name="quiz_reset"],
+body.single-quiz #sensei-quiz-form input[name="quiz_save"],
+body.single-quiz #sensei-quiz-form input[name="quiz_complete"] {
+    min-width: 150px !important;
+}
+
+body.single-quiz .quiz-submit,
+body.single-quiz .sensei-quiz-actions,
+body.single-quiz #sensei-quiz-form p.submit {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 14px !important;
+}
+
+@media (max-width: 640px) {
+    body.single-lesson .lesson a.button,
+    body.single-lesson a.button,
+    body.single-lesson .lesson button,
+    body.single-lesson .lesson input[type="submit"],
+    body.single-quiz .quiz a.button,
+    body.single-quiz .quiz button,
+    body.single-quiz .quiz input[type="submit"],
+    body.single-quiz #sensei-quiz-form a.button,
+    body.single-quiz #sensei-quiz-form button,
+    body.single-quiz #sensei-quiz-form input[type="submit"],
+    .quiz-submit input[type="submit"],
+    .quiz-submit button,
+    .quiz-submit a.button {
+        width: 100% !important;
+        white-space: normal !important;
+    }
+}
+
+/******Classhall Sensei progress widget spacing fix****/
+.widget.widget_sensei_course_progress,
+.widget_sensei_course_progress {
+    position: relative !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation,
+.widget_sensei_course_progress ul.course-progress-navigation,
+.widget ul.course-progress-navigation {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 112px minmax(0, 1fr) !important;
+    gap: 0 !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-top: 1px solid var(--classhall-border-grey, #d9e1ea) !important;
+    border-bottom: 1px solid var(--classhall-border-grey, #d9e1ea) !important;
+    background: #ffffff !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li,
+.widget_sensei_course_progress ul.course-progress-navigation li,
+.widget ul.course-progress-navigation li {
+    display: block !important;
+    width: auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li:first-child,
+.widget_sensei_course_progress ul.course-progress-navigation li:first-child,
+.widget ul.course-progress-navigation li:first-child {
+    grid-column: 1 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li:last-child,
+.widget_sensei_course_progress ul.course-progress-navigation li:last-child,
+.widget ul.course-progress-navigation li:last-child {
+    grid-column: 3 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget ul.course-progress-navigation li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: #ffffff !important;
+    color: #1e40af !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+    text-align: center !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget ul.course-progress-navigation li a::before {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-size: 32px !important;
+    line-height: 1 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li:first-child a::before,
+.widget_sensei_course_progress ul.course-progress-navigation li:first-child a::before,
+.widget ul.course-progress-navigation li:first-child a::before {
+    content: "\2039" !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li:last-child a::before,
+.widget_sensei_course_progress ul.course-progress-navigation li:last-child a::before,
+.widget ul.course-progress-navigation li:last-child a::before {
+    content: "\203A" !important;
+}
+
+.widget.widget_sensei_course_progress a.course-progress-collapse,
+.widget_sensei_course_progress a.course-progress-collapse,
+.widget.widget_sensei_course_progress .course-progress-collapse,
+.widget_sensei_course_progress .course-progress-collapse {
+    position: relative !important;
+    left: 50% !important;
+    z-index: 3 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 112px !important;
+    min-width: 112px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    margin: -41px 0 0 !important;
+    padding: 0 12px !important;
+    transform: translateX(-50%) !important;
+    border: 1px solid var(--classhall-border-grey, #d9e1ea) !important;
+    border-top: 0 !important;
+    background: #ffffff !important;
+    color: #475569 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons,
+.widget_sensei_course_progress .course-progress-lessons,
+.widget.widget_sensei_course_progress .course-progress-lessons ul,
+.widget_sensei_course_progress .course-progress-lessons ul,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-module {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 13px 22px !important;
+}
+
+/******Classhall Sensei next lesson button****/
+.sensei div.sensei-message.tick,
+.quiz div.sensei-message.tick {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+    padding: 18px 22px !important;
+    border: 1px solid #dbeafe !important;
+    border-left: 0 !important;
+    border-radius: 8px !important;
+    background: #f8fafc !important;
+    color: #0f172a !important;
+    font-size: 18px !important;
+    line-height: 1.45 !important;
+}
+
+.sensei div.sensei-message.tick a.next-lesson,
+.quiz div.sensei-message.tick a.next-lesson,
+.sensei div.sensei-message a.next-lesson,
+.quiz div.sensei-message a.next-lesson {
+    display: inline-flex !important;
+    flex: 0 0 auto !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 46px !important;
+    padding: 12px 22px !important;
+    border: 1px solid #2563eb !important;
+    border-radius: 8px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    font-size: 14px !important;
+    font-weight: 850 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, .22) !important;
+    transition: background-color .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+}
+
+.sensei div.sensei-message.tick a.next-lesson:hover,
+.sensei div.sensei-message.tick a.next-lesson:focus,
+.quiz div.sensei-message.tick a.next-lesson:hover,
+.quiz div.sensei-message.tick a.next-lesson:focus,
+.sensei div.sensei-message a.next-lesson:hover,
+.sensei div.sensei-message a.next-lesson:focus,
+.quiz div.sensei-message a.next-lesson:hover,
+.quiz div.sensei-message a.next-lesson:focus {
+    border-color: #1e40af !important;
+    background: #1e40af !important;
+    color: #ffffff !important;
+    box-shadow: 0 16px 30px rgba(37, 99, 235, .28) !important;
+    transform: translateY(-1px) !important;
+}
+
+@media (max-width: 640px) {
+    .sensei div.sensei-message.tick,
+    .quiz div.sensei-message.tick {
+        display: block !important;
+        padding: 16px !important;
+    }
+
+    .sensei div.sensei-message.tick a.next-lesson,
+    .quiz div.sensei-message.tick a.next-lesson,
+    .sensei div.sensei-message a.next-lesson,
+    .quiz div.sensei-message a.next-lesson {
+        width: 100% !important;
+        margin: 14px 0 0 !important;
+    }
+}
+
+/******Classhall Sensei final lesson progress alignment****/
+.sensei div.sensei-message.tick,
+.quiz div.sensei-message.tick {
+    justify-content: flex-start !important;
+    gap: 10px !important;
+}
+
+.sensei div.sensei-message.tick::before,
+.quiz div.sensei-message.tick::before {
+    flex: 0 0 auto !important;
+    margin: 0 8px 0 0 !important;
+}
+
+.sensei div.sensei-message.tick a.next-lesson,
+.quiz div.sensei-message.tick a.next-lesson,
+.sensei div.sensei-message a.next-lesson,
+.quiz div.sensei-message a.next-lesson {
+    margin-left: auto !important;
+}
+
+.widget.widget_sensei_course_progress a.course-progress-collapse,
+.widget_sensei_course_progress a.course-progress-collapse,
+.widget.widget_sensei_course_progress .course-progress-collapse,
+.widget_sensei_course_progress .course-progress-collapse,
+.widget.widget_sensei_course_progress .course-progress-expand,
+.widget_sensei_course_progress .course-progress-expand,
+.widget.widget_sensei_course_progress .course-progress-summary,
+.widget_sensei_course_progress .course-progress-summary,
+details.course-progress-details > summary,
+details.course-progress-details .course-progress-summary {
+    display: none !important;
+}
+
+.widget.widget_sensei_course_progress details.course-progress-details,
+.widget_sensei_course_progress details.course-progress-details,
+details.course-progress-details {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation,
+.widget_sensei_course_progress ul.course-progress-navigation,
+.widget ul.course-progress-navigation {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li:last-child,
+.widget_sensei_course_progress ul.course-progress-navigation li:last-child,
+.widget ul.course-progress-navigation li:last-child {
+    grid-column: 2 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding-left: 28px !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a::before,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed a::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.completed span::before {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    display: inline-flex !important;
+    flex: 0 0 22px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    color: #059669 !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+@media (max-width: 640px) {
+    .sensei div.sensei-message.tick a.next-lesson,
+    .quiz div.sensei-message.tick a.next-lesson,
+    .sensei div.sensei-message a.next-lesson,
+    .quiz div.sensei-message a.next-lesson {
+        margin-left: 0 !important;
+    }
+}
+
+
+body:not(.home) .main-title h1,
+body:not(.home) .title-section h1,
+body:not(.home) .template-page > h1:first-child {
+    color: #0f172a !important;
+    font-size: clamp(18px, 2vw, 24px) !important;
+    font-weight: 400 !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+}
+
+body:not(.home) .kleo-breadcrumb,
+body:not(.home) .breadcrumb,
+body:not(.home) .breadcrumbs,
+body:not(.home) .woocommerce-breadcrumb,
+body:not(.home) .kleo-woo-breadcrumb {
+    color: #64748b !important;
+    font-size: 14px !important;
+    line-height: 1.45 !important;
+}
+
+body:not(.home) .kleo-breadcrumb a,
+body:not(.home) .breadcrumb a,
+body:not(.home) .breadcrumbs a,
+body:not(.home) .woocommerce-breadcrumb a,
+body:not(.home) .kleo-woo-breadcrumb a {
+    color: #2563eb !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+@media (max-width: 640px) {
+    body:not(.home) .page-title,
+    body:not(.home) h1.page-title,
+    body:not(.home) h1.entry-title,
+    body:not(.home) .article-title h1,
+    body:not(.home) .main-title h1,
+    body:not(.home) .title-section h1,
+    body:not(.home) .template-page > h1:first-child {
+        font-size: clamp(18px, 5vw, 24px) !important;
+    }
+}
+
+
+/******Classhall Sensei sidebar spacing final fix****/
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget ul.course-progress-navigation li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 50px !important;
+    padding: 0 !important;
+    line-height: 1 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget ul.course-progress-navigation li a::before {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 1em !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 11px 14px !important;
+    text-align: left !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    display: flex !important;
+    flex: 0 0 20px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > *,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > * {
+    margin-left: 0 !important;
+}
+
+
+/******Classhall Sensei progress widget final cleanup****/
+.widget.widget_sensei_course_progress,
+.widget_sensei_course_progress {
+    overflow: hidden !important;
+    border: 1px solid #d7e1ee !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+}
+
+.widget.widget_sensei_course_progress header,
+.widget_sensei_course_progress header {
+    padding: 18px 22px !important;
+    border-bottom: 1px solid #d7e1ee !important;
+    background: #f8fafc !important;
+}
+
+.widget.widget_sensei_course_progress header h2,
+.widget_sensei_course_progress header h2 {
+    margin: 0 !important;
+    color: #1f2937 !important;
+    font-size: 21px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+    letter-spacing: 0 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation,
+.widget_sensei_course_progress ul.course-progress-navigation,
+.widget ul.course-progress-navigation {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #d7e1ee !important;
+    background: #ffffff !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li,
+.widget_sensei_course_progress ul.course-progress-navigation li,
+.widget ul.course-progress-navigation li {
+    display: block !important;
+    min-height: 48px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget_sensei_course_progress ul.course-progress-navigation li a,
+.widget ul.course-progress-navigation li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: #ffffff !important;
+    color: #1d4ed8 !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+}
+
+.widget.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+.widget ul.course-progress-navigation li a::before {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    color: #1d4ed8 !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons,
+.widget_sensei_course_progress .course-progress-lessons,
+.widget.widget_sensei_course_progress .course-progress-lessons ul,
+.widget_sensei_course_progress .course-progress-lessons ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    margin: 0 !important;
+    padding: 12px 22px !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #d7e1ee !important;
+    background: #f8fafc !important;
+    color: #020617 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    text-align: left !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    display: grid !important;
+    grid-template-columns: 22px minmax(0, 1fr) !important;
+    align-items: center !important;
+    column-gap: 10px !important;
+    min-height: 52px !important;
+    margin: 0 !important;
+    padding: 12px 18px !important;
+    border-bottom: 1px solid #d7e1ee !important;
+    background: #ffffff !important;
+    color: #020617 !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span {
+    background: #edf5ff !important;
+    color: #1e40af !important;
+    font-weight: 500 !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 22px !important;
+    height: 22px !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+.widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > *,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > * {
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+body:not(.home) .main-title,
+body:not(.home) .title-section,
+body:not(.home) .page-title-section,
+body:not(.home) .kleo-page-title,
+body:not(.home) .header-title {
+    margin: 0 !important;
+    padding: 18px 0 !important;
+    border-top: 0 !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    background: #f8fbff !important;
+}
+
+body:not(.home) .page-title,
+body:not(.home) h1.page-title,
+body:not(.home) h1.entry-title,
+body:not(.home) .article-title h1,
+body:not(.home) .main-title h1,
+body:not(.home) .title-section h1,
+body:not(.home) .template-page > h1:first-child {
+    margin: 0 0 6px !important;
+    color: #0f172a !important;
+    font-size: clamp(22px, 2.4vw, 30px) !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0 !important;
+}
+
+body:not(.home) .kleo-breadcrumb,
+body:not(.home) .breadcrumb,
+body:not(.home) .breadcrumbs,
+body:not(.home) .woocommerce-breadcrumb,
+body:not(.home) .kleo-woo-breadcrumb {
+    margin: 0 !important;
+    color: #64748b !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+}
+
+body:not(.home) .kleo-breadcrumb a,
+body:not(.home) .breadcrumb a,
+body:not(.home) .breadcrumbs a,
+body:not(.home) .woocommerce-breadcrumb a,
+body:not(.home) .kleo-woo-breadcrumb a {
+    color: #2563eb !important;
+    font-weight: 400 !important;
+    text-decoration: none !important;
+}
+
+@media (max-width: 640px) {
+    body:not(.home) .main-title,
+    body:not(.home) .title-section,
+    body:not(.home) .page-title-section,
+    body:not(.home) .kleo-page-title,
+    body:not(.home) .header-title {
+        padding: 16px 0 !important;
+    }
+
+    body:not(.home) .main-title .container,
+    body:not(.home) .title-section .container,
+    body:not(.home) .page-title-section .container,
+    body:not(.home) .kleo-page-title .container,
+    body:not(.home) .header-title .container {
+        padding-right: 16px !important;
+        padding-left: 16px !important;
+    }
+
+    body:not(.home) .page-title,
+    body:not(.home) h1.page-title,
+    body:not(.home) h1.entry-title,
+    body:not(.home) .article-title h1,
+    body:not(.home) .main-title h1,
+    body:not(.home) .title-section h1,
+    body:not(.home) .template-page > h1:first-child {
+        font-size: clamp(20px, 6vw, 26px) !important;
+    }
+}
+
+
+.sidebar .dwqa-popular-questions,.sidebar .dwqa-popular-questions,
+.sidebar .dwqa-questions-list,
+aside .dwqa-popular-questions,
+aside .dwqa-questions-list {
+    overflow: hidden !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 8px !important;
+    background: #ffffff !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .05) !important;
+}
+
+.sidebar .widget:has(.dwqa-popular-questions) .widget-title,
+.sidebar .widget:has(.dwqa-questions-list) .widget-title,
+.sidebar .widget:has(.dwqa-question) .widget-title,
+aside .widget:has(.dwqa-popular-questions) .widget-title,
+aside .widget:has(.dwqa-questions-list) .widget-title,
+aside .widget:has(.dwqa-question) .widget-title,
+.sidebar .dwqa-popular-questions > h3,
+.sidebar .dwqa-popular-questions > h4,
+.sidebar .dwqa-questions-list > h3,
+.sidebar .dwqa-questions-list > h4,
+aside .dwqa-popular-questions > h3,
+aside .dwqa-popular-questions > h4,
+aside .dwqa-questions-list > h3,
+aside .dwqa-questions-list > h4 {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    border-radius: 0 !important;
+    background: #f8fbff !important;
+    color: #0f172a !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+}
+
+.sidebar .dwqa-popular-questions ul,
+.sidebar .dwqa-questions-list ul,
+.sidebar .widget:has(.dwqa-popular-questions) ul,
+.sidebar .widget:has(.dwqa-questions-list) ul,
+.sidebar .widget:has(.dwqa-question) ul,
+aside .dwqa-popular-questions ul,
+aside .dwqa-questions-list ul,
+aside .widget:has(.dwqa-popular-questions) ul,
+aside .widget:has(.dwqa-questions-list) ul,
+aside .widget:has(.dwqa-question) ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: #ffffff !important;
+}
+
+.sidebar .dwqa-popular-questions li,
+.sidebar .dwqa-questions-list li,
+.sidebar .dwqa-questions-list .dwqa-question-item,
+.sidebar .widget:has(.dwqa-popular-questions) li,
+.sidebar .widget:has(.dwqa-questions-list) li,
+.sidebar .widget:has(.dwqa-question) li,
+aside .dwqa-popular-questions li,
+aside .dwqa-questions-list li,
+aside .dwqa-questions-list .dwqa-question-item,
+aside .widget:has(.dwqa-popular-questions) li,
+aside .widget:has(.dwqa-questions-list) li,
+aside .widget:has(.dwqa-question) li {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #eef2f7 !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+}
+
+.sidebar .dwqa-popular-questions li:last-child,
+.sidebar .dwqa-questions-list li:last-child,
+.sidebar .dwqa-questions-list .dwqa-question-item:last-child,
+.sidebar .widget:has(.dwqa-popular-questions) li:last-child,
+.sidebar .widget:has(.dwqa-questions-list) li:last-child,
+.sidebar .widget:has(.dwqa-question) li:last-child,
+aside .dwqa-popular-questions li:last-child,
+aside .dwqa-questions-list li:last-child,
+aside .dwqa-questions-list .dwqa-question-item:last-child,
+aside .widget:has(.dwqa-popular-questions) li:last-child,
+aside .widget:has(.dwqa-questions-list) li:last-child,
+aside .widget:has(.dwqa-question) li:last-child {
+    border-bottom: 0 !important;
+}
+
+.sidebar .dwqa-popular-questions a,
+.sidebar .dwqa-questions-list a,
+.sidebar .widget:has(.dwqa-popular-questions) a,
+.sidebar .widget:has(.dwqa-questions-list) a,
+.sidebar .widget:has(.dwqa-question) a,
+aside .dwqa-popular-questions a,
+aside .dwqa-questions-list a,
+aside .widget:has(.dwqa-popular-questions) a,
+aside .widget:has(.dwqa-questions-list) a,
+aside .widget:has(.dwqa-question) a {
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    text-decoration: none !important;
+}
+
+.sidebar .dwqa-popular-questions a:hover,
+.sidebar .dwqa-questions-list a:hover,
+.sidebar .widget:has(.dwqa-popular-questions) a:hover,
+.sidebar .widget:has(.dwqa-questions-list) a:hover,
+.sidebar .widget:has(.dwqa-question) a:hover,
+aside .dwqa-popular-questions a:hover,
+aside .dwqa-questions-list a:hover,
+aside .widget:has(.dwqa-popular-questions) a:hover,
+aside .widget:has(.dwqa-questions-list) a:hover,
+aside .widget:has(.dwqa-question) a:hover {
+    color: #2563eb !important;
+}
+/* Classhall targeted cleanup: forum sidebar, logged-out course CTA, cart payment */`r`n
+#main aside .widget,
+#main .sidebar .widget {
+    overflow: hidden !important;
+    margin-bottom: 24px !important;
+    border: 1px solid #d7dee8 !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .05) !important;
+}
+
+#main aside .widget .widget-title,
+#main .sidebar .widget .widget-title,
+#main aside .widget > h3:first-child,
+#main aside .widget > h4:first-child,
+#main .sidebar .widget > h3:first-child,
+#main .sidebar .widget > h4:first-child {
+    margin: 0 !important;
+    padding: 15px 18px !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    background: #eff6ff !important;
+    color: #0f172a !important;
+    font-size: 17px !important;
+    font-weight: 500 !important;
+    line-height: 1.35 !important;
+}
+
+#main aside .widget ul,
+#main .sidebar .widget ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#main aside .widget li,
+#main .sidebar .widget li {
+    margin: 0 !important;
+    padding: 14px 18px !important;
+    border-bottom: 1px solid #eef2f7 !important;
+    background: #ffffff !important;
+}
+
+#main aside .widget li:last-child,
+#main .sidebar .widget li:last-child {
+    border-bottom: 0 !important;
+}
+
+#main aside .widget a,
+#main .sidebar .widget a {
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.45 !important;
+    text-decoration: none !important;
+}
+
+#main aside .widget a:hover,
+#main .sidebar .widget a:hover {
+    color: #2563eb !important;
+}
+
+#main aside .widget .dwqa-popular-questions,
+#main aside .widget .dwqa-questions-list,
+#main .sidebar .widget .dwqa-popular-questions,
+#main .sidebar .widget .dwqa-questions-list {
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+body:not(.logged-in).single-course article.course,
+body:not(.logged-in).single-course .single-course .course {
+    display: grid !important;
+    grid-template-columns: minmax(260px, 42%) minmax(0, 1fr) !important;
+    gap: 28px !important;
+    align-items: start !important;
+    padding: 22px !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .05) !important;
+}
+
+body:not(.logged-in).single-course article.course .woo-image.thumbnail,
+body:not(.logged-in).single-course article.course .woo-image,
+body:not(.logged-in).single-course article.course .thumbnail {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+}
+
+body:not(.logged-in).single-course article.course .woo-image img,
+body:not(.logged-in).single-course article.course .thumbnail img {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 6px !important;
+}
+
+body:not(.logged-in).single-course .course-meta,
+body:not(.logged-in).single-course .sensei-course-meta {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body:not(.logged-in) article.course .course-meta > *,
+body:not(.logged-in) article.course .sensei-course-meta > * {
+    order: 1 !important;
+}
+
+body:not(.logged-in).single-course .course-meta form.cart,
+body:not(.logged-in).single-course .sensei-course-meta form.cart,
+body:not(.logged-in).single-course .course-meta .single_add_to_cart_button,
+body:not(.logged-in).single-course .sensei-course-meta .single_add_to_cart_button,
+body:not(.logged-in).single-course .course-meta a.button,
+body:not(.logged-in).single-course .sensei-course-meta a.button,
+body:not(.logged-in) article.course .course-meta a[href*="subscribe"],
+body:not(.logged-in) article.course .course-meta a[href*="cart"],
+body:not(.logged-in) article.course .course-meta a[href*="checkout"],
+body:not(.logged-in) article.course .sensei-course-meta a[href*="subscribe"],
+body:not(.logged-in) article.course .sensei-course-meta a[href*="cart"],
+body:not(.logged-in) article.course .sensei-course-meta a[href*="checkout"] {
+    order: 1 !important;
+    align-self: flex-start !important;
+    margin: 0 0 18px !important;
+}
+
+body:not(.logged-in).single-course .course-meta .status,
+body:not(.logged-in).single-course .sensei-course-meta .status,
+body:not(.logged-in) article.course .course-meta .status,
+body:not(.logged-in) article.course .sensei-course-meta .status {
+    order: 99 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 18px 20px !important;
+}
+
+@media (max-width: 760px) {
+    body:not(.logged-in).single-course article.course,
+    body:not(.logged-in).single-course .single-course .course {
+        grid-template-columns: 1fr !important;
+        gap: 18px !important;
+        padding: 18px !important;
+    }
+}
+
+body.woocommerce-cart .cart-collaterals .cart_totals {
+    padding: 28px !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 14px !important;
+    background: #ffffff !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, .08) !important;
+}
+
+body.woocommerce-cart .cart_totals .order-total {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 18px !important;
+    padding: 18px 20px !important;
+    border: 1px solid #dbeafe !important;
+    border-radius: 12px !important;
+    background: #f8fbff !important;
+}
+
+body.woocommerce-cart .cart_totals .order-total th,
+body.woocommerce-cart .cart_totals .order-total td {
+    width: auto !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    white-space: nowrap !important;
+}
+
+body.woocommerce-cart .wc-proceed-to-checkout a.checkout-button {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 56px !important;
+    border-radius: 10px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, .22) !important;
+}
+
+/* Restore Sensei course progress sidebar */
+#main .widget.widget_sensei_course_progress,
+#main .widget_sensei_course_progress {
+    display: block !important;
+    overflow: visible !important;
+    border: 0 !important;
+    border-radius: 2px !important;
+    background: #555 !important;
+    box-shadow: none !important;
+    text-align: left !important;
+}
+
+#main .widget.widget_sensei_course_progress header,
+#main .widget_sensei_course_progress header {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 2px 2px 0 0 !important;
+    background: #BEC0C0 !important;
+}
+
+#main .widget.widget_sensei_course_progress header h2,
+#main .widget_sensei_course_progress header h2 {
+    margin-top: -5px !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 20px !important;
+    color: inherit !important;
+    font-size: 1.618em !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation,
+#main .widget_sensei_course_progress ul.course-progress-navigation,
+#main .widget ul.course-progress-navigation {
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li,
+#main .widget_sensei_course_progress ul.course-progress-navigation li,
+#main .widget ul.course-progress-navigation li {
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li a,
+#main .widget_sensei_course_progress ul.course-progress-navigation li a,
+#main .widget ul.course-progress-navigation li a {
+    display: block !important;
+    width: auto !important;
+    min-height: 0 !important;
+    padding: 1em 0 !important;
+    border: 0 !important;
+    background: #B5EFEF !important;
+    color: #ccc !important;
+    font-size: inherit !important;
+    line-height: 1.5em !important;
+    text-decoration: none !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+#main .widget_sensei_course_progress ul.course-progress-navigation li a::before,
+#main .widget ul.course-progress-navigation li a::before {
+    content: none !important;
+    display: none !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons,
+#main .widget_sensei_course_progress .course-progress-lessons,
+#main .widget.widget_sensei_course_progress .course-progress-lessons ul,
+#main .widget_sensei_course_progress .course-progress-lessons ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    margin-top: -20px !important;
+    margin-bottom: 3px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    display: block !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0.618em 1.618em 0.618em 3.618em !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    background: #E7E9EC !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: bold !important;
+    line-height: inherit !important;
+    position: relative !important;
+    text-align: inherit !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before {
+    position: absolute !important;
+    top: auto !important;
+    left: auto !important;
+    display: inline-block !important;
+    width: auto !important;
+    height: auto !important;
+    margin-right: .2em !important;
+    line-height: 1em !important;
+    transform: none !important;
+}
+
+/* Classhall final Sensei course sidebar design */
+#main .widget.widget_sensei_course_progress,
+#main .widget_sensei_course_progress {
+    overflow: hidden !important;
+    border: 1px solid #dbe4f0 !important;
+    border-radius: 10px !important;
+    background: #ffffff !important;
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .06) !important;
+}
+
+#main .widget.widget_sensei_course_progress header,
+#main .widget_sensei_course_progress header {
+    padding: 20px 22px !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    border-radius: 0 !important;
+    background: #f8fbff !important;
+}
+
+#main .widget.widget_sensei_course_progress header h2,
+#main .widget_sensei_course_progress header h2 {
+    margin: 0 !important;
+    padding: 0 !important;
+    color: #0f172a !important;
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    line-height: 1.3 !important;
+    letter-spacing: 0 !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation,
+#main .widget_sensei_course_progress ul.course-progress-navigation,
+#main .widget ul.course-progress-navigation {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    background: #ffffff !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li,
+#main .widget_sensei_course_progress ul.course-progress-navigation li,
+#main .widget ul.course-progress-navigation li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    list-style: none !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li a,
+#main .widget_sensei_course_progress ul.course-progress-navigation li a,
+#main .widget ul.course-progress-navigation li a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 56px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-right: 1px solid #eef2f7 !important;
+    background: #ffffff !important;
+    color: #2563eb !important;
+    font-size: 0 !important;
+    line-height: 1 !important;
+    text-decoration: none !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li:last-child a,
+#main .widget_sensei_course_progress ul.course-progress-navigation li:last-child a,
+#main .widget ul.course-progress-navigation li:last-child a {
+    border-right: 0 !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li a::before,
+#main .widget_sensei_course_progress ul.course-progress-navigation li a::before,
+#main .widget ul.course-progress-navigation li a::before {
+    content: "\2039" !important;
+    position: static !important;
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    color: #2563eb !important;
+    font-size: 34px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+}
+
+#main .widget.widget_sensei_course_progress ul.course-progress-navigation li:last-child a::before,
+#main .widget_sensei_course_progress ul.course-progress-navigation li:last-child a::before,
+#main .widget ul.course-progress-navigation li:last-child a::before {
+    content: "\203A" !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons,
+#main .widget_sensei_course_progress .course-progress-lessons,
+#main .widget.widget_sensei_course_progress .course-progress-lessons ul,
+#main .widget_sensei_course_progress .course-progress-lessons ul {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #ffffff !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    margin: 0 !important;
+    padding: 14px 22px !important;
+    border: 0 !important;
+    border-bottom: 1px solid #dbe4f0 !important;
+    background: #eff6ff !important;
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span {
+    display: grid !important;
+    grid-template-columns: 26px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+    min-height: 62px !important;
+    margin: 0 !important;
+    padding: 13px 18px !important;
+    border-bottom: 1px solid #eef2f7 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.35 !important;
+    text-align: left !important;
+    text-decoration: none !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson:nth-child(even) a,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson:nth-child(even) span,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson:nth-child(even) a,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson:nth-child(even) span {
+    background: #f8fbff !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current a,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson.current span {
+    background: #eaf2ff !important;
+    color: #1e40af !important;
+    font-weight: 500 !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a::before,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span::before {
+    position: static !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 24px !important;
+    height: 24px !important;
+    margin: 0 !important;
+    color: inherit !important;
+    font-size: 22px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    transform: none !important;
+}
+
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > *,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson a > *,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-lesson span > * {
+    min-width: 0 !important;
+    margin: 0 !important;
+}
+
+/* Final small fixes */
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-module,
+#main .widget.widget_sensei_course_progress .course-progress-lessons .course-progress-module h3,
+#main .widget_sensei_course_progress .course-progress-lessons .course-progress-module h3 {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+
+/* Sidebar widget padding and content/sidebar divider */
+#main .sidebar .widget,
+#main aside .widget {
+    padding: 18px 20px !important;
+}
+
+#main .sidebar .widget:has(ul),
+#main aside .widget:has(ul),
+#main .sidebar .widget.widget_sensei_course_progress,
+#main aside .widget.widget_sensei_course_progress,
+#main .sidebar .widget:has(.dwqa-popular-questions),
+#main aside .widget:has(.dwqa-popular-questions),
+#main .sidebar .widget:has(.dwqa-questions-list),
+#main aside .widget:has(.dwqa-questions-list) {
+    padding: 0 !important;
+}
+
+@media (min-width: 992px) {
+    #main .sidebar,
+    #main aside,
+    #main .col-sm-4,
+    #main .col-md-4 {
+        border-left: 1px solid #dbe4f0 !important;
+    }
+}
+
+
+/* Sensei mobile spacing: reduce wasted top and side margins */
+@media (max-width: 782px) {
+    body.sensei #main,
+    body.single-course #main,
+    body.single-lesson #main,
+    body.single-quiz #main {
+        padding-top: 0 !important;
+    }
+
+    body.sensei #main > .container,
+    body.single-course #main > .container,
+    body.single-lesson #main > .container,
+    body.single-quiz #main > .container {
+        width: calc(100% - 8px) !important;
+        max-width: calc(100% - 8px) !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    body.sensei #main .template-page,
+    body.sensei #main .wrap-content,
+    body.single-course #main .template-page,
+    body.single-course #main .wrap-content,
+    body.single-lesson #main .template-page,
+    body.single-lesson #main .wrap-content,
+    body.single-quiz #main .template-page,
+    body.single-quiz #main .wrap-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 6px !important;
+        padding-top: 0 !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    body.sensei #main .row,
+    body.single-course #main .row,
+    body.single-lesson #main .row,
+    body.single-quiz #main .row {
+        margin-right: -4px !important;
+        margin-left: -4px !important;
+    }
+
+    body.sensei #main [class*="col-xs-"],
+    body.sensei #main [class*="col-sm-"],
+    body.sensei #main [class*="col-md-"],
+    body.sensei #main [class*="col-lg-"],
+    body.single-course #main [class*="col-xs-"],
+    body.single-course #main [class*="col-sm-"],
+    body.single-course #main [class*="col-md-"],
+    body.single-course #main [class*="col-lg-"],
+    body.single-lesson #main [class*="col-xs-"],
+    body.single-lesson #main [class*="col-sm-"],
+    body.single-lesson #main [class*="col-md-"],
+    body.single-lesson #main [class*="col-lg-"],
+    body.single-quiz #main [class*="col-xs-"],
+    body.single-quiz #main [class*="col-sm-"],
+    body.single-quiz #main [class*="col-md-"],
+    body.single-quiz #main [class*="col-lg-"] {
+        padding-right: 4px !important;
+        padding-left: 4px !important;
+    }
+
+    body.single-course article.course,
+    body.single-lesson article.lesson,
+    body.single-quiz #sensei-quiz-form,
+    body.sensei .course-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 6px !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+}
+
+body.single-lesson article.lesson h1,
+body.single-lesson article.lesson h2,
+body.single-lesson article.lesson h3,
+body.single-lesson article.lesson h4,
+body.single-lesson article.lesson h5,
+body.single-lesson article.lesson h6,
+body.single-lesson .entry-content h1,
+body.single-lesson .entry-content h2,
+body.single-lesson .entry-content h3,
+body.single-lesson .entry-content h4,
+body.single-lesson .entry-content h5,
+body.single-lesson .entry-content h6,
+body.single-lesson .lesson-content h1,
+body.single-lesson .lesson-content h2,
+body.single-lesson .lesson-content h3,
+body.single-lesson .lesson-content h4,
+body.single-lesson .lesson-content h5,
+body.single-lesson .lesson-content h6 {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+/* Sensei lesson content: restore a clear heading hierarchy */
+body.single-lesson article.lesson .entry h1,
+body.single-lesson article.lesson .entry-content h1,
+body.single-lesson article.lesson .lesson-content h1 {
+    margin: 34px 0 18px !important;
+    font-size: 2.25rem !important;
+    font-weight: 800 !important;
+    line-height: 1.18 !important;
+}
+
+body.single-lesson article.lesson .entry h2,
+body.single-lesson article.lesson .entry-content h2,
+body.single-lesson article.lesson .lesson-content h2 {
+    margin: 30px 0 16px !important;
+    font-size: 1.875rem !important;
+    font-weight: 780 !important;
+    line-height: 1.22 !important;
+}
+
+body.single-lesson article.lesson .entry h3,
+body.single-lesson article.lesson .entry-content h3,
+body.single-lesson article.lesson .lesson-content h3 {
+    margin: 26px 0 14px !important;
+    font-size: 1.5rem !important;
+    font-weight: 740 !important;
+    line-height: 1.28 !important;
+}
+
+body.single-lesson article.lesson .entry h4,
+body.single-lesson article.lesson .entry-content h4,
+body.single-lesson article.lesson .lesson-content h4 {
+    margin: 22px 0 12px !important;
+    font-size: 1.25rem !important;
+    font-weight: 720 !important;
+    line-height: 1.32 !important;
+}
+
+body.single-lesson article.lesson .entry h5,
+body.single-lesson article.lesson .entry-content h5,
+body.single-lesson article.lesson .lesson-content h5 {
+    margin: 20px 0 10px !important;
+    font-size: 1.125rem !important;
+    font-weight: 700 !important;
+    line-height: 1.36 !important;
+}
+
+body.single-lesson article.lesson .entry h6,
+body.single-lesson article.lesson .entry-content h6,
+body.single-lesson article.lesson .lesson-content h6 {
+    margin: 18px 0 10px !important;
+    font-size: 1rem !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    text-transform: uppercase !important;
+}
+
+@media (max-width: 600px) {
+    body.single-lesson article.lesson .entry h1,
+    body.single-lesson article.lesson .entry-content h1,
+    body.single-lesson article.lesson .lesson-content h1 {
+        font-size: 2rem !important;
+    }
+
+    body.single-lesson article.lesson .entry h2,
+    body.single-lesson article.lesson .entry-content h2,
+    body.single-lesson article.lesson .lesson-content h2 {
+        font-size: 1.625rem !important;
+    }
+
+    body.single-lesson article.lesson .entry h3,
+    body.single-lesson article.lesson .entry-content h3,
+    body.single-lesson article.lesson .lesson-content h3 {
+        font-size: 1.375rem !important;
+    }
+}
+
+body.single-lesson .lesson header,
+body.single-lesson header.lesson-title,
+body.single-lesson .lesson-title,
+body.single-lesson .entry-content > h1,
+body.single-lesson .entry-content > h2,
+body.single-lesson .entry-content > h3,
+body.single-lesson .entry-content > h4,
+body.single-lesson .entry-content > h5,
+body.single-lesson .entry-content > h6,
+body.single-lesson .lesson-content > h1,
+body.single-lesson .lesson-content > h2,
+body.single-lesson .lesson-content > h3,
+body.single-lesson .lesson-content > h4,
+body.single-lesson .lesson-content > h5,
+body.single-lesson .lesson-content > h6,
+body.single-lesson .entry-content > [style*="background"],
+body.single-lesson .lesson-content > [style*="background"] {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+body.single-lesson .entry-content > p:has(> strong:first-child),
+body.single-lesson .lesson-content > p:has(> strong:first-child) {
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+    width: 100% !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+}
+
+/****** Sensei single question display ******/
+body.single-question .template-page,
+body.single-question .wrap-content,
+body.single-question .main,
+body.single-question #main {
+    background: #ffffff;
+}
+
+.classhall-single-question {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    padding: 0;
+}
+
+.classhall-single-question-inner {
+    padding: 28px;
+    border: 1px solid #d8e3f4;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+.classhall-single-question .sensei-lms-question-block__header {
+    margin-bottom: 18px;
+}
+
+.classhall-single-question .question-title {
+    margin: 0 0 18px !important;
+    padding: 5px !important;
+    border-radius: 2px !important;
+    background: #c7d2f8 !important;
+    color: #0f172a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description {
+    margin-bottom: 18px;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.classhall-question-data-table-wrap {
+    width: 100%;
+    margin: 18px 0 28px;
+    overflow-x: auto;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table,
+.classhall-single-question .entry-content table,
+.classhall-single-question table.classhall-question-data-table,
+.classhall-question-data-table {
+    width: max-content;
+    min-width: min(100%, 620px);
+    border: 1px solid #1f2937 !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    background: #ffffff;
+    color: #081429;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table th,
+.classhall-single-question .wp-block-sensei-lms-question-description table td,
+.classhall-single-question .entry-content table th,
+.classhall-single-question .entry-content table td,
+.classhall-single-question table.classhall-question-data-table th,
+.classhall-single-question table.classhall-question-data-table td,
+.classhall-question-data-table th,
+.classhall-question-data-table td {
+    min-width: 86px;
+    padding: 12px 16px;
+    border: 1px solid #1f2937 !important;
+    outline: 1px solid #1f2937;
+    outline-offset: -1px;
+    background-clip: padding-box;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table th,
+.classhall-single-question .entry-content table th,
+.classhall-single-question table.classhall-question-data-table th,
+.classhall-question-data-table th {
+    background: #eaf2ff !important;
+    color: #07347c !important;
+    font-weight: 800 !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-answers {
+    margin-top: 18px;
+}
+
+.classhall-single-question .answers {
+    display: grid;
+    gap: 10px;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.classhall-single-question .answers li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #bdd7fb;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.classhall-single-question .answers input {
+    flex: 0 0 auto;
+    margin-top: 4px;
+}
+
+.classhall-single-question .answers label {
+    margin: 0;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.classhall-single-question-back {
+    margin: 24px 0 0;
+}
+
+.classhall-single-question-back a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background: #2563eb;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+.classhall-related-questions,
+.single-course #crp_related,
+.single-course .crp_related,
+.single-lesson #crp_related,
+.single-lesson .crp_related,
+.single-quiz #crp_related,
+.single-quiz .crp_related,
+.single-post #crp_related,
+.single-post .crp_related,
+.classhall-related-subjects-bottom-wrap .crp_related,
+.classhall-related-lessons-guest-wrap .crp_related,
+.classhall-related-lessons-bottom-wrap .crp_related,
+.classhall-related-quizzes-bottom-wrap .crp_related,
+.classhall-related-posts-bottom-wrap .crp_related {
+    max-width: 920px;
+    margin: 36px auto 56px;
+    padding: 0 18px;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    clear: both;
+}
+
+.classhall-related-questions {
+    margin-top: -22px;
+}
+
+.classhall-related-questions h2,
+.single-course #crp_related h3,
+.single-course .crp_related h3,
+.single-lesson #crp_related h3,
+.single-lesson .crp_related h3,
+.single-quiz #crp_related h3,
+.single-quiz .crp_related h3,
+.single-post #crp_related h3,
+.single-post .crp_related h3,
+.classhall-related-subjects-bottom-wrap .crp_related h3,
+.classhall-related-lessons-guest-wrap .crp_related h3,
+.classhall-related-lessons-bottom-wrap .crp_related h3,
+.classhall-related-quizzes-bottom-wrap .crp_related h3,
+.classhall-related-posts-bottom-wrap .crp_related h3 {
+    margin: 0 0 14px;
+    color: #0f172a;
+    font-size: 14.4px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.classhall-related-questions ol,
+.single-course #crp_related ul,
+.single-course .crp_related ul,
+.single-lesson #crp_related ul,
+.single-lesson .crp_related ul,
+.single-quiz #crp_related ul,
+.single-quiz .crp_related ul,
+.single-post #crp_related ul,
+.single-post .crp_related ul,
+.classhall-related-subjects-bottom-wrap .crp_related ul,
+.classhall-related-lessons-guest-wrap .crp_related ul,
+.classhall-related-lessons-bottom-wrap .crp_related ul,
+.classhall-related-quizzes-bottom-wrap .crp_related ul,
+.classhall-related-posts-bottom-wrap .crp_related ul {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.classhall-related-questions li,
+.single-course #crp_related li,
+.single-course .crp_related li,
+.single-lesson #crp_related li,
+.single-lesson .crp_related li,
+.single-quiz #crp_related li,
+.single-quiz .crp_related li,
+.single-post #crp_related li,
+.single-post .crp_related li,
+.classhall-related-subjects-bottom-wrap .crp_related li,
+.classhall-related-lessons-guest-wrap .crp_related li,
+.classhall-related-lessons-bottom-wrap .crp_related li,
+.classhall-related-quizzes-bottom-wrap .crp_related li,
+.classhall-related-posts-bottom-wrap .crp_related li {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    list-style: none !important;
+    transform: none !important;
+    overflow: visible !important;
+}
+
+.classhall-related-questions a,
+.single-course #crp_related li > a,
+.single-course .crp_related li > a,
+.single-lesson #crp_related li > a,
+.single-lesson .crp_related li > a,
+.single-quiz #crp_related li > a,
+.single-quiz .crp_related li > a,
+.single-post #crp_related li > a,
+.single-post .crp_related li > a,
+.classhall-related-subjects-bottom-wrap .crp_related li > a,
+.classhall-related-lessons-guest-wrap .crp_related li > a,
+.classhall-related-lessons-bottom-wrap .crp_related li > a,
+.classhall-related-quizzes-bottom-wrap .crp_related li > a,
+.classhall-related-posts-bottom-wrap .crp_related li > a {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 14px 16px;
+    border: 1px solid #dbeafe;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #0f172a !important;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.45;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.classhall-related-questions a:hover,
+.classhall-related-questions a:focus,
+.single-course #crp_related li > a:hover,
+.single-course #crp_related li > a:focus,
+.single-course .crp_related li > a:hover,
+.single-course .crp_related li > a:focus,
+.single-lesson #crp_related li > a:hover,
+.single-lesson #crp_related li > a:focus,
+.single-lesson .crp_related li > a:hover,
+.single-lesson .crp_related li > a:focus,
+.single-quiz #crp_related li > a:hover,
+.single-quiz #crp_related li > a:focus,
+.single-quiz .crp_related li > a:hover,
+.single-quiz .crp_related li > a:focus,
+.single-post #crp_related li > a:hover,
+.single-post #crp_related li > a:focus,
+.single-post .crp_related li > a:hover,
+.single-post .crp_related li > a:focus,
+.classhall-related-subjects-bottom-wrap .crp_related li > a:hover,
+.classhall-related-subjects-bottom-wrap .crp_related li > a:focus,
+.classhall-related-lessons-guest-wrap .crp_related li > a:hover,
+.classhall-related-lessons-guest-wrap .crp_related li > a:focus,
+.classhall-related-lessons-bottom-wrap .crp_related li > a:hover,
+.classhall-related-lessons-bottom-wrap .crp_related li > a:focus,
+.classhall-related-quizzes-bottom-wrap .crp_related li > a:hover,
+.classhall-related-quizzes-bottom-wrap .crp_related li > a:focus,
+.classhall-related-posts-bottom-wrap .crp_related li > a:hover,
+.classhall-related-posts-bottom-wrap .crp_related li > a:focus {
+    border-color: #93c5fd;
+    background: #ffffff;
+    color: #174ea6 !important;
+}
+
+.single-course #crp_related figure,
+.single-course #crp_related img,
+.single-course .crp_related figure,
+.single-course .crp_related img,
+.single-lesson #crp_related figure,
+.single-lesson #crp_related img,
+.single-lesson .crp_related figure,
+.single-lesson .crp_related img,
+.single-quiz #crp_related figure,
+.single-quiz #crp_related img,
+.single-quiz .crp_related figure,
+.single-quiz .crp_related img,
+.single-post #crp_related figure,
+.single-post #crp_related img,
+.single-post .crp_related figure,
+.single-post .crp_related img,
+.classhall-related-subjects-bottom-wrap .crp_related figure,
+.classhall-related-subjects-bottom-wrap .crp_related img,
+.classhall-related-lessons-guest-wrap .crp_related figure,
+.classhall-related-lessons-guest-wrap .crp_related img,
+.classhall-related-lessons-bottom-wrap .crp_related figure,
+.classhall-related-lessons-bottom-wrap .crp_related img,
+.classhall-related-quizzes-bottom-wrap .crp_related figure,
+.classhall-related-quizzes-bottom-wrap .crp_related img,
+.classhall-related-posts-bottom-wrap .crp_related figure,
+.classhall-related-posts-bottom-wrap .crp_related img {
+    display: none !important;
+}
+
+.single-course #crp_related .crp_title,
+.single-course .crp_related .crp_title,
+.single-lesson #crp_related .crp_title,
+.single-lesson .crp_related .crp_title,
+.single-quiz #crp_related .crp_title,
+.single-quiz .crp_related .crp_title,
+.single-post #crp_related .crp_title,
+.single-post .crp_related .crp_title,
+.classhall-related-subjects-bottom-wrap .crp_related .crp_title,
+.classhall-related-lessons-guest-wrap .crp_related .crp_title,
+.classhall-related-lessons-bottom-wrap .crp_related .crp_title,
+.classhall-related-quizzes-bottom-wrap .crp_related .crp_title,
+.classhall-related-posts-bottom-wrap .crp_related .crp_title {
+    position: static !important;
+    display: block;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    text-align: inherit !important;
+    text-shadow: none !important;
+}
+
+.single-course #crp_related .crp_author,
+.single-course #crp_related .crp_date,
+.single-course #crp_related .crp_primary_term,
+.single-course #crp_related .crp_excerpt,
+.single-course .crp_related .crp_author,
+.single-course .crp_related .crp_date,
+.single-course .crp_related .crp_primary_term,
+.single-course .crp_related .crp_excerpt,
+.single-lesson #crp_related .crp_author,
+.single-lesson #crp_related .crp_date,
+.single-lesson #crp_related .crp_primary_term,
+.single-lesson #crp_related .crp_excerpt,
+.single-lesson .crp_related .crp_author,
+.single-lesson .crp_related .crp_date,
+.single-lesson .crp_related .crp_primary_term,
+.single-lesson .crp_related .crp_excerpt,
+.single-quiz #crp_related .crp_author,
+.single-quiz #crp_related .crp_date,
+.single-quiz #crp_related .crp_primary_term,
+.single-quiz #crp_related .crp_excerpt,
+.single-quiz .crp_related .crp_author,
+.single-quiz .crp_related .crp_date,
+.single-quiz .crp_related .crp_primary_term,
+.single-quiz .crp_related .crp_excerpt,
+.single-post #crp_related .crp_author,
+.single-post #crp_related .crp_date,
+.single-post #crp_related .crp_primary_term,
+.single-post #crp_related .crp_excerpt,
+.single-post .crp_related .crp_author,
+.single-post .crp_related .crp_date,
+.single-post .crp_related .crp_primary_term,
+.single-post .crp_related .crp_excerpt,
+.classhall-related-subjects-bottom-wrap .crp_related .crp_author,
+.classhall-related-subjects-bottom-wrap .crp_related .crp_date,
+.classhall-related-subjects-bottom-wrap .crp_related .crp_primary_term,
+.classhall-related-subjects-bottom-wrap .crp_related .crp_excerpt,
+.classhall-related-lessons-guest-wrap .crp_related .crp_author,
+.classhall-related-lessons-guest-wrap .crp_related .crp_date,
+.classhall-related-lessons-guest-wrap .crp_related .crp_primary_term,
+.classhall-related-lessons-guest-wrap .crp_related .crp_excerpt,
+.classhall-related-lessons-bottom-wrap .crp_related .crp_author,
+.classhall-related-lessons-bottom-wrap .crp_related .crp_date,
+.classhall-related-lessons-bottom-wrap .crp_related .crp_primary_term,
+.classhall-related-lessons-bottom-wrap .crp_related .crp_excerpt,
+.classhall-related-quizzes-bottom-wrap .crp_related .crp_author,
+.classhall-related-quizzes-bottom-wrap .crp_related .crp_date,
+.classhall-related-quizzes-bottom-wrap .crp_related .crp_primary_term,
+.classhall-related-quizzes-bottom-wrap .crp_related .crp_excerpt,
+.classhall-related-posts-bottom-wrap .crp_related .crp_author,
+.classhall-related-posts-bottom-wrap .crp_related .crp_date,
+.classhall-related-posts-bottom-wrap .crp_related .crp_primary_term,
+.classhall-related-posts-bottom-wrap .crp_related .crp_excerpt {
+    display: block;
+    margin: 6px 16px 0;
+    color: #475569;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.classhall-related-subjects-bottom-wrap,
+.classhall-related-lessons-guest-wrap,
+.classhall-related-lessons-bottom-wrap,
+.classhall-related-quizzes-bottom-wrap,
+.classhall-related-posts-bottom-wrap {
+    clear: both;
+    margin: 36px auto 0;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.classhall-related-subjects-bottom-wrap {
+    max-width: 1180px;
+    margin-top: 54px;
+    padding-top: 18px;
+}
+
+.classhall-related-lessons-guest-wrap,
+.classhall-related-lessons-bottom-wrap,
+.classhall-related-quizzes-bottom-wrap,
+.classhall-related-posts-bottom-wrap {
+    margin-top: 28px;
+}
+
+.classhall-related-subjects-bottom-wrap #crp_related,
+.classhall-related-lessons-guest-wrap #crp_related,
+.classhall-related-lessons-bottom-wrap #crp_related,
+.classhall-related-quizzes-bottom-wrap #crp_related,
+.classhall-related-posts-bottom-wrap #crp_related,
+.classhall-related-subjects-bottom-wrap .crp_related,
+.classhall-related-lessons-guest-wrap .crp_related,
+.classhall-related-lessons-bottom-wrap .crp_related,
+.classhall-related-quizzes-bottom-wrap .crp_related,
+.classhall-related-posts-bottom-wrap .crp_related {
+    margin-top: 0;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Lesson accessibility fixes for Lighthouse contrast checks */
+body.single-lesson .lesson-tags,
+body.single-lesson section.lesson-tags,
+body.single-lesson article.lesson .lesson-tags,
+body.single-lesson .sensei-breadcrumb {
+    color: #334155 !important;
+}
+
+body.single-lesson .lesson-tags *,
+body.single-lesson section.lesson-tags *,
+body.single-lesson article.lesson .lesson-tags *,
+body.single-lesson .sensei-breadcrumb * {
+    color: inherit !important;
+}
+
+body.single-lesson .lesson-tags a,
+body.single-lesson section.lesson-tags a,
+body.single-lesson article.lesson .lesson-tags a,
+body.single-lesson .sensei-breadcrumb a {
+    color: #1d4ed8 !important;
+}
+
+body.single-lesson article.lesson > p,
+body.single-lesson article.lesson > p * {
+    color: #334155 !important;
+}
+
+/* Restore the original Sensei message styling on lesson pages */
+body.single-lesson .sensei-message,
+body.single-lesson p.sensei-message,
+body.single-lesson div.sensei-message,
+body.single-lesson .course-container p.sensei-message,
+body.single-lesson .course-container div.sensei-message,
+body.single-lesson .lesson p.sensei-message,
+body.single-lesson .lesson div.sensei-message {
+    display: block !important;
+    clear: both !important;
+    margin-top: 1.387em !important;
+    margin-bottom: 1.618em !important;
+    padding: 1em 1.618em !important;
+    border: 1px solid #cbdaf0 !important;
+    border-radius: 6px !important;
+    background-clip: padding-box !important;
+    box-shadow: none !important;
+    color: #1f3558 !important;
+    font-size: inherit !important;
+    line-height: inherit !important;
+}
+
+body.single-lesson .sensei-message a,
+body.single-lesson p.sensei-message a,
+body.single-lesson div.sensei-message a {
+    text-decoration: underline !important;
+}
+
+body.single-lesson .sensei-message a:hover,
+body.single-lesson p.sensei-message a:hover,
+body.single-lesson div.sensei-message a:hover {
+    text-decoration: none !important;
+}
+
+body.single-lesson .sensei-message::after,
+body.single-lesson p.sensei-message::after,
+body.single-lesson div.sensei-message::after {
+    content: "" !important;
+    clear: both !important;
+    display: block !important;
+}
+
+body.single-lesson .sensei-message::before,
+body.single-lesson p.sensei-message::before,
+body.single-lesson div.sensei-message::before {
+    font-family: "FontAwesomeSensei" !important;
+    display: inline-block !important;
+    margin-right: .618em !important;
+    font-weight: normal !important;
+    line-height: 1em !important;
+    width: 1em !important;
+    font-size: 1.387em !important;
+    position: relative !important;
+    top: .1em !important;
+    color: #1f4690 !important;
+}
+
+body.single-lesson .sensei-message.info,
+body.single-lesson p.sensei-message.info,
+body.single-lesson div.sensei-message.info {
+    background: #f5f8fc !important;
+}
+
+body.single-lesson .sensei-message.info::before,
+body.single-lesson p.sensei-message.info::before,
+body.single-lesson div.sensei-message.info::before {
+    content: "\f05a" !important;
+}
+
+body.single-lesson .sensei-message.info a,
+body.single-lesson p.sensei-message.info a,
+body.single-lesson div.sensei-message.info a {
+    color: #1d4ed8 !important;
+}
+
+body.single-lesson .sensei-message.info a:hover,
+body.single-lesson p.sensei-message.info a:hover,
+body.single-lesson div.sensei-message.info a:hover {
+    color: #174ea6 !important;
+}
+
+body.single-lesson .sensei-message.alert,
+body.single-lesson p.sensei-message.alert,
+body.single-lesson div.sensei-message.alert {
+    border-color: #fecaca !important;
+    background: #fff1f2 !important;
+    color: #7f1d1d !important;
+}
+
+body.single-lesson .sensei-message.alert::before,
+body.single-lesson p.sensei-message.alert::before,
+body.single-lesson div.sensei-message.alert::before {
+    color: #ed6c6c !important;
+    content: "\f071" !important;
+}
+
+body.single-lesson .sensei-message.success,
+body.single-lesson p.sensei-message.success,
+body.single-lesson div.sensei-message.success {
+    background: hsl(116.7567567568, 30.081300813%, 86.7647058824%) !important;
+}
+
+body.single-lesson .sensei-message.success::before,
+body.single-lesson p.sensei-message.success::before,
+body.single-lesson div.sensei-message.success::before {
+    color: #63a95f !important;
+    content: "\f058" !important;
+}
+
+/* Lesson footer: match the homepage blue footer treatment */
+body.single-lesson #footer,
+body.single-lesson footer,
+body.single-lesson .footer-color,
+body.single-lesson .footer-main,
+body.single-quiz #footer,
+body.single-quiz footer,
+body.single-quiz .footer-color,
+body.single-quiz .footer-main,
+body.single-question #footer,
+body.single-question footer,
+body.single-question .footer-color,
+body.single-question .footer-main {
+    background: #1e3a8a !important;
+    color: #ffffff !important;
+    border-top: 0 !important;
+}
+
+body.single-lesson #footer *,
+body.single-lesson footer *,
+body.single-lesson .footer-color *,
+body.single-lesson .footer-main *,
+body.single-quiz #footer *,
+body.single-quiz footer *,
+body.single-quiz .footer-color *,
+body.single-quiz .footer-main *,
+body.single-question #footer *,
+body.single-question footer *,
+body.single-question .footer-color *,
+body.single-question .footer-main * {
+    color: #ffffff !important;
+}
+
+body.single-lesson #footer a,
+body.single-lesson footer a,
+body.single-lesson .footer-color a,
+body.single-lesson .footer-main a,
+body.single-quiz #footer a,
+body.single-quiz footer a,
+body.single-quiz .footer-color a,
+body.single-quiz .footer-main a,
+body.single-question #footer a,
+body.single-question footer a,
+body.single-question .footer-color a,
+body.single-question .footer-main a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+body.single-lesson #footer a:hover,
+body.single-lesson #footer a:focus,
+body.single-lesson footer a:hover,
+body.single-lesson footer a:focus,
+body.single-quiz #footer a:hover,
+body.single-quiz #footer a:focus,
+body.single-quiz footer a:hover,
+body.single-quiz footer a:focus,
+body.single-question #footer a:hover,
+body.single-question #footer a:focus,
+body.single-question footer a:hover,
+body.single-question footer a:focus {
+    color: #dbeafe !important;
+    text-decoration: underline !important;
+    text-underline-offset: 3px;
+}
+
+body.single-lesson #footer .container,
+body.single-lesson footer .container,
+body.single-lesson #footer .row,
+body.single-lesson footer .row,
+body.single-quiz #footer .container,
+body.single-quiz footer .container,
+body.single-quiz #footer .row,
+body.single-quiz footer .row,
+body.single-question #footer .container,
+body.single-question footer .container,
+body.single-question #footer .row,
+body.single-question footer .row {
+    background: transparent !important;
+}
+
+body.single-lesson #socket,
+body.single-lesson .socket,
+body.single-lesson .footer-bottom,
+body.single-quiz #socket,
+body.single-quiz .socket,
+body.single-quiz .footer-bottom,
+body.single-question #socket,
+body.single-question .socket,
+body.single-question .footer-bottom {
+    background: #0f2f72 !important;
+    color: #ffffff !important;
+    border-top: 1px solid rgba(255, 255, 255, .14) !important;
+}
+
+body.single-lesson #socket *,
+body.single-lesson .socket *,
+body.single-lesson .footer-bottom *,
+body.single-quiz #socket *,
+body.single-quiz .socket *,
+body.single-quiz .footer-bottom *,
+body.single-question #socket *,
+body.single-question .socket *,
+body.single-question .footer-bottom * {
+    color: #ffffff !important;
+}
+
+/* Shared Sensei footer: keep lesson, quiz, and question pages visually identical. */
+body.single-lesson #footer.footer-color,
+body.single-lesson #footer,
+body.single-quiz #footer.footer-color,
+body.single-quiz #footer,
+body.single-question #footer.footer-color,
+body.single-question #footer {
+    display: block !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-left: calc(50% - 50vw) !important;
+    padding: 38px 0 34px !important;
+    border-top: 0 !important;
+    background: #1e40af !important;
+    color: #ffffff !important;
+}
+
+body.single-lesson #footer .container,
+body.single-lesson #footer .template-page,
+body.single-lesson #footer .wrap-content,
+body.single-lesson #footer .row,
+body.single-lesson #footer [class*="col-"],
+body.single-lesson #footer .footer-sidebar,
+body.single-lesson #footer .widget,
+body.single-quiz #footer .container,
+body.single-quiz #footer .template-page,
+body.single-quiz #footer .wrap-content,
+body.single-quiz #footer .row,
+body.single-quiz #footer [class*="col-"],
+body.single-quiz #footer .footer-sidebar,
+body.single-quiz #footer .widget,
+body.single-question #footer .container,
+body.single-question #footer .template-page,
+body.single-question #footer .wrap-content,
+body.single-question #footer .row,
+body.single-question #footer [class*="col-"],
+body.single-question #footer .footer-sidebar,
+body.single-question #footer .widget {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body.single-lesson #footer .container,
+body.single-quiz #footer .container,
+body.single-question #footer .container {
+    max-width: 1180px !important;
+    padding-top: 0 !important;
+    padding-right: clamp(20px, 4vw, 34px) !important;
+    padding-bottom: 0 !important;
+    padding-left: clamp(20px, 4vw, 34px) !important;
+}
+
+body.single-lesson #footer .row,
+body.single-quiz #footer .row,
+body.single-question #footer .row {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: clamp(22px, 4vw, 46px) !important;
+}
+
+body.single-lesson #footer .row::before,
+body.single-lesson #footer .row::after,
+body.single-quiz #footer .row::before,
+body.single-quiz #footer .row::after,
+body.single-question #footer .row::before,
+body.single-question #footer .row::after {
+    content: none !important;
+}
+
+body.single-lesson #footer [class*="col-"],
+body.single-quiz #footer [class*="col-"],
+body.single-question #footer [class*="col-"] {
+    float: none !important;
+    width: auto !important;
+    min-width: 0 !important;
+    padding: 0 !important;
+}
+
+body.single-lesson #socket,
+body.single-lesson .socket,
+body.single-lesson .footer-bottom,
+body.single-quiz #socket,
+body.single-quiz .socket,
+body.single-quiz .footer-bottom,
+body.single-question #socket,
+body.single-question .socket,
+body.single-question .footer-bottom {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-right: calc(50% - 50vw) !important;
+    margin-left: calc(50% - 50vw) !important;
+    border-top: 1px solid rgba(255, 255, 255, .12) !important;
+    background: #0f2f72 !important;
+    color: rgba(255, 255, 255, .72) !important;
+    min-height: 48px !important;
+    padding: 14px 0 !important;
+}
+
+body.single-lesson #socket .container,
+body.single-lesson #socket .template-page,
+body.single-lesson #socket .wrap-content,
+body.single-lesson #socket .row,
+body.single-lesson .socket .container,
+body.single-lesson .footer-bottom .container,
+body.single-quiz #socket .container,
+body.single-quiz #socket .template-page,
+body.single-quiz #socket .wrap-content,
+body.single-quiz #socket .row,
+body.single-quiz .socket .container,
+body.single-quiz .footer-bottom .container,
+body.single-question #socket .container,
+body.single-question #socket .template-page,
+body.single-question #socket .wrap-content,
+body.single-question #socket .row,
+body.single-question .socket .container,
+body.single-question .footer-bottom .container {
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+body.single-lesson #footer,
+body.single-quiz #footer,
+body.single-question #footer {
+    min-height: 0 !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    line-height: 1.55 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #footer .container,
+body.single-lesson #footer .row,
+body.single-lesson #footer [class*="col-"],
+body.single-lesson #footer .footer-sidebar,
+body.single-lesson #footer .widget,
+body.single-quiz #footer .container,
+body.single-quiz #footer .row,
+body.single-quiz #footer [class*="col-"],
+body.single-quiz #footer .footer-sidebar,
+body.single-quiz #footer .widget,
+body.single-question #footer .container,
+body.single-question #footer .row,
+body.single-question #footer [class*="col-"],
+body.single-question #footer .footer-sidebar,
+body.single-question #footer .widget {
+    min-height: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #footer h1,
+body.single-lesson #footer h2,
+body.single-lesson #footer h3,
+body.single-lesson #footer h4,
+body.single-lesson #footer h5,
+body.single-lesson #footer h6,
+body.single-lesson #footer .widget-title,
+body.single-quiz #footer h1,
+body.single-quiz #footer h2,
+body.single-quiz #footer h3,
+body.single-quiz #footer h4,
+body.single-quiz #footer h5,
+body.single-quiz #footer h6,
+body.single-quiz #footer .widget-title,
+body.single-question #footer h1,
+body.single-question #footer h2,
+body.single-question #footer h3,
+body.single-question #footer h4,
+body.single-question #footer h5,
+body.single-question #footer h6,
+body.single-question #footer .widget-title {
+    margin: 0 0 16px !important;
+    padding: 0 !important;
+    color: #ffffff !important;
+    font-family: inherit !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #footer p,
+body.single-lesson #footer li,
+body.single-lesson #footer span,
+body.single-lesson #footer div,
+body.single-quiz #footer p,
+body.single-quiz #footer li,
+body.single-quiz #footer span,
+body.single-quiz #footer div,
+body.single-question #footer p,
+body.single-question #footer li,
+body.single-question #footer span,
+body.single-question #footer div {
+    color: #ffffff !important;
+    font-family: inherit !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #footer p,
+body.single-quiz #footer p,
+body.single-question #footer p {
+    margin: 0 0 14px !important;
+}
+
+body.single-lesson #footer ul,
+body.single-quiz #footer ul,
+body.single-question #footer ul {
+    display: grid !important;
+    gap: 10px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+body.single-lesson #footer li,
+body.single-quiz #footer li,
+body.single-question #footer li {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body.single-lesson #footer a,
+body.single-quiz #footer a,
+body.single-question #footer a {
+    color: #ffffff !important;
+    font-family: inherit !important;
+    font-size: inherit !important;
+    font-weight: 400 !important;
+    line-height: inherit !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #footer strong,
+body.single-lesson #footer b,
+body.single-quiz #footer strong,
+body.single-quiz #footer b,
+body.single-question #footer strong,
+body.single-question #footer b {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #socket,
+body.single-lesson .socket,
+body.single-lesson .footer-bottom,
+body.single-quiz #socket,
+body.single-quiz .socket,
+body.single-quiz .footer-bottom,
+body.single-question #socket,
+body.single-question .socket,
+body.single-question .footer-bottom {
+    min-height: 0 !important;
+}
+
+body.single-lesson #socket *,
+body.single-lesson .socket *,
+body.single-lesson .footer-bottom *,
+body.single-quiz #socket *,
+body.single-quiz .socket *,
+body.single-quiz .footer-bottom *,
+body.single-question #socket *,
+body.single-question .socket *,
+body.single-question .footer-bottom * {
+    font-family: inherit !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    text-transform: none !important;
+    letter-spacing: 0 !important;
+}
+
+body.single-lesson #socket .container,
+body.single-lesson .socket .container,
+body.single-lesson .footer-bottom .container,
+body.single-quiz #socket .container,
+body.single-quiz .socket .container,
+body.single-quiz .footer-bottom .container,
+body.single-question #socket .container,
+body.single-question .socket .container,
+body.single-question .footer-bottom .container {
+    max-width: 1180px !important;
+    padding-top: 0 !important;
+    padding-right: clamp(20px, 4vw, 34px) !important;
+    padding-bottom: 0 !important;
+    padding-left: clamp(20px, 4vw, 34px) !important;
+}
+
+@media (max-width: 900px) {
+    body.single-lesson #footer .row,
+    body.single-quiz #footer .row,
+    body.single-question #footer .row {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+body.single-lesson article.lesson .entry a.button[href*="quiz"],
+body.single-lesson article.lesson .entry-content a.button[href*="quiz"],
+body.single-lesson .lesson .entry a.button[href*="quiz"],
+body.single-lesson .lesson .entry-content a.button[href*="quiz"] {
+    display: inline-flex !important;
+    width: auto !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    margin: 18px 0 8px !important;
+    padding: 13px 24px !important;
+    border-radius: 8px !important;
+    background: #2563eb !important;
+    color: #ffffff !important;
+    box-shadow: 0 12px 24px rgba(37, 99, 235, .18) !important;
+}
+
+body.single-lesson article.lesson footer,
+body.single-lesson .lesson footer {
+    background: transparent !important;
+}
+
+@media (max-width: 560px) {
+    body.single-lesson #footer .row,
+    body.single-quiz #footer .row,
+    body.single-question #footer .row {
+        grid-template-columns: 1fr !important;
+        gap: 26px !important;
+    }
+}
+
+@font-face {
+    font-family: "fontello";
+    src: url("../kleo/assets/font/fontello.woff2?52140119") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "FontAwesomeSensei";
+    src: url("../../plugins/woothemes-sensei/plugins/sensei-lms/assets/dist/fonts/fontawesome-webfont.45de4ef7.woff2") format("woff2"),
+        url("../../plugins/woothemes-sensei/plugins/sensei-pro/assets/dist/fonts/fontawesome-webfont.45de4ef7.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Classhall lesson content tables */
+body.single-lesson article.lesson .entry .wp-block-table,
+body.single-lesson article.lesson .entry .jtrespo-scroll,
+body.single-lesson article.lesson .entry-content .wp-block-table,
+body.single-lesson article.lesson .entry-content .jtrespo-scroll,
+body.single-lesson .lesson .entry .wp-block-table,
+body.single-lesson .lesson .entry .jtrespo-scroll,
+body.single-lesson .lesson .entry-content .wp-block-table,
+body.single-lesson .lesson .entry-content .jtrespo-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+body.single-lesson article.lesson .entry table,
+body.single-lesson article.lesson .entry-content table,
+body.single-lesson .lesson .entry table,
+body.single-lesson .lesson .entry-content table {
+    display: table;
+    width: 100%;
+    max-width: 100%;
+    margin: 18px 0 24px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    color: #0f172a;
+    font-size: 16px;
+    line-height: 1.45;
+    table-layout: auto;
+    white-space: normal;
+}
+
+body.single-lesson article.lesson .entry table th,
+body.single-lesson article.lesson .entry table td,
+body.single-lesson article.lesson .entry-content table th,
+body.single-lesson article.lesson .entry-content table td,
+body.single-lesson .lesson .entry table th,
+body.single-lesson .lesson .entry table td,
+body.single-lesson .lesson .entry-content table th,
+body.single-lesson .lesson .entry-content table td {
+    padding: 10px 18px !important;
+    border: 1px solid #dbe4f0;
+    vertical-align: top;
+    text-align: left;
+}
+
+body.single-lesson article.lesson .entry table th,
+body.single-lesson article.lesson .entry-content table th,
+body.single-lesson .lesson .entry table th,
+body.single-lesson .lesson .entry-content table th {
+    background: #edf3fb;
+    color: #0f172a;
+    font-weight: 800;
+}
+
+@media (max-width: 991px) {
+    body.single-lesson article.lesson .entry table,
+    body.single-lesson article.lesson .entry-content table,
+    body.single-lesson .lesson .entry table,
+    body.single-lesson .lesson .entry-content table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        font-size: 14px;
+    }
+
+    body.single-lesson article.lesson .entry table th,
+    body.single-lesson article.lesson .entry table td,
+    body.single-lesson article.lesson .entry-content table th,
+    body.single-lesson article.lesson .entry-content table td,
+    body.single-lesson .lesson .entry table th,
+    body.single-lesson .lesson .entry table td,
+    body.single-lesson .lesson .entry-content table th,
+    body.single-lesson .lesson .entry-content table td {
+        min-width: 96px;
+        padding: 8px 10px !important;
+    }
+}
+/* Lesson footer logout consistency. Logout should be a text link, not a button. */
+body.single-lesson #footer .classhall-footer-logout,
+body.single-lesson #footer a.classhall-footer-logout,
+body.single-quiz #footer .classhall-footer-logout,
+body.single-quiz #footer a.classhall-footer-logout,
+body.single-question #footer .classhall-footer-logout,
+body.single-question #footer a.classhall-footer-logout {
+    display: inline !important;
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    color: #ffffff !important;
+    font: inherit !important;
+    font-weight: 700 !important;
+    line-height: inherit !important;
+    text-align: left !important;
+    text-decoration: none !important;
+    text-transform: none !important;
+    white-space: normal !important;
+}
+
+body.single-lesson #footer .classhall-footer-logout *,
+body.single-lesson #footer a.classhall-footer-logout *,
+body.single-quiz #footer .classhall-footer-logout *,
+body.single-quiz #footer a.classhall-footer-logout *,
+body.single-question #footer .classhall-footer-logout *,
+body.single-question #footer a.classhall-footer-logout * {
+    color: #ffffff !important;
+}
+
+body.single-lesson #footer .classhall-footer-logout:hover,
+body.single-lesson #footer .classhall-footer-logout:focus,
+body.single-lesson #footer a.classhall-footer-logout:hover,
+body.single-lesson #footer a.classhall-footer-logout:focus,
+body.single-quiz #footer .classhall-footer-logout:hover,
+body.single-quiz #footer .classhall-footer-logout:focus,
+body.single-quiz #footer a.classhall-footer-logout:hover,
+body.single-quiz #footer a.classhall-footer-logout:focus,
+body.single-question #footer .classhall-footer-logout:hover,
+body.single-question #footer .classhall-footer-logout:focus,
+body.single-question #footer a.classhall-footer-logout:hover,
+body.single-question #footer a.classhall-footer-logout:focus {
+    background: transparent !important;
+    color: #ffffff !important;
+    text-decoration: underline !important;
+}
+
+
+/* Mobile lesson layout: reclaim the unused sidebar column while preserving desktop sidebars. */
+@media (max-width: 700px) {
+    body.single-lesson #main > .container,
+    body.single-quiz #main > .container,
+    body.sensei #main > .container {
+        width: min(100% - 16px, 1180px) !important;
+        max-width: min(100% - 16px, 1180px) !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    body.single-lesson #main .row,
+    body.single-quiz #main .row,
+    body.sensei #main .row {
+        display: block !important;
+        width: 100% !important;
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    body.single-lesson #main [class*="col-"],
+    body.single-quiz #main [class*="col-"],
+    body.sensei #main [class*="col-"] {
+        float: none !important;
+        clear: both !important;
+        width: 100% !important;
+        max-width: none !important;
+        min-width: 0 !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    body.single-lesson #main .sidebar,
+    body.single-lesson #main aside,
+    body.single-lesson #main .sidebar-main,
+    body.single-quiz #main .sidebar,
+    body.single-quiz #main aside,
+    body.single-quiz #main .sidebar-main,
+    body.sensei #main .sidebar,
+    body.sensei #main aside,
+    body.sensei #main .sidebar-main {
+        display: none !important;
+    }
+}

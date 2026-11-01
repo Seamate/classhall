@@ -1,0 +1,62 @@
+.woocommerce-order-details .chl-home-order-row td.product-name {
+    display: table-cell !important;
+    text-align: left !important;
+    vertical-align: top;
+}
+.woocommerce-order-details .chl-home-order-row .wc-item-meta {
+    display: grid !important;
+    gap: 16px;
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 64ch;
+    text-align: left !important;
+}
+.woocommerce-order-details .chl-home-order-row .wc-item-meta li,
+.woocommerce-order-details .chl-home-order-row .wc-item-meta p,
+.woocommerce-order-details .chl-home-order-row .wc-item-meta strong {
+    display: block !important;
+    float: none !important;
+    text-align: left !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    line-height: 1.6;
+    color: #292929;
+}
+.woocommerce-order-details .chl-home-order-row .wc-item-meta strong { font-weight: 700 !important; }
+.woocommerce-order-details .chl-home-order-row .wc-item-meta p { font-weight: 400; }
+/* A home-lessons-only order uses full-width details and a separate totals summary. */
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) {
+    display: block;
+    width: 100%;
+    border: 1px solid #d6e2f2;
+    border-top: 4px solid #245eec;
+    background: #fff;
+}
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) :is(thead, colgroup),
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) tbody .product-total { display: none !important; }
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) :is(tbody, tfoot, tbody tr) { display: block; width: 100%; }
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) td.product-name {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px !important;
+}
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) tfoot tr { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) tfoot td { text-align: right; white-space: normal; }
+.woocommerce-order-details table.order_details:has(.chl-home-order-row):not(:has(.order_item:not(.chl-home-order-row))) tfoot .amount { white-space: nowrap; }
+.woocommerce-order:has(.chl-home-order-row) .woocommerce-thankyou-order-received,
+.woocommerce-order:has(.chl-home-order-row) .woocommerce-notice--success {
+    color: #1746bb !important;
+    background: #edf3ff !important;
+    border-color: #245eec !important;
+    text-align: left;
+}
+.woocommerce-order:has(.chl-home-order-row) .woocommerce-order-overview,
+.woocommerce-order:has(.chl-home-order-row) .woocommerce-order-overview strong { color: #292929 !important; }
+.woocommerce-order:has(.chl-home-order-row) .woocommerce-order-overview { background: #edf3ff !important; border-top: 3px solid #245eec; }
+.woocommerce-order:has(.chl-home-order-row) a.button { background: #245eec !important; color: #fff !important; }
+@media (max-width: 480px) {
+    .woocommerce-order-details .chl-home-order-row .wc-item-meta { font-size: 15px; }
+    .woocommerce-order-details table.order_details:has(.chl-home-order-row) tfoot tr { grid-template-columns: minmax(0, 1fr); }
+}

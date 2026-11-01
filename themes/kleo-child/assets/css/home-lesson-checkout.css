@@ -1,0 +1,83 @@
+/* Restore the table cell overridden by the theme's flex checkout layout. */
+body.woocommerce-checkout #order_review .chl-home-lesson-row td.product-name,
+body.woocommerce-checkout table.shop_table .chl-home-lesson-row td.product-name {
+    display: table-cell !important;
+    text-align: left !important;
+    vertical-align: top;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row .chl-checkout-class {
+    display: block;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    font-weight: 400 !important;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 54ch;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left !important;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation dt,
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation dd,
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation p {
+    display: block !important;
+    float: none !important;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    text-align: left !important;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation dt {
+    margin: 8px 0 4px;
+    font-weight: 700 !important;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row .chl-checkout-label {
+    font-weight: 700 !important;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation dd,
+.woocommerce-checkout-review-order-table .chl-home-lesson-row dl.variation p {
+    font-weight: 400 !important;
+}
+.woocommerce-checkout-review-order-table .chl-home-lesson-row td.product-total {
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+/* Keep totals below the details, without a separate item-price column. */
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) {
+    display: block;
+    width: 100%;
+}
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) :is(thead, tbody, tfoot) {
+    display: block;
+    width: 100%;
+}
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) :is(thead, tbody) tr {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+body.woocommerce-checkout #order_review table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) td.product-name,
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) :is(th, td).product-name {
+    display: block !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) thead,
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) colgroup,
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) :is(thead, tbody) .product-total {
+    display: none !important;
+}
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) tfoot tr {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+}
+body.woocommerce-checkout table.woocommerce-checkout-review-order-table:has(.chl-home-lesson-row):not(:has(.cart_item:not(.chl-home-lesson-row))) tfoot td {
+    white-space: nowrap;
+    text-align: right;
+}

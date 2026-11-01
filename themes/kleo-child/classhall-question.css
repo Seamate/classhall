@@ -1,0 +1,467 @@
+/****** Classhall question page critical styles ******/
+@font-face {
+    font-family: "fontello";
+    src: url("../kleo/assets/font/fontello.woff2?52140119") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body.single-question {
+    --classhall-blue: #2563eb;
+    --classhall-blue-dark: #1e40af;
+    --classhall-blue-light: #dbeafe;
+    --classhall-blue-soft: #eff6ff;
+    color: #0f172a;
+}
+
+body.single-question .container-wrap.main-title,
+body.single-question .main-title {
+    background: #f7f7f7;
+    border-color: #e5e5e5;
+}
+
+body.single-question .template-page,
+body.single-question .wrap-content,
+body.single-question .main,
+body.single-question #main {
+    background: #ffffff;
+}
+
+body.single-question .template-page .container,
+body.single-question .wrap-content .container {
+    max-width: 1180px;
+}
+
+body.single-question .page-title {
+    color: #0f172a;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+body.single-question .sensei-breadcrumb,
+body.single-question section.sensei-breadcrumb,
+body.single-question .sensei-breadcrumb * {
+    color: #334155 !important;
+}
+
+body.single-question .sensei-breadcrumb a,
+body.single-question section.sensei-breadcrumb a {
+    color: #1d4ed8 !important;
+}
+
+.classhall-single-question {
+    max-width: 760px;
+    margin: 0 auto 34px;
+    padding: 0;
+}
+
+body.single-question #main > .container,
+body.single-question .template-page > .container,
+body.single-question .wrap-content > .container {
+    max-width: 980px !important;
+}
+
+body.single-question .template-page .row,
+body.single-question .wrap-content .row {
+    display: block;
+}
+
+body.single-question .template-page [class*="col-"],
+body.single-question .wrap-content [class*="col-"] {
+    float: none !important;
+    width: auto !important;
+    max-width: none !important;
+}
+
+body.single-question aside,
+body.single-question .sidebar,
+body.single-question .sidebar-right,
+body.single-question .sidebar-left {
+    display: none !important;
+}
+
+.classhall-single-question-inner {
+    padding: 28px;
+    border: 1px solid #d8e3f4;
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow: none;
+}
+
+body.single-question .classhall-single-question p,
+body.single-question .classhall-single-question li,
+body.single-question .classhall-single-question td,
+body.single-question .classhall-single-question th,
+body.single-question .classhall-single-question label {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+.classhall-single-question .sensei-lms-question-block__header {
+    margin-bottom: 18px;
+}
+
+.classhall-single-question .question-title {
+    margin: 0 0 18px !important;
+    padding: 5px !important;
+    border-radius: 2px !important;
+    background: #c7d2f8 !important;
+    color: #0f172a !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description {
+    margin-bottom: 18px;
+    color: #111827;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.classhall-question-data-table-wrap {
+    width: 100%;
+    margin: 18px 0 28px;
+    overflow-x: auto;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table,
+.classhall-single-question .entry-content table,
+.classhall-single-question table.classhall-question-data-table,
+.classhall-question-data-table {
+    width: max-content;
+    min-width: min(100%, 620px);
+    border: 1px solid #1f2937 !important;
+    border-collapse: collapse !important;
+    border-spacing: 0 !important;
+    background: #ffffff;
+    color: #081429;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table th,
+.classhall-single-question .wp-block-sensei-lms-question-description table td,
+.classhall-single-question .entry-content table th,
+.classhall-single-question .entry-content table td,
+.classhall-single-question table.classhall-question-data-table th,
+.classhall-single-question table.classhall-question-data-table td,
+.classhall-question-data-table th,
+.classhall-question-data-table td {
+    min-width: 86px;
+    padding: 12px 16px;
+    border: 1px solid #1f2937 !important;
+    outline: 1px solid #1f2937;
+    outline-offset: -1px;
+    background-clip: padding-box;
+    text-align: center !important;
+    vertical-align: middle !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-description table th,
+.classhall-single-question .entry-content table th,
+.classhall-single-question table.classhall-question-data-table th,
+.classhall-question-data-table th {
+    background: #eaf2ff !important;
+    color: #07347c !important;
+    font-weight: 800 !important;
+}
+
+.classhall-single-question .wp-block-sensei-lms-question-answers {
+    margin-top: 18px;
+}
+
+.classhall-single-question .answers {
+    display: grid;
+    gap: 10px;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.classhall-single-question .answers li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #bdd7fb;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #0f172a;
+}
+
+.classhall-single-question .answers input {
+    flex: 0 0 auto;
+    margin-top: 4px;
+}
+
+.classhall-single-question .answers label {
+    margin: 0;
+    color: #0f172a;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.45;
+}
+
+.classhall-single-question-back {
+    margin: 24px 0 0;
+}
+
+.classhall-single-question-back a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    background: #2563eb;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-decoration: none !important;
+}
+
+.classhall-related-questions {
+    max-width: 760px;
+    margin: 0 auto 46px;
+    padding: 0;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    clear: both;
+}
+
+.classhall-related-questions h2 {
+    margin: 0 0 14px;
+    color: #0f172a;
+    font-size: 14.4px;
+    font-weight: 900;
+    line-height: 1.2;
+}
+
+.classhall-related-questions ol {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+.classhall-related-questions li {
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    list-style: none !important;
+    transform: none !important;
+    overflow: visible !important;
+}
+
+.classhall-related-questions a {
+    display: block;
+    width: auto !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    padding: 10px;
+    border: 1px solid #bdd7fb;
+    border-radius: 5px;
+    background: #ffffff;
+    color: #0f172a !important;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.45;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.classhall-related-questions a:hover,
+.classhall-related-questions a:focus {
+    border-color: #93c5fd;
+    background: #ffffff;
+    color: #1d4ed8 !important;
+}
+
+#footer.footer-color,
+#footer {
+    padding: clamp(46px, 6vw, 76px) 0 !important;
+    border-top: 0 !important;
+    background: #1e40af !important;
+    color: #ffffff !important;
+}
+
+#footer .container {
+    max-width: 1180px;
+    padding-right: clamp(20px, 4vw, 34px) !important;
+    padding-left: clamp(20px, 4vw, 34px) !important;
+}
+
+#footer .template-page,
+#footer .wrap-content,
+#footer .footer-sidebar,
+#footer .widget {
+    padding: 0 !important;
+    border: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+#footer .row {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(22px, 4vw, 46px);
+}
+
+#footer .row::before,
+#footer .row::after {
+    content: none !important;
+}
+
+#footer [class*="col-"] {
+    float: none !important;
+    width: auto !important;
+    min-width: 0;
+    padding: 0 !important;
+}
+
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer .widget-title {
+    margin: 0 0 14px !important;
+    color: #ffffff !important;
+    font-size: 15px !important;
+    font-weight: 850 !important;
+    letter-spacing: .08em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+
+#footer p,
+#footer li,
+#footer .textwidget {
+    color: #ffffff !important;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+#footer a {
+    color: #ffffff !important;
+    font-weight: 650;
+    text-decoration: none !important;
+}
+
+#footer a:hover,
+#footer a:focus {
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+
+#footer ul {
+    display: grid;
+    gap: 10px;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+#footer li {
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+}
+
+#socket,
+.socket,
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, .12) !important;
+    background: #0f2f72 !important;
+    color: #ffffff !important;
+    min-height: 48px !important;
+    padding: 14px 0 !important;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+#socket .container,
+.socket .container,
+.footer-bottom .container {
+    max-width: 1180px;
+    padding-right: clamp(20px, 4vw, 34px) !important;
+    padding-left: clamp(20px, 4vw, 34px) !important;
+}
+
+#socket,
+#socket p,
+#socket li,
+#socket span,
+#socket div,
+.socket,
+.socket p,
+.socket li,
+.socket span,
+.socket div,
+.footer-bottom,
+.footer-bottom p,
+.footer-bottom li,
+.footer-bottom span,
+.footer-bottom div {
+    color: rgba(255, 255, 255, .72) !important;
+    color: #ffffff !important;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif !important;
+    line-height: 1.5 !important;
+}
+
+#socket a,
+.socket a,
+.footer-bottom a {
+    color: #ffffff !important;
+    font-weight: 700;
+}
+
+@media (max-width: 900px) {
+    #footer .row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    #footer.footer-color,
+    #footer {
+        padding: 38px 0 !important;
+    }
+
+    #footer .container,
+    #socket .container,
+    .socket .container,
+    .footer-bottom .container {
+        padding-right: 22px !important;
+        padding-left: 22px !important;
+    }
+
+    #footer .row {
+        grid-template-columns: 1fr;
+    }
+}
+
+body.single-question .sensei-breadcrumb,
+body.single-question .sensei-breadcrumb a,
+body.single-question .lesson-tags,
+body.single-question .lesson-tags a {
+    color: #12315f !important;
+}
+
+body.single-question .classhall-single-question a,
+body.single-question .sensei-breadcrumb a,
+body.single-question .lesson-tags a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+}

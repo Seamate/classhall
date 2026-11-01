@@ -1,0 +1,178 @@
+<h1>Classhall Live Classes: Admin Guide</h1>
+
+<p>Classhall Live Classes allows approved teachers to create paid online classes for Classhall subjects, while students and parents can discover, book, attend, and review those classes through Classhall.</p>
+
+<h2>What the Plugin Handles</h2>
+
+<ul>
+	<li>Teacher applications and verification</li>
+	<li>Live class creation, approval, suspension, completion, and deletion</li>
+	<li>One-on-one and group live classes</li>
+	<li>One-time, weekly, and multiple-days-per-week recurring classes</li>
+	<li>WooCommerce checkout and booking confirmation</li>
+	<li>Student dashboards for joining and reviewing booked classes</li>
+	<li>Teacher dashboards for creating classes, tracking bookings, earnings, and payouts</li>
+	<li>Teacher ratings, verified reviews, and teacher profile pages</li>
+	<li>Reminder emails for students and teachers before class sessions</li>
+	<li>Admin moderation for reviews and teacher payouts</li>
+</ul>
+
+<h2>Recommended Frontend Pages</h2>
+
+<p>Create the following WordPress pages and add the matching shortcode to each page.</p>
+
+<table>
+	<thead>
+		<tr>
+			<th>Page</th>
+			<th>Suggested URL</th>
+			<th>Shortcode</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Live Classes</td>
+			<td>/live-classes/</td>
+			<td><code>[classhall_live_classes]</code></td>
+		</tr>
+		<tr>
+			<td>Find a Teacher</td>
+			<td>/live-teachers/</td>
+			<td>The plugin also provides this route automatically. A manual page can use <code>[classhall_live_teachers]</code>.</td>
+		</tr>
+		<tr>
+			<td>Teacher Application</td>
+			<td>/live-teacher-application/</td>
+			<td><code>[classhall_live_teacher_application]</code></td>
+		</tr>
+		<tr>
+			<td>Teacher Dashboard</td>
+			<td>/create-a-live-class/</td>
+			<td><code>[classhall_live_teacher_dashboard]</code></td>
+		</tr>
+		<tr>
+			<td>Student Dashboard</td>
+			<td>/my-live-classes/</td>
+			<td><code>[classhall_live_student_dashboard]</code></td>
+		</tr>
+		<tr>
+			<td>Review Live Class</td>
+			<td>/live-class-review/</td>
+			<td><code>[classhall_live_review_form]</code></td>
+		</tr>
+		<tr>
+			<td>Teacher Terms</td>
+			<td>/live-class-teacher-terms/</td>
+			<td>Use the Teacher Terms and Conditions page content.</td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Subject Pages</h2>
+
+<p>The plugin automatically adds a live-class block to Sensei subject pages. The block lets users discover live classes for that subject and encourages qualified teachers to apply to teach the subject online.</p>
+
+<p>Only one featured live class is shown directly on a subject page. The plugin chooses the class using teacher quality signals, including rating, review count, completed classes, and upcoming schedule. Students can use the main live classes page to see more available classes for the same subject.</p>
+
+<h2>Teacher Application Management</h2>
+
+<p>Go to <strong>Live Classes</strong> in the WordPress admin menu to review teacher applications.</p>
+
+<p>Admin can:</p>
+
+<ul>
+	<li>Approve, reject, or suspend a teacher application</li>
+	<li>Verify or unverify a teacher separately from approval</li>
+	<li>Review the teacher's profile, qualifications, classes taught, exam specialisations, and bank details</li>
+</ul>
+
+<p>Approving a teacher allows the teacher to access the live-class creation dashboard. Verification is separate and should be used only when Classhall has confirmed that the teacher is trusted, qualified, or otherwise approved for the verified badge.</p>
+
+<h2>Live Class Management</h2>
+
+<p>Teachers create classes from the teacher dashboard. Admin can then manage submitted classes from the Live Classes admin screen.</p>
+
+<p>Admin can:</p>
+
+<ul>
+	<li>Approve a submitted class</li>
+	<li>Reject a class that should not be listed</li>
+	<li>Suspend a class that should temporarily stop being available</li>
+	<li>Mark a class as completed</li>
+	<li>Delete a class from active listings while preserving booking and audit records</li>
+</ul>
+
+<p>Approved classes become visible on the relevant live-class pages and can be booked through WooCommerce.</p>
+
+<h2>One-Time and Recurring Classes</h2>
+
+<p>A class can be created as:</p>
+
+<ul>
+	<li><strong>One time:</strong> a single live session</li>
+	<li><strong>Weekly:</strong> one session per week for one month</li>
+	<li><strong>Multiple days per week:</strong> more than one session per week for one month</li>
+</ul>
+
+<p>Recurring classes are treated as one bookable class package, not as separate classes. Students book the full recurring package once. The class page shows the schedule summary and the booking price for the package.</p>
+
+<h2>Bookings and Checkout</h2>
+
+<p>Live class booking uses WooCommerce checkout. When a student or parent books a class and payment is completed, the plugin confirms the booking, reserves the seat, and sends confirmation emails.</p>
+
+<p>The plugin prevents a student from booking two live classes that overlap at the same date and time. If a timing conflict exists, the student must book a different class, usually from another teacher.</p>
+
+<h2>Meeting Link Security</h2>
+
+<p>Teachers add the private meeting URL when creating the class. The plugin does not display the meeting link publicly.</p>
+
+<p>Booked students see the join option from their live classes dashboard only within the configured meeting access window. This reduces the chance of unbooked users accessing the meeting link.</p>
+
+<h2>Reviews and Ratings</h2>
+
+<p>After a booked class has been completed, students can confirm that the class held and then review the teacher. A student can update an existing review for the same booking, but the review is not counted as a second review.</p>
+
+<p>Reviews can be moderated by admin before they appear publicly. Teacher ratings shown publicly are based on approved reviews.</p>
+
+<h2>Earnings and Payouts</h2>
+
+<p>The plugin records teacher earnings from paid live class bookings. Admin can view teacher balances and create payout batches from eligible unpaid earnings.</p>
+
+<p>Teacher bank details submitted through the teacher application form are displayed in the payout admin section to help the admin process manual bank transfers.</p>
+
+<h2>Reminder Emails</h2>
+
+<p>The plugin can send reminder emails to students and teachers before class sessions. By default, reminders are sent 24 hours and 1 hour before a session.</p>
+
+<p>Go to <strong>Live Classes &gt; Settings</strong> to manage:</p>
+
+<ul>
+	<li>Whether reminder emails are enabled</li>
+	<li>Reminder windows in minutes, for example <code>1440,60</code></li>
+	<li>Maximum reminder batches per cron run</li>
+	<li>The last reminder cron run status</li>
+</ul>
+
+<p>The reminder system runs through WordPress Cron. It checks only upcoming sessions inside the configured reminder window and uses sent markers so the same reminder is not repeatedly sent.</p>
+
+<h2>Important Settings</h2>
+
+<ul>
+	<li><strong>Classhall commission percentage:</strong> the platform percentage retained from live class sales.</li>
+	<li><strong>Minimum price:</strong> the lowest class price allowed.</li>
+	<li><strong>Maximum class capacity:</strong> the highest number of seats a group class can offer.</li>
+	<li><strong>Booking close buffer:</strong> how close to start time bookings should close.</li>
+	<li><strong>Meeting link access window:</strong> how long before and after a class the meeting link can be shown.</li>
+	<li><strong>Review moderation:</strong> whether reviews require admin approval before public display.</li>
+	<li><strong>Class approval required:</strong> whether teacher-created classes require admin approval.</li>
+</ul>
+
+<h2>Operational Notes</h2>
+
+<ul>
+	<li>Keep WooCommerce active because checkout and order confirmation depend on it.</li>
+	<li>Do not publicly display meeting links on pages, posts, or social media.</li>
+	<li>Review teacher applications carefully before approving and verifying teachers.</li>
+	<li>Use review moderation to protect the quality of teacher profile pages.</li>
+	<li>Process teacher payouts outside Classhall, then mark payout batches accordingly in admin.</li>
+</ul>

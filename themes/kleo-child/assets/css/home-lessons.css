@@ -1,0 +1,76 @@
+.ch-home-promo { padding: 28px 0; }
+.chl-home-lessons .ch-home-promo { padding: 0; }
+.chl-home-lessons .ch-home-promo .ch-shell { width: 100%; max-width: none; margin: 0; padding: 0; }
+.ch-home-promo *, .chl-home-lessons * { box-sizing: border-box; letter-spacing: 0; }
+.ch-home-promo-link, .chl-home-lessons .chl-home-lessons-hero { position: relative; display: block; overflow: hidden; isolation: isolate; background: #edf5ff; border: 0; border-radius: 8px; padding: 40px; box-shadow: none; text-decoration: none; }
+.ch-home-promo-photo, .chl-home-hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: right center; z-index: -2; }
+.ch-home-promo-link::before, .chl-home-lessons-hero::before { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, #edf5ff 0%, rgba(237,245,255,.98) 35%, rgba(237,245,255,.88) 52%, rgba(237,245,255,0) 82%); z-index: -1; }
+.ch-home-promo-copy, .chl-home-hero-copy { max-width: 570px; }
+.ch-home-eyebrow { display: block; color: #1854c5; font-size: 15px; font-weight: 800; margin-bottom: 16px; }
+.ch-home-promo .ch-home-promo-copy :is(h1, h2), .chl-home-lessons .chl-home-lessons-hero h1 { color: #08275c; font-size: 38px; font-weight: 900; line-height: 1.15; margin: 0 0 16px; }
+.ch-home-promo-copy p, .chl-home-lessons .chl-home-lessons-lead { color: #263d60; font-size: 18px; line-height: 1.65; margin: 12px 0; }
+.ch-home-promo-copy .ch-home-promo-age { font-size: 24px; font-weight: 800; }
+.ch-home-promo-copy .ch-home-promo-facts, .chl-home-session-time { font-size: 20px; font-weight: 800; color: #08275c; margin: 20px 0; }
+.ch-home-promo .chl-home-button, .chl-home-lessons .chl-home-button { display: inline-flex; align-items: center; justify-content: center; gap: 14px; min-height: 48px; padding: 12px 20px; border-radius: 6px; background: #245eec; color: #fff !important; font-size: 16px; font-weight: 800; text-decoration: none; white-space: normal; }
+.ch-home-promo-link:focus-visible, .chl-home-lessons a:focus-visible { outline: 3px solid #1854c5; outline-offset: 5px; }
+.ch-home-promo-link:hover .chl-home-button, .chl-home-button:hover { background: #1746bb; }
+.chl-home-lessons .chl-home-lessons-price { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; padding: 0; background: transparent; border-radius: 0; box-shadow: none; text-align: left; }
+.chl-home-lessons .chl-home-lessons-price strong { font-size: 28px; }
+.chl-home-lessons .chl-home-lessons-price span { text-transform: none; letter-spacing: 0; color: #263d60; font-size: 15px; }
+.chl-home-lessons .chl-home-selection-title { font-size: 26px; line-height: 1.3; color: #08275c; margin: 32px 0 0; }
+.chl-home-lessons .chl-home-lessons-grid { gap: 20px; margin-top: 22px; }
+.chl-home-lessons .chl-home-class-card { --class-color: #245eec; --class-tint: #edf3ff; position: relative; gap: 8px; border: 1px solid #d6e2f2; border-top: 5px solid var(--class-color); border-radius: 8px; padding: 24px; background: var(--class-tint); box-shadow: none; transition: transform .15s ease; }
+.chl-home-lessons .chl-home-class-card:hover { transform: translateY(-3px); border-color: var(--class-color); box-shadow: 0 8px 18px #08275c12; }
+.chl-home-lessons .chl-home-class-card .chl-home-class-number { color: #245eec; font-size: 26px; font-weight: 800; line-height: 1.3; margin-bottom: 12px; }
+.chl-home-lessons .chl-home-class-card strong { font-size: 24px; }
+.chl-home-class-time { color: #43566e; font-size: 15px; }
+.chl-home-class-link { display: flex; justify-content: space-between; gap: 12px; color: #174ea6; border-top: 1px solid #cbd8e5; margin-top: 12px; padding-top: 14px; font-weight: 800; }
+.chl-home-lessons .chl-home-back { margin-top: 24px; }
+.chl-home-lessons .chl-home-teacher-card { border-radius: 8px; border-top: 4px solid #245eec; box-shadow: none; }
+@media (max-width: 800px) {
+    .chl-home-lessons .chl-home-lessons-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .ch-home-promo-link, .chl-home-lessons .chl-home-lessons-hero { padding: 28px; }
+    .ch-home-promo-link::before, .chl-home-lessons-hero::before { background: rgba(237,245,255,.92); }
+    .chl-home-lessons .chl-home-lessons-hero h1, .ch-home-promo .ch-home-promo-copy :is(h1, h2) { font-size: 30px; }
+}
+@media (max-width: 480px) {
+    .chl-home-lessons .chl-home-lessons-grid { grid-template-columns: 1fr; }
+    .ch-home-promo-link, .chl-home-lessons .chl-home-lessons-hero { padding: 24px 20px; }
+    .chl-home-lessons .chl-home-lessons-hero h1, .ch-home-promo .ch-home-promo-copy :is(h1, h2) { font-size: 28px; }
+    .ch-home-promo-copy p, .chl-home-lessons .chl-home-lessons-lead { font-size: 16px; }
+    .ch-home-promo .chl-home-button { width: 100%; }
+}
+.ch-home-promo .ch-home-promo-link { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; gap: 24px; padding: 24px 28px; border-top: 6px solid #245eec; background: #f5faff; }
+.ch-home-promo .ch-home-promo-photo { position: static; grid-column: 2; grid-row: 1; display: block; width: 100%; height: auto; aspect-ratio: 921 / 614; object-fit: contain; object-position: center; z-index: auto; }
+.ch-home-promo .ch-home-promo-photo { -webkit-mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent), linear-gradient(transparent, #000 8px, #000 calc(100% - 8px), transparent); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, transparent, #000 10px, #000 calc(100% - 10px), transparent), linear-gradient(transparent, #000 8px, #000 calc(100% - 8px), transparent); mask-composite: intersect; }
+.ch-home-promo .ch-home-promo-link::before { display: none; }
+.ch-home-promo .ch-home-promo-copy { grid-column: 1; grid-row: 1; min-width: 0; max-width: none; }
+/* The whole banner is a link; prevent theme link colours overriding its copy. */
+.ch-home-promo .ch-home-promo-copy :is(h1, h2, p, span, small, strong) { color: #292929 !important; }
+.ch-home-promo .ch-home-promo-copy .chl-home-button,
+.ch-home-promo .ch-home-promo-copy .chl-home-button span { color: #fff !important; }
+.ch-home-promo .ch-home-promo-copy :is(h1, h2) { font-family: 'Arial Rounded MT Bold', 'Trebuchet MS', sans-serif; font-size: 30px; line-height: 1.2; margin-bottom: 14px; white-space: nowrap; }
+.ch-home-promo .ch-home-promo-copy :is(h1, h2),
+.ch-home-promo .ch-home-promo-copy :is(h1, h2) span { color: #245eec !important; }
+.ch-home-promo .ch-home-promo-copy :is(h1, h2) span { display: inline; text-decoration: none; }
+.ch-home-promo .ch-home-promo-age { margin: 14px 0 8px; font-size: 23px; }
+.ch-home-promo .ch-home-promo-platform { color: #174ea6; font-weight: 800; font-size: 16px; }
+.ch-home-promo .ch-home-promo-facts { display: flex; flex-wrap: wrap; gap: 16px 28px; margin: 16px 0; padding: 12px 0; border-top: 2px dashed #c0d4ed; border-bottom: 2px dashed #c0d4ed; }
+.ch-home-promo-facts > span { display: grid; gap: 6px; }
+.ch-home-promo-facts small { font-size: 14px; font-weight: 600; color: #43566e; }
+.ch-home-promo-facts strong { font-size: 24px; line-height: 1.2; color: #08275c; }
+.ch-home-promo .chl-home-button { border-bottom: 4px solid #1641a7; box-shadow: 0 5px 0 #cfdefb; }
+@media (max-width: 800px) {
+    .ch-home-promo .ch-home-promo-link { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 28px; }
+    .ch-home-promo .ch-home-promo-photo { grid-column: 1; grid-row: 1; margin: 0; }
+    .ch-home-promo .ch-home-promo-link::before { display: none; }
+    .ch-home-promo .ch-home-promo-copy { grid-column: 1; grid-row: 2; max-width: none; }
+    .ch-home-promo .ch-home-promo-copy :is(h1, h2) { font-size: 30px; white-space: normal; }
+}
+@media (max-width: 480px) {
+    .ch-home-promo .ch-home-promo-link { padding: 20px; }
+    .ch-home-promo .ch-home-promo-copy :is(h1, h2) { font-size: 24px; }
+    .ch-home-promo .ch-home-promo-facts { gap: 16px 24px; }
+    .ch-home-promo-facts strong { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { .chl-home-lessons .chl-home-class-card { transition: none; transform: none; } }

@@ -1,0 +1,19 @@
+/* Keep the badge compact in both the desktop and mobile navigation. */
+li.menu-item a .classhall-menu-new {
+    display: inline-block;
+    position: static;
+    margin-left: 5px;
+    padding: 3px 6px;
+    border: 0;
+    border-radius: 4px;
+    background: #245eec;
+    color: #fff;
+    font-family: inherit;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    vertical-align: middle;
+    white-space: nowrap;
+}

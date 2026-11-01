@@ -19,6 +19,8 @@ if ( have_posts() ) {
 }
 ?>
 
+<main class="classhall-lesson-main">
+
 <article <?php post_class( array( 'lesson', 'post' ) ); ?>>
 
 	<?php
@@ -91,5 +93,7 @@ if ( have_posts() ) {
 	
 	
 </article><!-- .post -->
+
+</main>
 
 <?php get_sensei_footer(); ?>

@@ -2,6 +2,8 @@
 $classhall_support_email    = 'hi@classhall.com';
 $classhall_whatsapp_display = '+234 704 596 7535';
 $classhall_whatsapp_url     = 'https://wa.me/2347045967535';
+$classhall_logo_url         = 'https://classhall.com/wp-content/uploads/2026/07/classhall-logo.png';
+$classhall_logo_id          = function_exists( 'attachment_url_to_postid' ) ? attachment_url_to_postid( $classhall_logo_url ) : 0;
 
 $classhall_class_menu = array(
 	'Primary' => array(
@@ -128,22 +130,132 @@ $classhall_class_menu = array(
 	),
 );
 ?>
-<main id="classhall-home" class="classhall-home">
-	<section class="ch-hero" aria-labelledby="classhall-home-title">
-		<div class="ch-shell ch-hero-grid">
-			<div class="ch-hero-copy">
-				<div class="ch-hero-brand">
-					<img src="<?php echo esc_url( 'https://classhall.com/wp-content/uploads/2026/07/classhall-logo.png' ); ?>" width="120" height="120" alt="Classhall" decoding="async">
-					<span class="ch-brand-text">
-						<strong>Classhall</strong>
-						<em>...activate learning</em>
+<style id="classhall-home-layout-stability">
+	#classhall-home .ch-math-lesson {
+		--ch-phone-viewport: 460px;
+	}
+
+	#classhall-home .ch-math-scroll {
+		height: var(--ch-phone-viewport);
+		overflow: hidden;
+	}
+
+	#classhall-home .ch-math-scroll-content {
+		animation: classhall-math-phone-scroll 26s linear infinite;
+		will-change: transform;
+	}
+
+	@keyframes classhall-math-phone-scroll {
+		0%,
+		10% {
+			transform: translate3d(0, 0, 0);
+		}
+
+		90%,
+		100% {
+			transform: translate3d(0, calc(-100% + var(--ch-phone-viewport)), 0);
+		}
+	}
+
+	@media (min-width: 981px) {
+		#classhall-home .ch-hero-grid {
+			grid-template-columns: minmax(0, .95fr) minmax(360px, .78fr) !important;
+			gap: clamp(32px, 6vw, 86px) !important;
+		}
+
+		#classhall-home .ch-hero-visual {
+			min-height: 640px;
+			transform: translateY(-36px);
+		}
+
+		#classhall-home .ch-math-lesson {
+			height: auto;
+			min-height: 0;
+		}
+
+		#classhall-home .ch-math-phone-screen {
+			height: auto;
+		}
+
+		#classhall-home .ch-math-scroll {
+			height: var(--ch-phone-viewport);
+			overflow: hidden;
+		}
+	}
+
+	@media (max-width: 980px) {
+		#classhall-home .ch-hero {
+			padding: 34px 0 46px !important;
+		}
+
+		#classhall-home .ch-hero-grid {
+			grid-template-columns: 1fr !important;
+			gap: 26px !important;
+			width: min(100% - 28px, 1120px) !important;
+		}
+
+		#classhall-home .ch-hero-visual {
+			height: auto !important;
+			min-height: 0 !important;
+			transform: none !important;
+		}
+
+		#classhall-home .ch-math-lesson {
+			--ch-phone-viewport: 460px !important;
+			height: auto !important;
+			min-height: 0 !important;
+		}
+
+		#classhall-home .ch-math-phone-screen {
+			height: auto !important;
+		}
+
+		#classhall-home .ch-math-scroll {
+			height: var(--ch-phone-viewport) !important;
+			overflow: hidden !important;
+		}
+
+		#classhall-home .ch-math-scroll-content {
+			animation: classhall-math-phone-scroll 26s linear infinite !important;
+			will-change: transform;
+		}
+	}
+</style>
+<main id="classhall-home" class="classhall-home" style="background:#fff;color:#172033;overflow-x:clip;">
+	<section class="ch-hero" aria-labelledby="classhall-home-title" style="position:relative;overflow:hidden;padding:clamp(52px,7vw,92px) 0 clamp(58px,7vw,96px);background:#f8fafc;">
+		<div class="ch-shell ch-hero-grid" style="display:grid;grid-template-columns:minmax(0,.95fr) minmax(360px,.78fr);gap:clamp(32px,6vw,86px);align-items:center;width:min(100% - 40px,1120px);margin:0 auto;">
+			<div class="ch-hero-copy" style="align-self:center;">
+				<div class="ch-hero-brand" style="display:grid;grid-template-columns:58px auto;align-items:center;gap:13px;margin-bottom:26px;">
+					<?php
+					if ( $classhall_logo_id ) {
+						echo wp_get_attachment_image(
+							$classhall_logo_id,
+							array( 58, 58 ),
+							false,
+							array(
+								'alt'           => 'Classhall',
+								'loading'       => 'eager',
+								'decoding'      => 'async',
+								'fetchpriority' => 'high',
+								'style'         => 'width:58px;height:58px;',
+							)
+						);
+					} else {
+						?>
+						<img src="<?php echo esc_url( $classhall_logo_url ); ?>" width="58" height="58" alt="Classhall" loading="eager" decoding="async" fetchpriority="high" style="width:58px;height:58px;">
+						<?php
+					}
+					?>
+					<span class="ch-brand-text" style="display:grid;gap:2px;">
+						<strong style="color:#0f172a;font-size:24px;font-weight:900;line-height:1;">Classhall</strong>
+						<em style="color:#2563eb;font-size:14px;font-style:normal;font-weight:850;line-height:1.15;">...activate learning</em>
 					</span>
 				</div>
 
-				<h1 id="classhall-home-title">Structured digital curriculum and content for teachers and students</h1>
-				<p class="ch-lead">Curriculum-aligned lesson notes, lesson plans, assessments, and interactive learning resources designed to help teachers save time and students achieve more.</p>
+				<h1 id="classhall-home-title" style="max-width:720px;margin:0;color:#0f172a;font-size:clamp(28px,3.1vw,40px);line-height:1.14;font-weight:800;letter-spacing:0;">Structured digital curriculum and content for teachers and students</h1>
+				<p class="ch-lead" style="display:block;max-width:710px;margin:22px 0 0;color:#334155;font-size:clamp(18px,1.65vw,23px);line-height:1.68;opacity:1;visibility:visible;transform:none;">Curriculum-aligned lesson notes, lesson plans, assessments, and interactive learning resources designed to help teachers save time and students achieve more.</p>
 
-				<p class="ch-trust-badge">Trusted by <strong>76,000+</strong> teachers and students across Nigeria and beyond.</p>
+				<p class="ch-trust-badge">Trusted by <strong style="color:#92400e;">76,000+</strong> teachers and students across Nigeria and beyond.</p>
 
 				<div class="ch-actions" aria-label="Homepage actions">
 					<a class="ch-button ch-button-primary" href="<?php echo esc_url( home_url( '/classhall-user-register-protected-7047324/' ) ); ?>">Get Started</a>
@@ -155,7 +267,7 @@ $classhall_class_menu = array(
 				<article class="ch-math-lesson">
 					<div class="ch-phone-status">
 						<span>JSS3&nbsp;Mathematics <em>First Term</em></span>
-						<span class="ch-phone-progress" aria-label="Lesson progress">
+						<span class="ch-phone-progress" role="progressbar" aria-label="Lesson progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="62">
 							<span></span>
 						</span>
 					</div>
@@ -215,7 +327,11 @@ $classhall_class_menu = array(
 		</div>
 	</section>
 
-	<?php get_template_part( 'template-parts/classhall-summer-banner' ); ?>
+	<?php
+	$GLOBALS['classhall_allow_summer_banner'] = true;
+	get_template_part( 'template-parts/classhall-summer-banner' );
+	unset( $GLOBALS['classhall_allow_summer_banner'] );
+	?>
 
 	<section id="classhall-core-features" class="ch-core-features" aria-labelledby="classhall-core-features-title">
 		<div class="ch-shell">
@@ -387,12 +503,12 @@ $classhall_class_menu = array(
 				</nav>
 			</div>
 
-			<div class="ch-bundle-panel">
+			<div class="ch-bundle-panel" style="background:#ffffff;color:#0f172a;">
 				<div>
-				<p class="ch-eyebrow">Subject Coverage</p>
-				<h2 id="classhall-bundles-title">Subjects covered on Classhall</h2>
-				<p>Classhall brings lesson plans, notes, evaluation, and exam practice together across the subjects learners and teachers use most.</p>
-				<ul class="ch-subject-list" aria-label="Subjects on Classhall">
+				<p class="ch-eyebrow" style="color:#1e40af;">Subject Coverage</p>
+				<h2 id="classhall-bundles-title" style="color:#0f172a;">Subjects covered on Classhall</h2>
+				<p style="color:#334155;">Classhall brings lesson plans, notes, evaluation, and exam practice together across the subjects learners and teachers use most.</p>
+				<ul class="ch-subject-list" aria-label="Subjects on Classhall" style="color:#0f172a;">
 					<li>Primary Mathematics</li>
 					<li>Primary English</li>
 					<li>Primary Basic Science</li>
@@ -450,7 +566,7 @@ $classhall_class_menu = array(
 					<li>Animal Husbandry</li>
 				</ul>
 			</div>
-			<a class="ch-button ch-button-primary" href="<?php echo esc_url( home_url( '/classhall-user-register-protected-7047324/' ) ); ?>">Sign up</a>
+			<a class="ch-button ch-button-primary" href="<?php echo esc_url( home_url( '/classhall-user-register-protected-7047324/' ) ); ?>" style="background:#1d4ed8;border-color:#1d4ed8;color:#ffffff;">Sign up</a>
 			</div>
 		</div>
 	</section>
@@ -501,11 +617,47 @@ $classhall_class_menu = array(
 		});
 	</script>
 
-	<section class="ch-prefooter" aria-label="Classhall footer links">
+	<style id="classhall-prefooter-contrast-fix">
+		#classhall-home .ch-prefooter,
+		#classhall-home .ch-prefooter * {
+			color: #ffffff !important;
+		}
+
+		#classhall-home .ch-prefooter {
+			background: #1e3a8a !important;
+		}
+
+		#classhall-home .ch-prefooter .ch-button {
+			background: #ffffff !important;
+			border-color: #ffffff !important;
+			color: #172554 !important;
+		}
+
+		#classhall-home .ch-bundle-panel,
+		#classhall-home .ch-bundle-panel h2,
+		#classhall-home .ch-bundle-panel p,
+		#classhall-home .ch-bundle-panel li,
+		#classhall-home .ch-bundle-panel span {
+			background: #ffffff !important;
+			color: #0f172a !important;
+		}
+
+		#classhall-home .ch-bundle-panel .ch-eyebrow {
+			color: #1e40af !important;
+		}
+
+		#classhall-home .ch-bundle-panel .ch-button-primary {
+			background: #1d4ed8 !important;
+			border-color: #1d4ed8 !important;
+			color: #ffffff !important;
+		}
+	</style>
+
+	<section class="ch-prefooter" aria-label="Classhall footer links" style="background:#1e3a8a;color:#ffffff;">
 		<div class="ch-shell ch-prefooter-grid">
-			<div class="ch-prefooter-brand">
-				<h2>About Classhall</h2>
-				<p>Classhall provides structured class lesson notes, lesson plans, CATs, and exam questions in line with the revised NERDC curriculum.</p>
+			<div class="ch-prefooter-brand" style="background:#1e3a8a;color:#ffffff;">
+				<h2 style="color:#ffffff;background:#1e3a8a;">About Classhall</h2>
+				<p style="color:#ffffff;background:#1e3a8a;">Classhall provides structured class lesson notes, lesson plans, CATs, and exam questions in line with the revised NERDC curriculum.</p>
 				<div class="ch-footer-actions">
 					<a class="ch-button ch-button-primary" href="<?php echo esc_url( home_url( '/classhall-user-register-protected-7047324/' ) ); ?>">Get Started</a>
 					<a class="ch-button ch-button-secondary" href="<?php echo esc_url( home_url( '/subjects-catalogue/' ) ); ?>">Browse Subjects</a>
@@ -515,27 +667,27 @@ $classhall_class_menu = array(
 				</div>
 			</div>
 
-			<nav class="ch-prefooter-column" aria-label="Quick links">
+			<nav class="ch-prefooter-column" aria-label="Quick links" style="background:#1e3a8a;color:#ffffff;">
 				<h3>Quick Links</h3>
 				<ul>
-					<li><a href="<?php echo esc_url( home_url( '/smartclass/' ) ); ?>">SmartClass</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/subjects-catalogue/' ) ); ?>">Subjects catalogue</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/subscriptions/' ) ); ?>">Subscriptions</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/faqs/' ) ); ?>">FAQs</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/smartclass/' ) ); ?>" style="color:#ffffff;">SmartClass</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/subjects-catalogue/' ) ); ?>" style="color:#ffffff;">Subjects catalogue</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/subscriptions/' ) ); ?>" style="color:#ffffff;">Subscriptions</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>" style="color:#ffffff;">Blog</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/faqs/' ) ); ?>" style="color:#ffffff;">FAQs</a></li>
 				</ul>
 			</nav>
 
-			<nav class="ch-prefooter-column" aria-label="Class bundle links">
+			<nav class="ch-prefooter-column" aria-label="Class bundle links" style="background:#1e3a8a;color:#ffffff;">
 				<h3>Class bundles</h3>
 				<ul>
-					<li><a href="<?php echo esc_url( home_url( '/subscriptions/' ) ); ?>">Primary</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/jss1-subscription-plans/' ) ); ?>">JSS1 bundle</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/jss2-subscription-plans/' ) ); ?>">JSS2 bundle</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/jss3-subscription-plans/' ) ); ?>">JSS3 bundle</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/ss1-subscription-plans/' ) ); ?>">SS1 bundle</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/ss2-subscription-plans/' ) ); ?>">SS2 bundle</a></li>
-					<li><a href="<?php echo esc_url( home_url( '/ss3-subscription-plans/' ) ); ?>">SS3 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/subscriptions/' ) ); ?>" style="color:#ffffff;">Primary</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/jss1-subscription-plans/' ) ); ?>" style="color:#ffffff;">JSS1 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/jss2-subscription-plans/' ) ); ?>" style="color:#ffffff;">JSS2 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/jss3-subscription-plans/' ) ); ?>" style="color:#ffffff;">JSS3 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/ss1-subscription-plans/' ) ); ?>" style="color:#ffffff;">SS1 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/ss2-subscription-plans/' ) ); ?>" style="color:#ffffff;">SS2 bundle</a></li>
+					<li><a href="<?php echo esc_url( home_url( '/ss3-subscription-plans/' ) ); ?>" style="color:#ffffff;">SS3 bundle</a></li>
 				</ul>
 			</nav>
 
