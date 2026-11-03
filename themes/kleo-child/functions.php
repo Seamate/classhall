@@ -2064,18 +2064,18 @@ function classhall_home_lesson_classes() {
         'jss1' => __( 'JSS1', 'kleo-child' ),
         'jss2' => __( 'JSS2', 'kleo-child' ),
         'jss3' => __( 'JSS3', 'kleo-child' ),
-        'ss1' => __( 'SS1 (Science)', 'kleo-child' ),
-        'ss2' => __( 'SS2 (Science)', 'kleo-child' ),
-        'ss3' => __( 'SS3 (Science)', 'kleo-child' ),
+        'ss1' => __( 'SS1 (Sciences)', 'kleo-child' ),
+        'ss2' => __( 'SS2 (Sciences)', 'kleo-child' ),
+        'ss3' => __( 'SS3 (Sciences)', 'kleo-child' ),
     );
 }
 
-function classhall_home_lesson_price_minor() {
-    return 2000000;
+function classhall_home_lesson_price_minor( $class_key = '' ) {
+    return in_array( $class_key, array( 'ss1', 'ss2', 'ss3' ), true ) ? 2500000 : 1500000;
 }
 
-function classhall_home_lesson_price() {
-    return classhall_home_lesson_price_minor() / 100;
+function classhall_home_lesson_price( $class_key = '' ) {
+    return classhall_home_lesson_price_minor( $class_key ) / 100;
 }
 
 function classhall_is_home_lessons_route() {
@@ -2169,6 +2169,10 @@ function classhall_home_lesson_product_id() {
             $product->set_name( __( 'Classhall Online Classes', 'kleo-child' ) );
             $product->save();
         }
+        if ( $product && (float) $product->get_regular_price() !== (float) classhall_home_lesson_price() ) {
+            $product->set_regular_price( (string) classhall_home_lesson_price() );
+            $product->save();
+        }
         return absint( $existing[0] );
     }
 
@@ -2197,7 +2201,7 @@ function classhall_render_home_lessons_shortcode() {
         wc_print_notices();
     }
     echo '<h2 id="home-lesson-classes" class="chl-home-selection-title">' . esc_html__( "Which class is your child in?", 'kleo-child' ) . '</h2>';
-    $levels = array( 'primary-1' => __( 'Primary School', 'kleo-child' ), 'jss1' => __( 'Junior Secondary School', 'kleo-child' ), 'ss1' => __( 'Senior Secondary School (Science)', 'kleo-child' ) );
+    $levels = array( 'primary-1' => __( 'Primary School', 'kleo-child' ), 'jss1' => __( 'Junior Secondary School', 'kleo-child' ), 'ss1' => __( 'Senior Secondary School (Sciences)', 'kleo-child' ) );
     foreach ( $classes as $key => $label ) {
         if ( isset( $levels[ $key ] ) ) {
             if ( 'primary-1' !== $key ) {
@@ -2214,7 +2218,7 @@ function classhall_render_home_lessons_shortcode() {
             ),
             home_url( '/online-classes/' )
         );
-        echo '<a class="chl-home-class-card" href="' . esc_url( $url ) . '"><strong class="chl-home-class-number">' . esc_html( $label ) . '</strong><span>' . esc_html__( 'Core Subjects', 'kleo-child' ) . '</span><span>&#8358;20,000 ' . esc_html__( 'per month', 'kleo-child' ) . '</span><span class="chl-home-class-link">' . esc_html__( 'Enrol your child', 'kleo-child' ) . ' <span aria-hidden="true">&rarr;</span></span></a>';
+        echo '<a class="chl-home-class-card" href="' . esc_url( $url ) . '"><strong class="chl-home-class-number">' . esc_html( $label ) . '</strong><span>' . esc_html__( 'Core Subjects', 'kleo-child' ) . '</span><span>&#8358;' . esc_html( number_format_i18n( classhall_home_lesson_price( $key ), 0 ) ) . ' ' . esc_html__( 'per month', 'kleo-child' ) . '</span><span class="chl-home-class-link">' . esc_html__( 'Enrol your child', 'kleo-child' ) . ' <span aria-hidden="true">&rarr;</span></span></a>';
     }
     echo '</div></main>';
 
@@ -2287,7 +2291,7 @@ function classhall_price_home_lesson_cart_items( $cart ) {
 
     foreach ( $cart->get_cart() as $cart_item ) {
         if ( ! empty( $cart_item['classhall_home_lesson'] ) && ! empty( $cart_item['data'] ) ) {
-            $cart_item['data']->set_price( (string) classhall_home_lesson_price() );
+            $cart_item['data']->set_price( (string) classhall_home_lesson_price( $cart_item['classhall_home_lesson_class'] ?? '' ) );
         }
     }
 }

@@ -5,12 +5,12 @@ require_once __DIR__ . '/home-lesson-renewals.php';
 
 function classhall_home_lesson_subjects( $class_key ) {
     if ( in_array( $class_key, array( 'jss1', 'jss2', 'jss3' ), true ) ) {
-        return __( 'English, Mathematics, Intermediate Science, Digital Technologies and Business Studies', 'kleo-child' );
+        return __( 'English, Mathematics and Intermediate Science', 'kleo-child' );
     }
     if ( in_array( $class_key, array( 'ss1', 'ss2', 'ss3' ), true ) ) {
         return __( 'English Language, General Mathematics, Biology, Chemistry and Physics', 'kleo-child' );
     }
-    return __( 'English, Mathematics, Basic Science and Digital Technology', 'kleo-child' );
+    return __( 'English, Mathematics and Science', 'kleo-child' );
 }
 
 function classhall_home_lesson_schedule( $class_key ) {
@@ -36,7 +36,14 @@ function classhall_home_lesson_schedule( $class_key ) {
     } elseif ( in_array( $class_key, array( 'jss1', 'jss2', 'jss3' ), true ) ) {
         foreach ( $slots as &$slot ) {
             if ( 'Other subjects' === $slot[2] ) {
-                $slot[2] = 'Intermediate Science / Digital Technologies / Business Studies';
+                $slot[2] = 'Intermediate Science';
+            }
+        }
+        unset( $slot );
+    } else {
+        foreach ( $slots as &$slot ) {
+            if ( 'Other subjects' === $slot[2] ) {
+                $slot[2] = 'Science';
             }
         }
         unset( $slot );

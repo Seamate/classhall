@@ -21,8 +21,12 @@ if ( empty( $GLOBALS['classhall_allow_summer_banner'] ) && ! $home_lessons_page 
                 <?php endif; ?>
                 <p class="ch-home-promo-age"><?php esc_html_e( 'Primary 1 - 6 | JSS1 - SS3', 'kleo-child' ); ?></p>
                 <p class="ch-home-promo-platform"><?php esc_html_e( 'Learn from home via Google Meet', 'kleo-child' ); ?></p>
-                <p><?php esc_html_e( 'Core subjects for primary and junior secondary pupils, plus English Language, General Mathematics, Biology, Chemistry and Physics for senior secondary science students.', 'kleo-child' ); ?></p>
-                <div class="ch-home-promo-facts"><span><small><?php esc_html_e( 'Lesson time', 'kleo-child' ); ?></small><strong><?php esc_html_e( 'Weekdays, 4:30 - 6:30 pm', 'kleo-child' ); ?></strong></span><span><small><?php esc_html_e( 'Monthly fee', 'kleo-child' ); ?></small><strong>&#8358;20,000</strong></span></div>
+                <p><?php esc_html_e( 'Mathematics, English Language and Sciences', 'kleo-child' ); ?></p>
+                <div class="ch-home-promo-facts">
+                    <span class="ch-home-promo-time"><small><?php esc_html_e( 'Lesson time', 'kleo-child' ); ?></small><strong><?php esc_html_e( 'Weekdays, 4:30 - 6:30 pm', 'kleo-child' ); ?></strong></span>
+                    <span><small><?php esc_html_e( 'Primary 1 - JSS3 monthly', 'kleo-child' ); ?></small><strong>&#8358;15,000</strong></span>
+                    <span><small><?php esc_html_e( 'SS1 - SS3 Sciences monthly', 'kleo-child' ); ?></small><strong>&#8358;25,000</strong></span>
+                </div>
                 <?php if ( ! $home_lessons_page ) : ?>
                     <span class="chl-home-button"><?php esc_html_e( 'Enrol your child', 'kleo-child' ); ?> <span aria-hidden="true">&rarr;</span></span>
                 <?php endif; ?>

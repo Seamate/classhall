@@ -57,6 +57,7 @@
 .ch-home-promo .ch-home-promo-platform { color: #174ea6; font-weight: 800; font-size: 16px; }
 .ch-home-promo .ch-home-promo-facts { display: flex; flex-wrap: wrap; gap: 16px 28px; margin: 16px 0; padding: 12px 0; border-top: 2px dashed #c0d4ed; border-bottom: 2px dashed #c0d4ed; }
 .ch-home-promo-facts > span { display: grid; gap: 6px; }
+.ch-home-promo-facts > .ch-home-promo-time { flex-basis: 100%; }
 .ch-home-promo-facts small { font-size: 14px; font-weight: 600; color: #43566e; }
 .ch-home-promo-facts strong { font-size: 24px; line-height: 1.2; color: #08275c; }
 .ch-home-promo .chl-home-button { border-bottom: 4px solid #1641a7; box-shadow: 0 5px 0 #cfdefb; }

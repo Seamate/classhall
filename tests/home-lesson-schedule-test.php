@@ -5,6 +5,15 @@ define( 'ABSPATH', __DIR__ );
 define( 'DAY_IN_SECONDS', 86400 );
 function add_action( ...$args ) {}
 function add_filter( ...$args ) {}
+function is_admin() { return false; }
+class WC_Cart {
+    public function __construct( public $items ) {}
+    public function get_cart() { return $this->items; }
+}
+class TestClassProduct {
+    public $price = 999;
+    public function set_price( $price ) { $this->price = (float) $price; }
+}
 function esc_html( $s ) { return htmlspecialchars( (string) $s, ENT_QUOTES ); }
 function __( $s, ...$args ) { return $s; }
 function esc_html__( $s, ...$args ) { return esc_html( $s ); }
@@ -12,7 +21,6 @@ function wp_strip_all_tags( $s ) { return strip_tags( $s ); }
 function esc_url( $s ) { return esc_html( $s ); }
 function wp_kses_post( $s ) { return $s; }
 function wc_price( $price ) { return 'NGN ' . $price; }
-function classhall_home_lesson_price() { return 20000; }
 function wp_hash( $s ) { return hash_hmac( 'sha256', $s, 'isolated-test-key' ); }
 function get_current_user_id() { return $GLOBALS['test_user'] ?? 0; }
 function WC() { return $GLOBALS['test_wc']; }
@@ -22,8 +30,12 @@ function wp_generate_password( ...$args ) { return bin2hex( random_bytes( 20 ) )
 function wp_date( $format, $time, $zone ) { return ( new DateTimeImmutable( '@' . $time ) )->setTimezone( $zone )->format( $format ); }
 $source = file_get_contents( __DIR__ . '/../themes/kleo-child/functions.php' );
 $start = strpos( $source, 'function classhall_home_lesson_classes(' );
-$end = strpos( $source, 'function classhall_home_lesson_price_minor(' );
+$end = strpos( $source, 'function classhall_is_home_lessons_route(' );
 if ( false === $start || false === $end ) { throw new RuntimeException( 'Class catalogue not found.' ); }
+eval( substr( $source, $start, $end - $start ) );
+$start = strpos( $source, 'function classhall_price_home_lesson_cart_items(' );
+$end = strpos( $source, 'function classhall_is_home_lesson_checkout_display(' );
+if ( false === $start || false === $end ) { throw new RuntimeException( 'Cart pricing function not found.' ); }
 eval( substr( $source, $start, $end - $start ) );
 $options = $queue = $mails = $orders = array();
 $mail_result = true;
@@ -87,9 +99,9 @@ check( classhall_home_lesson_period_end( stamp( '2026-01-31 17:15' ) ) === stamp
 check( classhall_home_lesson_period_end( stamp( '2028-01-31 17:15' ) ) === stamp( '2028-02-29 17:15' ), 'Leap year expiry' );
 check( classhall_home_lesson_period_end( stamp( '2026-12-15 09:00' ) ) === stamp( '2027-01-15 09:00' ), 'Year boundary expiry' );
 $expected = array(
-    1 => array( '2026-09-21 16:30' => 'Mathematics', '2026-09-23 16:30' => 'English', '2026-09-24 16:30' => 'Other subjects' ),
-    2 => array( '2026-09-21 17:30' => 'English', '2026-09-22 16:30' => 'Mathematics', '2026-09-24 17:30' => 'Other subjects' ),
-    3 => array( '2026-09-22 17:30' => 'English', '2026-09-23 17:30' => 'Other subjects', '2026-09-25 16:30' => 'Mathematics' ),
+    1 => array( '2026-09-21 16:30' => 'Mathematics', '2026-09-23 16:30' => 'English', '2026-09-24 16:30' => 'Science' ),
+    2 => array( '2026-09-21 17:30' => 'English', '2026-09-22 16:30' => 'Mathematics', '2026-09-24 17:30' => 'Science' ),
+    3 => array( '2026-09-22 17:30' => 'English', '2026-09-23 17:30' => 'Science', '2026-09-25 16:30' => 'Mathematics' ),
 );
 foreach ( range( 1, 6 ) as $number ) {
     $want = array();
@@ -241,18 +253,38 @@ check( classhall_home_lesson_order_display_meta( $formatted, $root_item ) === $f
 $GLOBALS['classhall_home_order_display'] = true;
 $display = classhall_home_lesson_order_display_meta( $formatted, $root_item );
 check( count( $display ) === 3 && $display[0]->display_key === 'Class' && $display[1]->display_key === 'Core Subjects' && $display[2]->display_key === 'Timetable', 'Confirmation labels simplified and Location removed' );
-check( str_contains( $display[2]->display_value, '<br>' ) && str_contains( $display[1]->display_value, 'Digital Technology' ), 'Timetable wraps by day and lists core subjects' );
+check( str_contains( $display[2]->display_value, '<br>' ) && $display[1]->display_value === 'English, Mathematics and Science', 'Timetable wraps by day and lists streamlined core subjects' );
 check( $formatted[0]->display_key === 'Primary class', 'Stored and shared order metadata not mutated' );
 $other_item = new LessonItem( 90, 'primary-1' );
 $other_item->meta['_classhall_home_lesson'] = 'no';
 check( classhall_home_lesson_order_display_meta( $formatted, $other_item ) === $formatted, 'Other products keep existing order details' );
 unset( $GLOBALS['classhall_home_order_display'] );
 check( count( classhall_home_lesson_classes() ) === 12, 'Primary, junior and senior secondary classes are selectable' );
+foreach ( classhall_home_lesson_classes() as $key => $label ) {
+    $senior = in_array( $key, array( 'ss1', 'ss2', 'ss3' ), true );
+    check( classhall_home_lesson_price( $key ) == ( $senior ? 25000 : 15000 ), $key . ' has the correct monthly fee' );
+    foreach ( array( false, true ) as $renewal_cart ) {
+        $product = new TestClassProduct();
+        $unrelated = new TestClassProduct();
+        $cart = new WC_Cart( array(
+            array( 'classhall_home_lesson' => true, 'classhall_home_lesson_class' => $key, 'data' => $product, 'chl_root_item' => $renewal_cart ? 123 : 0 ),
+            array( 'data' => $unrelated ),
+        ) );
+        classhall_price_home_lesson_cart_items( $cart );
+        check( $product->price == ( $senior ? 25000 : 15000 ) && $unrelated->price === 999, $key . ( $renewal_cart ? ' renewal' : ' enrolment' ) . ' cart uses current price without changing other products' );
+    }
+    if ( $senior ) { check( str_contains( $label, '(Sciences)' ), $key . ' uses Sciences label' ); }
+}
 foreach ( array( 'jss1', 'jss2', 'jss3', 'ss1', 'ss2', 'ss3' ) as $index => $class ) {
     $group = $index % 3 + 1;
     $sessions = classhall_home_lesson_sessions( $class, stamp( '2026-09-21 00:00' ), stamp( '2026-09-28 00:00' ) );
     check( array_keys( $sessions ) === array_map( 'stamp', array_keys( $expected[ $group ] ) ), $class . ' reuses the assigned timetable group' );
-    $subject = $index < 3 ? 'Business Studies' : 'Physics';
+    $subject = $index < 3 ? 'Intermediate Science' : 'Physics';
+    $want_subjects = $index < 3 ? array( 'English', 'Mathematics', 'Intermediate Science' ) : array( 'English Language', 'General Mathematics', 'Biology / Chemistry / Physics' );
+    $actual_subjects = array_values( $sessions );
+    sort( $want_subjects );
+    sort( $actual_subjects );
+    check( $actual_subjects === $want_subjects, $class . ' timetable contains only its current subjects' );
     check( str_contains( classhall_home_lesson_subjects( $class ), $subject ), $class . ' has level-specific subjects' );
     $id = 100 + $index;
     $item = new LessonItem( $id * 10, $class );
